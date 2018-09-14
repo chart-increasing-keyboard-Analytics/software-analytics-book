@@ -158,6 +158,8 @@ build scripts and continuous integration.
   What are causes of a broken build?
 \item
   With which goals is continuous integration applied?
+\item
+  What can be used to effectively fix a broken build?
 \end{itemize}
 
 \section{Search Strategy}\label{search-strategy}
@@ -194,7 +196,18 @@ based on previous changes.
 
 \subsection{\texorpdfstring{\citet{vassallo2018break}}{@vassallo2018break}}\label{vassallo2018break}
 
+This paper proposes a tool called \textsc{BART} to help developers fix
+build errors. This tool eliminates the need to browse error logs which
+can be very long by generating a summary of the failure with useful
+information.
+
 \subsection{\texorpdfstring{\citet{zampetti2017open}}{@zampetti2017open}}\label{zampetti2017open}
+
+This paper studies the usage of static analysis tools in 20 Java open
+source software projects hosted on GitHub and using Travic CI as
+continuous integration infrastructure. There is investigated which tools
+are being used, what types of issues make the build fail or raise
+warnings and how is responded to broken builds.
 
 \bibliography{book.bib}
 
