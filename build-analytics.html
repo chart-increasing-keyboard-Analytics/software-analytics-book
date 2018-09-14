@@ -80,7 +80,12 @@
 <li class="chapter" data-level="5.1" data-path="build-analytics.html"><a href="build-analytics.html#background"><i class="fa fa-check"></i><b>5.1</b> Background</a></li>
 <li class="chapter" data-level="5.2" data-path="build-analytics.html"><a href="build-analytics.html#research-questions"><i class="fa fa-check"></i><b>5.2</b> Research Questions</a></li>
 <li class="chapter" data-level="5.3" data-path="build-analytics.html"><a href="build-analytics.html#search-strategy"><i class="fa fa-check"></i><b>5.3</b> Search Strategy</a></li>
-<li class="chapter" data-level="5.4" data-path="build-analytics.html"><a href="build-analytics.html#study-selection"><i class="fa fa-check"></i><b>5.4</b> Study Selection</a></li>
+<li class="chapter" data-level="5.4" data-path="build-analytics.html"><a href="build-analytics.html#study-selection"><i class="fa fa-check"></i><b>5.4</b> Study Selection</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="build-analytics.html"><a href="build-analytics.html#vassallo2017tale"><i class="fa fa-check"></i><b>5.4.1</b> <span class="citation">Vassallo et al. (<a href="#ref-vassallo2017tale">2017</a>)</span></a></li>
+<li class="chapter" data-level="5.4.2" data-path="build-analytics.html"><a href="build-analytics.html#hassan2018hirebuild"><i class="fa fa-check"></i><b>5.4.2</b> <span class="citation">Hassan and Wang (<a href="#ref-hassan2018hirebuild">2018</a>)</span></a></li>
+<li class="chapter" data-level="5.4.3" data-path="build-analytics.html"><a href="build-analytics.html#vassallo2018break"><i class="fa fa-check"></i><b>5.4.3</b> <span class="citation">Vassallo et al. (<a href="#ref-vassallo2018break">2018</a>)</span></a></li>
+<li class="chapter" data-level="5.4.4" data-path="build-analytics.html"><a href="build-analytics.html#zampetti2017open"><i class="fa fa-check"></i><b>5.4.4</b> <span class="citation">Zampetti et al. (<a href="#ref-zampetti2017open">2017</a>)</span></a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -106,16 +111,42 @@
 <h1><span class="header-section-number">Chapter 5</span> Build analytics</h1>
 <div id="background" class="section level2">
 <h2><span class="header-section-number">5.1</span> Background</h2>
+<p>When building a project from source code to executables everything should go smoothly. This is not always the case, a build can break for several reasons. This chapter will give an overview of research done on build scripts and continuous integration.</p>
+<!--
+ - Define build
+ - Define context
+ -->
 </div>
 <div id="research-questions" class="section level2">
 <h2><span class="header-section-number">5.2</span> Research Questions</h2>
+<!-- Subject to change -->
+<ul>
+<li>What are causes of a broken build?</li>
+<li>With which goals is continuous integration applied?</li>
+</ul>
 </div>
 <div id="search-strategy" class="section level2">
 <h2><span class="header-section-number">5.3</span> Search Strategy</h2>
-<p>Using the initial seed consisting of <span class="citation">Bird and Zimmermann (<a href="#ref-bird2017predicting">2017</a>)</span>, <span class="citation">Beller, Gousios, and Zaidman (<a href="#ref-beller2017oops">2017</a><a href="#ref-beller2017oops">a</a>)</span>, <span class="citation">(<span class="citeproc-not-found" data-reference-id="raush2017emprical"><strong>???</strong></span>)</span>, <span class="citation">Beller, Gousios, and Zaidman (<a href="#ref-beller2017travistorrent">2017</a><a href="#ref-beller2017travistorrent">b</a>)</span>, <span class="citation">Pinto and Rebouças (<a href="#ref-pinto2018work">2018</a>)</span>, <span class="citation">Zhao et al. (<a href="#ref-zhao2017impact">2017</a>)</span>, <span class="citation">Widder et al. (<a href="#ref-widder2018m">2018</a>)</span> and <span class="citation">Hilton et al. (<a href="#ref-hilton2016usage">2016</a>)</span> we used references and similar keywords to find new papers to analyze.</p>
+<p>Using the initial seed consisting of <span class="citation">Bird and Zimmermann (<a href="#ref-bird2017predicting">2017</a>)</span>, <span class="citation">Beller, Gousios, and Zaidman (<a href="#ref-beller2017oops">2017</a><a href="#ref-beller2017oops">a</a>)</span>, <span class="citation">Rausch et al. (<a href="#ref-rausch2017empirical">2017</a>)</span>, <span class="citation">Beller, Gousios, and Zaidman (<a href="#ref-beller2017travistorrent">2017</a><a href="#ref-beller2017travistorrent">b</a>)</span>, <span class="citation">Pinto and Rebouças (<a href="#ref-pinto2018work">2018</a>)</span>, <span class="citation">Zhao et al. (<a href="#ref-zhao2017impact">2017</a>)</span>, <span class="citation">Widder et al. (<a href="#ref-widder2018m">2018</a>)</span> and <span class="citation">Hilton et al. (<a href="#ref-hilton2016usage">2016</a>)</span> we used references and similar keywords to find new papers to analyze.</p>
 </div>
 <div id="study-selection" class="section level2">
 <h2><span class="header-section-number">5.4</span> Study Selection</h2>
+<p>Through this we found the following papers</p>
+<div id="vassallo2017tale" class="section level3">
+<h3><span class="header-section-number">5.4.1</span> <span class="citation">Vassallo et al. (<a href="#ref-vassallo2017tale">2017</a>)</span></h3>
+<p>Discusses the difference in failures on continuous integration between open source software (OSS) and industrial software projects. For this 349 Java OSS projects and 418 project from ING Nederland, a financial organisation.</p>
+<p>Using cluser analysis it was observed that both kinds of projects share similar build failures, but in other cases very different patterns emerge.</p>
+</div>
+<div id="hassan2018hirebuild" class="section level3">
+<h3><span class="header-section-number">5.4.2</span> <span class="citation">Hassan and Wang (<a href="#ref-hassan2018hirebuild">2018</a>)</span></h3>
+<p>This paper uses TravisTorrent (<span class="citation">Beller, Gousios, and Zaidman (<a href="#ref-beller2017travistorrent">2017</a><a href="#ref-beller2017travistorrent">b</a>)</span>) to show that 22% of code commits include changes in build script files to keep the build working or to fix the build.</p>
+<p>In the paper a tool is proposed to automatically fix build failures based on previous changes.</p>
+</div>
+<div id="vassallo2018break" class="section level3">
+<h3><span class="header-section-number">5.4.3</span> <span class="citation">Vassallo et al. (<a href="#ref-vassallo2018break">2018</a>)</span></h3>
+</div>
+<div id="zampetti2017open" class="section level3">
+<h3><span class="header-section-number">5.4.4</span> <span class="citation">Zampetti et al. (<a href="#ref-zampetti2017open">2017</a>)</span></h3>
 
 <div id="refs" class="references">
 <div>
@@ -128,16 +159,32 @@
 <p>Bird, Christian, and Thomas Zimmermann. 2017. “Predicting Software Build Errors.” Google Patents.</p>
 </div>
 <div>
+<p>Hassan, Foyzul, and Xiaoyin Wang. 2018. “HireBuild: An Automatic Approach to History-Driven Repair of Build Scripts.” In <em>Proceedings of the 40th International Conference on Software Engineering</em>, 1078–89. ACM.</p>
+</div>
+<div>
 <p>Hilton, Michael, Timothy Tunnell, Kai Huang, Darko Marinov, and Danny Dig. 2016. “Usage, Costs, and Benefits of Continuous Integration in Open-Source Projects.” In <em>Proceedings of the 31st Ieee/Acm International Conference on Automated Software Engineering</em>, 426–37. ACM.</p>
 </div>
 <div>
 <p>Pinto, Gustavo, and Fernando Castor Rodrigo Bonifacio Marcel Rebouças. 2018. “Work Practices and Challenges in Continuous Integration: A Survey with Travis Ci Users.”</p>
 </div>
 <div>
+<p>Rausch, Thomas, Waldemar Hummer, Philipp Leitner, and Stefan Schulte. 2017. “An Empirical Analysis of Build Failures in the Continuous Integration Workflows of Java-Based Open-Source Software.” In <em>Proceedings of the 14th International Conference on Mining Software Repositories</em>, 345–55. IEEE Press.</p>
+</div>
+<div>
+<p>Vassallo, Carmine, Sebastian Proksch, Timothy Zemp, and Harald C Gall. 2018. “Un-Break My Build: Assisting Developers with Build Repair Hints.”</p>
+</div>
+<div>
+<p>Vassallo, Carmine, Gerald Schermann, Fiorella Zampetti, Daniele Romano, Philipp Leitner, Andy Zaidman, Massimiliano Di Penta, and Sebastiano Panichella. 2017. “A Tale of Ci Build Failures: An Open Source and a Financial Organization Perspective.” In <em>Software Maintenance and Evolution (Icsme), 2017 Ieee International Conference on</em>, 183–93. IEEE.</p>
+</div>
+<div>
 <p>Widder, David Gray, Michael Hilton, Christian Kästner, and Bogdan Vasilescu. 2018. “I’im Leaving You, Travis: A Continuous Integration Breakup Story.”</p>
 </div>
 <div>
+<p>Zampetti, Fiorella, Simone Scalabrino, Rocco Oliveto, Gerardo Canfora, and Massimiliano Di Penta. 2017. “How Open Source Projects Use Static Code Analysis Tools in Continuous Integration Pipelines.” In <em>Mining Software Repositories (Msr), 2017 Ieee/Acm 14th International Conference on</em>, 334–44. IEEE.</p>
+</div>
+<div>
 <p>Zhao, Yangyang, Alexander Serebrenik, Yuming Zhou, Vladimir Filkov, and Bogdan Vasilescu. 2017. “The Impact of Continuous Integration on Other Software Development Practices: A Large-Scale Empirical Study.” In <em>Proceedings of the 32nd Ieee/Acm International Conference on Automated Software Engineering</em>, 60–71. IEEE Press.</p>
+</div>
 </div>
 </div>
 </div>
@@ -149,6 +196,9 @@
 </div>
 <div id="ref-beller2017oops">
 <p>Beller, Moritz, Georgios Gousios, and Andy Zaidman. 2017a. “Oops, My Tests Broke the Build: An Explorative Analysis of Travis Ci with Github.” In <em>Mining Software Repositories (Msr), 2017 Ieee/Acm 14th International Conference on</em>, 356–67. IEEE.</p>
+</div>
+<div id="ref-rausch2017empirical">
+<p>Rausch, Thomas, Waldemar Hummer, Philipp Leitner, and Stefan Schulte. 2017. “An Empirical Analysis of Build Failures in the Continuous Integration Workflows of Java-Based Open-Source Software.” In <em>Proceedings of the 14th International Conference on Mining Software Repositories</em>, 345–55. IEEE Press.</p>
 </div>
 <div id="ref-beller2017travistorrent">
 <p>Beller, Moritz, Georgios Gousios, and Andy Zaidman. 2017b. “Travistorrent: Synthesizing Travis Ci and Github for Full-Stack Research on Continuous Integration.” In <em>Proceedings of the 14th International Conference on Mining Software Repositories</em>, 447–50. IEEE press.</p>
@@ -164,6 +214,18 @@
 </div>
 <div id="ref-hilton2016usage">
 <p>Hilton, Michael, Timothy Tunnell, Kai Huang, Darko Marinov, and Danny Dig. 2016. “Usage, Costs, and Benefits of Continuous Integration in Open-Source Projects.” In <em>Proceedings of the 31st Ieee/Acm International Conference on Automated Software Engineering</em>, 426–37. ACM.</p>
+</div>
+<div id="ref-vassallo2017tale">
+<p>Vassallo, Carmine, Gerald Schermann, Fiorella Zampetti, Daniele Romano, Philipp Leitner, Andy Zaidman, Massimiliano Di Penta, and Sebastiano Panichella. 2017. “A Tale of Ci Build Failures: An Open Source and a Financial Organization Perspective.” In <em>Software Maintenance and Evolution (Icsme), 2017 Ieee International Conference on</em>, 183–93. IEEE.</p>
+</div>
+<div id="ref-hassan2018hirebuild">
+<p>Hassan, Foyzul, and Xiaoyin Wang. 2018. “HireBuild: An Automatic Approach to History-Driven Repair of Build Scripts.” In <em>Proceedings of the 40th International Conference on Software Engineering</em>, 1078–89. ACM.</p>
+</div>
+<div id="ref-vassallo2018break">
+<p>Vassallo, Carmine, Sebastian Proksch, Timothy Zemp, and Harald C Gall. 2018. “Un-Break My Build: Assisting Developers with Build Repair Hints.”</p>
+</div>
+<div id="ref-zampetti2017open">
+<p>Zampetti, Fiorella, Simone Scalabrino, Rocco Oliveto, Gerardo Canfora, and Massimiliano Di Penta. 2017. “How Open Source Projects Use Static Code Analysis Tools in Continuous Integration Pipelines.” In <em>Mining Software Repositories (Msr), 2017 Ieee/Acm 14th International Conference on</em>, 334–44. IEEE.</p>
 </div>
 </div>
             </section>
