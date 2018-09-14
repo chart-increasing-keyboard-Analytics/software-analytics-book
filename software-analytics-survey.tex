@@ -1,0 +1,163 @@
+\documentclass[]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={A Literature Survey of Software Analytics},
+            pdfauthor={Moritz Beller, IN4334 2018 TU Delft},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{natbib}
+\bibliographystyle{apalike}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{A Literature Survey of Software Analytics}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{Moritz Beller, IN4334 2018 TU Delft}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{2018-09-14}
+
+\usepackage{booktabs}
+\usepackage{amsthm}
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter{Preamble}\label{intro}
+
+The book you see in front of you is the outcome of an eight week seminar
+run by the Software Engineering Research Group (SERG) at TU Delft. We
+have split up the novel area of Software Analytics into several sub
+topics. Every chapter addresses one such sub-topic of Software Analytics
+and is the outcome of a systematic literature review a laborious team of
+3-4 students performed.
+
+With this book, we hope to structure the new field of Software Analytics
+and show how it is related to many long existing research fields.
+
+\emph{Moritz Beller}
+
+\section{License}\label{license}
+
+\includegraphics{figures/cc-nc-sa.png} This book is copyrighted 2018 by
+TU Delft and its respective authors and distributed under a
+\href{https://creativecommons.org/licenses/by-nc-sa/4.0/}{CC BY-NC-SA
+4.0 license}
+
+\chapter{A contemporary view on Software
+Analytics}\label{a-contemporary-view-on-software-analytics}
+
+\section{What is Software Analytics?}\label{what-is-software-analytics}
+
+\section{A list of Software Analytics
+Sub-Topics}\label{a-list-of-software-analytics-sub-topics}
+
+\chapter{Sample Sub-Topic}\label{sample-sub-topic}
+
+This is an example for the deliverable every group works on. Every group
+works on one independent chapter (starting as one Rmd file).
+
+\chapter{Final Words}\label{final-words}
+
+We have finished a nice book on Software Analytics.
+
+\chapter{Build analytics}\label{build-analytics}
+
+\section{Background}\label{background}
+
+\section{Research Questions}\label{research-questions}
+
+\section{Search Strategy}\label{search-strategy}
+
+Using the initial seed consisting of \citet{bird2017predicting},
+\citet{beller2017oops}, \citet{raush2017emprical},
+\citet{beller2017travistorrent}, \citet{pinto2018work},
+\citet{zhao2017impact}, \citet{widder2018m} and \citet{hilton2016usage}
+we used references and similar keywords to find new papers to analyze.
+
+\section{Study Selection}\label{study-selection}
+
+\bibliography{book.bib}
+
+
+\end{document}
