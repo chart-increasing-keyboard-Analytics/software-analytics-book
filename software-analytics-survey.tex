@@ -168,7 +168,7 @@ Using the initial seed consisting of \citet{bird2017predicting},
 \citet{beller2017oops}, \citet{rausch2017empirical},
 \citet{beller2017travistorrent}, \citet{pinto2018work},
 \citet{zhao2017impact}, \citet{widder2018m} and \citet{hilton2016usage}
-we used references and similar keywords to find new papers to analyze.
+we used references to find new papers to analyze.
 
 \section{Study Selection}\label{study-selection}
 
@@ -178,6 +178,8 @@ Through this we found the following papers
 
 \subsection{\texorpdfstring{\citet{bird2017predicting}}{@bird2017predicting}}\label{bird2017predicting}
 
+\emph{Initial Seed}
+
 This is a US patent grant for a method of predicting software build
 errors. This patent is owned by Microsoft. Using logistic regression a
 prediction can be made on the probability of a build failing. Using this
@@ -185,6 +187,8 @@ method build errors can be better anticipated, which decreases the time
 until the build works again.
 
 \subsection{\texorpdfstring{\citet{beller2017oops}}{@beller2017oops}}\label{beller2017oops}
+
+\emph{Initial Seed}
 
 This paper explores data from Travis CI\footnote{See
   \url{https://travis-ci.org}} on a large scale by analyzing 2,640,825
@@ -195,11 +199,15 @@ and Ruby.
 
 \subsection{\texorpdfstring{\citet{rausch2017empirical}}{@rausch2017empirical}}\label{rausch2017empirical}
 
+\emph{Initial Seed}
+
 A stuy on the build results of 14 open source software Java projects. It
 is similar to \citet{beller2017oops}, albeit on a smaller scale. It does
 go more in depth on the result and changes over time.
 
 \subsection{\texorpdfstring{\citet{beller2017travistorrent}}{@beller2017travistorrent}}\label{beller2017travistorrent}
+
+\emph{Initial Seed}
 
 This paper introduces \textsc{TravisTorrent}, a dataset containing
 analyzed builds from more than 1,000 projects. This data is freely
@@ -207,6 +215,8 @@ downloadable from the internet. It uses \textsc{GHTorrent} to link the
 information from travis to commits on GitHub.
 
 \subsection{\texorpdfstring{\citet{pinto2018work}}{@pinto2018work}}\label{pinto2018work}
+
+\emph{Initial Seed}
 
 This paper is a survey amongst Travis CI users. It found that users are
 not sure whether a job failure represents a failure or not, that
@@ -216,6 +226,8 @@ when blindly trusing tests.
 
 \subsection{\texorpdfstring{\citet{zhao2017impact}}{@zhao2017impact}}\label{zhao2017impact}
 
+\emph{Initial Seed}
+
 This paper analyzed approximately 160,000 projects written in seven
 different programming languages. It notes that adoption of CI is often
 part of a reorganization. It collected information on the differences
@@ -223,6 +235,8 @@ before and after adoption of CI. There is also a survey amongst
 developers to learn about their experiences in adopting Travis CI.
 
 \subsection{\texorpdfstring{\citet{widder2018m}}{@widder2018m}}\label{widder2018m}
+
+\emph{Initial Seed}
 
 This paper analyzes what factors have impact on abandonment of Travis.
 They find that increased build complexity reduces the chance of
@@ -233,6 +247,8 @@ dispersion in the project don't affect the rate of abandonment.
 
 \subsection{\texorpdfstring{\citet{hilton2016usage}}{@hilton2016usage}}\label{hilton2016usage}
 
+\emph{Initial Seed}
+
 This paper explores which CI system developers use, how developers use
 CI and why developers use CI. For this it analyzes data from Github,
 Travis CI and it conducts a developer survey. It finds that projects
@@ -240,6 +256,8 @@ using CI release twice as often, accept pull requests faster and have
 developers who are less worried about breaking the build.
 
 \subsection{\texorpdfstring{\citet{vassallo2017tale}}{@vassallo2017tale}}\label{vassallo2017tale}
+
+\emph{References \citet{beller2017oops} }
 
 This paper discusses the difference in failures on continuous
 integration between open source software (OSS) and industrial software
@@ -252,6 +270,8 @@ emerge.
 
 \subsection{\texorpdfstring{\citet{hassan2018hirebuild}}{@hassan2018hirebuild}}\label{hassan2018hirebuild}
 
+\emph{References \citet{beller2017travistorrent} }
+
 This paper uses TravisTorrent (\citet{beller2017travistorrent}) to show
 that 22\% of code commits include changes in build script files to keep
 the build working or to fix the build.
@@ -261,12 +281,16 @@ based on previous changes.
 
 \subsection{\texorpdfstring{\citet{vassallo2018break}}{@vassallo2018break}}\label{vassallo2018break}
 
+\emph{References \citet{beller2017oops}, \citet{rausch2017empirical} }
+
 This paper proposes a tool called \textsc{BART} to help developers fix
 build errors. This tool eliminates the need to browse error logs which
 can be very long by generating a summary of the failure with useful
 information.
 
 \subsection{\texorpdfstring{\citet{zampetti2017open}}{@zampetti2017open}}\label{zampetti2017open}
+
+\emph{Referenced by \citet{vassallo2018break} }
 
 This paper studies the usage of static analysis tools in 20 Java open
 source software projects hosted on GitHub and using Travic CI as
