@@ -134,12 +134,15 @@ Sub-Topics}\label{a-list-of-software-analytics-sub-topics}
 
 \chapter{Build analytics}\label{build-analytics}
 
-\section{Background}\label{background}
+\section{Motivation}\label{motivation}
 
-When building a project from source code to executables everything
-should go smoothly. This is not always the case, a build can break for
-several reasons. This chapter will give an overview of research done on
-build configurations and continuous integration.
+Ideally, when building a project from source code to executable, the
+process should be fast and without any errors. Unfortunately, this is
+not always the case and automated builds results notify developers of
+compile errors, missing dependencies, broken functionality and many
+other problems. This chapter is aimed to give an overview of the effort
+made in build analytics field and Continuous Integration (CI) as an
+increasingly common development practice in many projects.
 
 \section{Research Questions}\label{research-questions}
 
@@ -284,6 +287,21 @@ continuous integration infrastructure. There is investigated which tools
 are being used, what types of issues make the build fail or raise
 warnings and how is responded to broken builds.
 
+\subsection{\texorpdfstring{\citet{baltes2018no}}{@baltes2018no}}\label{baltes2018no}
+
+\emph{Google Scholar search term
+\texttt{Github\ "Continuous\ Integration"}, papers from 2018}
+
+This paper analyses 93 GitHub projects before and after adoption of
+Travis CI. It finds only one non-negligible effect, an increasing merge
+ratio, meaning that more merging commits in relation to all commits
+after a project started using Travis CI. But the paper also shows that
+this effect can be seen on projects not adopting CI. It shows the
+importance of having a proper dataset with as little bias as possible.
+
+\section{What is the current state of the art in the field of build
+analytics?}\label{what-is-the-current-state-of-the-art-in-the-field-of-build-analytics}
+
 \section{What is the current state of practice in the field of build
 analytics?}\label{what-is-the-current-state-of-practice-in-the-field-of-build-analytics}
 
@@ -336,12 +354,25 @@ testing environment. It also uses Marin Fowler's practises of CI (as
 discussed previously) and expresses the importance of CI in the software
 industry.
 
+\section{What future research can we expect in the field of build
+analytics?}\label{what-future-research-can-we-expect-in-the-field-of-build-analytics}
+
+Future research in build analytics branches in a couple of different
+topics. \citet{pinto2018work} proposes to focus on getting a better
+understanding of the users and why they might choose to abandon an
+automatic build platform.
+
+According to \citet{baltes2018no} future work could look into more
+perspectives when analyzing commit data, for instance partitioning
+commits by developer. It also notes the importance of more qualitative
+research.
+
 \chapter{Sample Sub-Topic}\label{sample-sub-topic}
 
 \emph{This is an example for the deliverable every group works on. Every
 group works on one independent chapter (starting as one Rmd file).}
 
-\section{Motivation}\label{motivation}
+\section{Motivation}\label{motivation-1}
 
 \emph{A short introduction about why the topic you are working on is
 interesting.}
