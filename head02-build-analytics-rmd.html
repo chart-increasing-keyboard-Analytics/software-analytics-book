@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>A Literature Survey of Software Analytics</title>
+  <meta name="description" content="This is a contemporary, systematic survey of literature on Software Analytics.">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="A Literature Survey of Software Analytics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a contemporary, systematic survey of literature on Software Analytics." />
+  <meta name="github-repo" content="saltudelft/software-analytics-book" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="A Literature Survey of Software Analytics" />
+  
+  <meta name="twitter:description" content="This is a contemporary, systematic survey of literature on Software Analytics." />
+  
+
+<meta name="author" content="Moritz Beller, IN4334 2018 TU Delft">
+
+
+<meta name="date" content="2018-09-24">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="build-analytics.html">
+<link rel="next" href="sample-sub-topic.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Software Analytics Survey Book</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preamble</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i><b>1.1</b> License</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="a-contemporary-view-on-software-analytics.html"><a href="a-contemporary-view-on-software-analytics.html"><i class="fa fa-check"></i><b>2</b> A contemporary view on Software Analytics</a><ul>
+<li class="chapter" data-level="2.1" data-path="a-contemporary-view-on-software-analytics.html"><a href="a-contemporary-view-on-software-analytics.html#what-is-software-analytics"><i class="fa fa-check"></i><b>2.1</b> What is Software Analytics?</a></li>
+<li class="chapter" data-level="2.2" data-path="a-contemporary-view-on-software-analytics.html"><a href="a-contemporary-view-on-software-analytics.html#a-list-of-software-analytics-sub-topics"><i class="fa fa-check"></i><b>2.2</b> A list of Software Analytics Sub-Topics</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="build-analytics.html"><a href="build-analytics.html"><i class="fa fa-check"></i><b>3</b> Build analytics</a><ul>
+<li class="chapter" data-level="3.1" data-path="build-analytics.html"><a href="build-analytics.html#motivation"><i class="fa fa-check"></i><b>3.1</b> Motivation</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html"><i class="fa fa-check"></i><b>4</b> &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:02-build-analytics.Rmd</a><ul>
+<li class="chapter" data-level="4.1" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#research-questions"><i class="fa fa-check"></i><b>4.1</b> Research Questions</a></li>
+<li class="chapter" data-level="4.2" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#search-strategy"><i class="fa fa-check"></i><b>4.2</b> Search Strategy</a></li>
+<li class="chapter" data-level="4.3" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#study-selection"><i class="fa fa-check"></i><b>4.3</b> Study Selection</a></li>
+<li class="chapter" data-level="4.4" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#summary-of-papers"><i class="fa fa-check"></i><b>4.4</b> Summary of papers</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#bird2017predicting"><i class="fa fa-check"></i><b>4.4.1</b> <span class="citation">Bird and Zimmermann (<a href="#ref-bird2017predicting">2017</a>)</span></a></li>
+<li class="chapter" data-level="4.4.2" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#beller2017oops"><i class="fa fa-check"></i><b>4.4.2</b> <span class="citation">Beller, Gousios, and Zaidman (<a href="#ref-beller2017oops">2017</a><a href="#ref-beller2017oops">a</a>)</span></a></li>
+<li class="chapter" data-level="4.4.3" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#rausch2017empirical"><i class="fa fa-check"></i><b>4.4.3</b> <span class="citation">Rausch et al. (<a href="#ref-rausch2017empirical">2017</a>)</span></a></li>
+<li class="chapter" data-level="4.4.4" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#beller2017travistorrent"><i class="fa fa-check"></i><b>4.4.4</b> <span class="citation">Beller, Gousios, and Zaidman (<a href="#ref-beller2017travistorrent">2017</a><a href="#ref-beller2017travistorrent">b</a>)</span></a></li>
+<li class="chapter" data-level="4.4.5" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#pinto2018work"><i class="fa fa-check"></i><b>4.4.5</b> <span class="citation">Pinto and Rebouças (<a href="#ref-pinto2018work">2018</a>)</span></a></li>
+<li class="chapter" data-level="4.4.6" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#zhao2017impact"><i class="fa fa-check"></i><b>4.4.6</b> <span class="citation">Zhao et al. (<a href="#ref-zhao2017impact">2017</a>)</span></a></li>
+<li class="chapter" data-level="4.4.7" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#widder2018m"><i class="fa fa-check"></i><b>4.4.7</b> <span class="citation">Widder et al. (<a href="#ref-widder2018m">2018</a>)</span></a></li>
+<li class="chapter" data-level="4.4.8" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#hilton2016usage"><i class="fa fa-check"></i><b>4.4.8</b> <span class="citation">Hilton et al. (<a href="#ref-hilton2016usage">2016</a>)</span></a></li>
+<li class="chapter" data-level="4.4.9" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#vassallo2017tale"><i class="fa fa-check"></i><b>4.4.9</b> <span class="citation">Vassallo et al. (<a href="#ref-vassallo2017tale">2017</a>)</span></a></li>
+<li class="chapter" data-level="4.4.10" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#hassan2018hirebuild"><i class="fa fa-check"></i><b>4.4.10</b> <span class="citation">Hassan and Wang (<a href="#ref-hassan2018hirebuild">2018</a>)</span></a></li>
+<li class="chapter" data-level="4.4.11" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#vassallo2018break"><i class="fa fa-check"></i><b>4.4.11</b> <span class="citation">Vassallo et al. (<a href="#ref-vassallo2018break">2018</a>)</span></a></li>
+<li class="chapter" data-level="4.4.12" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#zampetti2017open"><i class="fa fa-check"></i><b>4.4.12</b> <span class="citation">Zampetti et al. (<a href="#ref-zampetti2017open">2017</a>)</span></a></li>
+<li class="chapter" data-level="4.4.13" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#baltes2018no"><i class="fa fa-check"></i><b>4.4.13</b> <span class="citation">Baltes et al. (<a href="#ref-baltes2018no">2018</a>)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#what-is-the-current-state-of-the-art-in-the-field-of-build-analytics"><i class="fa fa-check"></i><b>4.5</b> What is the current state of the art in the field of build analytics?</a></li>
+<li class="chapter" data-level="4.6" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#what-is-the-current-state-of-practice-in-the-field-of-build-analytics"><i class="fa fa-check"></i><b>4.6</b> What is the current state of practice in the field of build analytics?</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#fowler2006continuous"><i class="fa fa-check"></i><b>4.6.1</b> <span class="citation">Fowler and Foemmel (<a href="#ref-fowler2006continuous">2006</a>)</span></a></li>
+<li class="chapter" data-level="4.6.2" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#hilton2016usage-1"><i class="fa fa-check"></i><b>4.6.2</b> <span class="citation">Hilton et al. (<a href="#ref-hilton2016usage">2016</a>)</span></a></li>
+<li class="chapter" data-level="4.6.3" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#rausch2017empirical-1"><i class="fa fa-check"></i><b>4.6.3</b> <span class="citation">Rausch et al. (<a href="#ref-rausch2017empirical">2017</a>)</span></a></li>
+<li class="chapter" data-level="4.6.4" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#stolberg2009enabling"><i class="fa fa-check"></i><b>4.6.4</b> <span class="citation">Stolberg (<a href="#ref-stolberg2009enabling">2009</a>)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="head02-build-analytics-rmd.html"><a href="head02-build-analytics-rmd.html#what-future-research-can-we-expect-in-the-field-of-build-analytics"><i class="fa fa-check"></i><b>4.7</b> What future research can we expect in the field of build analytics?</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="sample-sub-topic.html"><a href="sample-sub-topic.html"><i class="fa fa-check"></i><b>5</b> Sample Sub-Topic</a><ul>
+<li class="chapter" data-level="5.1" data-path="sample-sub-topic.html"><a href="sample-sub-topic.html#motivation-1"><i class="fa fa-check"></i><b>5.1</b> Motivation</a></li>
+<li class="chapter" data-level="5.2" data-path="sample-sub-topic.html"><a href="sample-sub-topic.html#research-protocol"><i class="fa fa-check"></i><b>5.2</b> Research protocol</a></li>
+<li class="chapter" data-level="5.3" data-path="sample-sub-topic.html"><a href="sample-sub-topic.html#answers"><i class="fa fa-check"></i><b>5.3</b> Answers</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="7" data-path="app-store-analytics.html"><a href="app-store-analytics.html"><i class="fa fa-check"></i><b>7</b> App Store analytics</a><ul>
+<li class="chapter" data-level="7.1" data-path="app-store-analytics.html"><a href="app-store-analytics.html#api-change-and-fault-proneness-a-threat-to-the-success-of-android-apps"><i class="fa fa-check"></i><b>7.1</b> API change and fault proneness: A threat to the success of Android apps</a></li>
+<li class="chapter" data-level="7.2" data-path="app-store-analytics.html"><a href="app-store-analytics.html#the-impact-of-api-change-and-fault-proneness-on-the-user-ratings-of-android-apps"><i class="fa fa-check"></i><b>7.2</b> The Impact of API Change and Fault-Proneness on the User Ratings of Android Apps</a></li>
+<li class="chapter" data-level="7.3" data-path="app-store-analytics.html"><a href="app-store-analytics.html#how-can-i-improve-my-app-classifying-user-reviews-for-software-maintenance-and-evolution"><i class="fa fa-check"></i><b>7.3</b> How can i improve my app? Classifying user reviews for software maintenance and evolution</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="release-engineering-analytics.html"><a href="release-engineering-analytics.html"><i class="fa fa-check"></i><b>8</b> Release Engineering Analytics</a><ul>
+<li class="chapter" data-level="8.1" data-path="release-engineering-analytics.html"><a href="release-engineering-analytics.html#search-strategy-1"><i class="fa fa-check"></i><b>8.1</b> Search Strategy</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Literature Survey of Software Analytics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="head02-build-analytics.rmd" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:02-build-analytics.Rmd</h1>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:build-analytics.Rmd When building a project from source code to executables everything should go smoothly. This is not always the case, a build can break for several reasons. This chapter will give an overview of research done on build scripts and continuous integration. ======= &gt;&gt;&gt;&gt;&gt;&gt;&gt; 1c1f415c88dff2841f2f6846da5bc9c1c2b88e16:build-analytics.Rmd Ideally, when building a project from source code to executable, the process should be fast and without any errors. Unfortunately, this is not always the case and automated builds results notify developers of compile errors, missing dependencies, broken functionality and many other problems. This chapter is aimed to give an overview of the effort made in build analytics field and Continuous Integration (CI) as an increasingly common development practice in many projects. &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:02-build-analytics.Rmd ======= &gt;&gt;&gt;&gt;&gt;&gt;&gt; b71c3d4… Modify motivation section:02-build-analytics.Rmd &gt;&gt;&gt;&gt;&gt;&gt;&gt; 1c1f415c88dff2841f2f6846da5bc9c1c2b88e16:build-analytics.Rmd</p>
+<!--
+ - Define build
+ - Define context
+ -->
+<div id="research-questions" class="section level2">
+<h2><span class="header-section-number">4.1</span> Research Questions</h2>
+<p><strong>RQ1</strong> What is the current state of the art in the field of build analytics? <strong>RQ2</strong> What is the current state of practice in the field of build analytics? <strong>RQ3</strong> What future research can we expect in the field of build analytics?</p>
+</div>
+<div id="search-strategy" class="section level2">
+<h2><span class="header-section-number">4.2</span> Search Strategy</h2>
+<p>Using the initial seed consisting of <span class="citation">Bird and Zimmermann (<a href="#ref-bird2017predicting">2017</a>)</span>, <span class="citation">Beller, Gousios, and Zaidman (<a href="#ref-beller2017oops">2017</a><a href="#ref-beller2017oops">a</a>)</span>, <span class="citation">Rausch et al. (<a href="#ref-rausch2017empirical">2017</a>)</span>, <span class="citation">Beller, Gousios, and Zaidman (<a href="#ref-beller2017travistorrent">2017</a><a href="#ref-beller2017travistorrent">b</a>)</span>, <span class="citation">Pinto and Rebouças (<a href="#ref-pinto2018work">2018</a>)</span>, <span class="citation">Zhao et al. (<a href="#ref-zhao2017impact">2017</a>)</span>, <span class="citation">Widder et al. (<a href="#ref-widder2018m">2018</a>)</span> and <span class="citation">Hilton et al. (<a href="#ref-hilton2016usage">2016</a>)</span> we used references to find new papers to analyze. Moreover, we used academical search engines like <em>GoogleScholar</em> to perform a keyword based search for other relevant build analytics domain papers. The keywords used were: build analytics, machine learning, build time, prediction, continuous integration, build failures, active learning, build errors, mining, software repositories, open-source software.</p>
+</div>
+<div id="study-selection" class="section level2">
+<h2><span class="header-section-number">4.3</span> Study Selection</h2>
+<p>Through this we found the following papers</p>
+</div>
+<div id="summary-of-papers" class="section level2">
+<h2><span class="header-section-number">4.4</span> Summary of papers</h2>
+<div id="bird2017predicting" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> <span class="citation">Bird and Zimmermann (<a href="#ref-bird2017predicting">2017</a>)</span></h3>
+<p><em>Initial Seed</em></p>
+<p>This is a US patent grant for a method of predicting software build errors. This patent is owned by Microsoft. Using logistic regression a prediction can be made on the probability of a build failing. Using this method build errors can be better anticipated, which decreases the time until the build works again.</p>
+</div>
+<div id="beller2017oops" class="section level3">
+<h3><span class="header-section-number">4.4.2</span> <span class="citation">Beller, Gousios, and Zaidman (<a href="#ref-beller2017oops">2017</a><a href="#ref-beller2017oops">a</a>)</span></h3>
+<p><em>Initial Seed</em></p>
+<p>This paper explores data from Travis CI<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> on a large scale by analyzing 2,640,825 build logs of Java and Ruby builds. It uses <span style="font-variant: small-caps;">TravisTorrent</span> as a data source. It is found that the number one reason for failing builds it test failure. It also explores differences in testing between Java and Ruby.</p>
+</div>
+<div id="rausch2017empirical" class="section level3">
+<h3><span class="header-section-number">4.4.3</span> <span class="citation">Rausch et al. (<a href="#ref-rausch2017empirical">2017</a>)</span></h3>
+<p><em>Initial Seed</em></p>
+<p>A stuy on the build results of 14 open source software Java projects. It is similar to <span class="citation">Beller, Gousios, and Zaidman (<a href="#ref-beller2017oops">2017</a><a href="#ref-beller2017oops">a</a>)</span>, albeit on a smaller scale. It does go more in depth on the result and changes over time.</p>
+</div>
+<div id="beller2017travistorrent" class="section level3">
+<h3><span class="header-section-number">4.4.4</span> <span class="citation">Beller, Gousios, and Zaidman (<a href="#ref-beller2017travistorrent">2017</a><a href="#ref-beller2017travistorrent">b</a>)</span></h3>
+<p><em>Initial Seed</em></p>
+<p>This paper introduces <span style="font-variant: small-caps;">TravisTorrent</span>, a dataset containing analyzed builds from more than 1,000 projects. This data is freely downloadable from the internet. It uses <span style="font-variant: small-caps;">GHTorrent</span> to link the information from travis to commits on GitHub.</p>
+</div>
+<div id="pinto2018work" class="section level3">
+<h3><span class="header-section-number">4.4.5</span> <span class="citation">Pinto and Rebouças (<a href="#ref-pinto2018work">2018</a>)</span></h3>
+<p><em>Initial Seed</em></p>
+<p>This paper is a survey amongst Travis CI users. It found that users are not sure whether a job failure represents a failure or not, that inadequate testing is the most common (technical) reason for build breakage and that people feel that there is a false sense of confidence when blindly trusing tests.</p>
+</div>
+<div id="zhao2017impact" class="section level3">
+<h3><span class="header-section-number">4.4.6</span> <span class="citation">Zhao et al. (<a href="#ref-zhao2017impact">2017</a>)</span></h3>
+<p><em>Initial Seed</em></p>
+<!-- Note: Interesting collab between Nanjing (China), Eindhoven (Netherlands), UC Davis (USA) and Carnegie Mellon (USA). -->
+<p>This paper analyzed approximately 160,000 projects written in seven different programming languages. It notes that adoption of CI is often part of a reorganization. It collected information on the differences before and after adoption of CI. There is also a survey amongst developers to learn about their experiences in adopting Travis CI.</p>
+</div>
+<div id="widder2018m" class="section level3">
+<h3><span class="header-section-number">4.4.7</span> <span class="citation">Widder et al. (<a href="#ref-widder2018m">2018</a>)</span></h3>
+<p><em>Initial Seed</em></p>
+<p>This paper analyzes what factors have impact on abandonment of Travis. They find that increased build complexity reduces the chance of abandonment, but larger projects abandon at a higher rate and that a project’s language has significant but varying effect. A surprising result is that metrics of configuration attempts and knowledge dispersion in the project do not affect the rate of abandonment.</p>
+</div>
+<div id="hilton2016usage" class="section level3">
+<h3><span class="header-section-number">4.4.8</span> <span class="citation">Hilton et al. (<a href="#ref-hilton2016usage">2016</a>)</span></h3>
+<p><em>Initial Seed</em></p>
+<p>This paper explores which CI system developers use, how developers use CI and why developers use CI. For this it analyzes data from Github, Travis CI and it conducts a developer survey. It finds that projects using CI release twice as often, accept pull requests faster and have developers who are less worried about breaking the build.</p>
+</div>
+<div id="vassallo2017tale" class="section level3">
+<h3><span class="header-section-number">4.4.9</span> <span class="citation">Vassallo et al. (<a href="#ref-vassallo2017tale">2017</a>)</span></h3>
+<p><em>References <span class="citation">Beller, Gousios, and Zaidman (<a href="#ref-beller2017oops">2017</a><a href="#ref-beller2017oops">a</a>)</span> </em></p>
+<p>This paper discusses the difference in failures on continuous integration between open source software (OSS) and industrial software projects. For this 349 Java OSS projects and 418 project from ING Nederland, a financial organization.</p>
+<p>Using cluser analysis it was observed that both kinds of projects share similar build failures, but in other cases very different patterns emerge.</p>
+</div>
+<div id="hassan2018hirebuild" class="section level3">
+<h3><span class="header-section-number">4.4.10</span> <span class="citation">Hassan and Wang (<a href="#ref-hassan2018hirebuild">2018</a>)</span></h3>
+<p><em>References <span class="citation">Beller, Gousios, and Zaidman (<a href="#ref-beller2017travistorrent">2017</a><a href="#ref-beller2017travistorrent">b</a>)</span> </em></p>
+<p>This paper uses TravisTorrent (<span class="citation">Beller, Gousios, and Zaidman (<a href="#ref-beller2017travistorrent">2017</a><a href="#ref-beller2017travistorrent">b</a>)</span>) to show that 22% of code commits include changes in build script files to keep the build working or to fix the build.</p>
+<p>In the paper a tool is proposed to automatically fix build failures based on previous changes.</p>
+</div>
+<div id="vassallo2018break" class="section level3">
+<h3><span class="header-section-number">4.4.11</span> <span class="citation">Vassallo et al. (<a href="#ref-vassallo2018break">2018</a>)</span></h3>
+<p><em>References <span class="citation">Beller, Gousios, and Zaidman (<a href="#ref-beller2017oops">2017</a><a href="#ref-beller2017oops">a</a>)</span>, <span class="citation">Rausch et al. (<a href="#ref-rausch2017empirical">2017</a>)</span> </em></p>
+<p>This paper proposes a tool called <span style="font-variant: small-caps;">BART</span> to help developers fix build errors. This tool eliminates the need to browse error logs which can be very long by generating a summary of the failure with useful information.</p>
+</div>
+<div id="zampetti2017open" class="section level3">
+<h3><span class="header-section-number">4.4.12</span> <span class="citation">Zampetti et al. (<a href="#ref-zampetti2017open">2017</a>)</span></h3>
+<p><em>Referenced by <span class="citation">Vassallo et al. (<a href="#ref-vassallo2018break">2018</a>)</span> </em></p>
+<p>This paper studies the usage of static analysis tools in 20 Java open source software projects hosted on GitHub and using Travic CI as continuous integration infrastructure. There is investigated which tools are being used, what types of issues make the build fail or raise warnings and how is responded to broken builds.</p>
+</div>
+<div id="baltes2018no" class="section level3">
+<h3><span class="header-section-number">4.4.13</span> <span class="citation">Baltes et al. (<a href="#ref-baltes2018no">2018</a>)</span></h3>
+<p><em>Google Scholar search term <code>Github &quot;Continuous Integration&quot;</code>, papers from 2018</em></p>
+<p>This paper analyses 93 GitHub projects before and after adoption of Travis CI. It finds only one non-negligible effect, an increasing merge ratio, meaning that more merging commits in relation to all commits after a project started using Travis CI. But the paper also shows that this effect can be seen on projects not adopting CI. It shows the importance of having a proper dataset with as little bias as possible.</p>
+</div>
+</div>
+<div id="what-is-the-current-state-of-the-art-in-the-field-of-build-analytics" class="section level2">
+<h2><span class="header-section-number">4.5</span> What is the current state of the art in the field of build analytics?</h2>
+</div>
+<div id="what-is-the-current-state-of-practice-in-the-field-of-build-analytics" class="section level2">
+<h2><span class="header-section-number">4.6</span> What is the current state of practice in the field of build analytics?</h2>
+<p>In this section, I will examine scientific papers to analyse the current trend of build analytics in the software development industry.</p>
+<div id="fowler2006continuous" class="section level3">
+<h3><span class="header-section-number">4.6.1</span> <span class="citation">Fowler and Foemmel (<a href="#ref-fowler2006continuous">2006</a>)</span></h3>
+<p>In this paper, Martin talks about the current state of the software industry in terms of Continuous Integration (CI) and comments on the practises required to implement CI effectively. He talks about his experience working for a large English electronics company where the development of a project took two years and the integration process took several months. Integration is a long and unpredictable process. Martin suggested this approach and that the two most common reactions he got were: “it can’t work (here)” or “doing it won’t make much difference”. He expresses that most engineers don’t know how simple the process can be of setting the CI framework up. In this way, we get a glimpse into the practises popular within the industry regarding build analytics.</p>
+</div>
+<div id="hilton2016usage-1" class="section level3">
+<h3><span class="header-section-number">4.6.2</span> <span class="citation">Hilton et al. (<a href="#ref-hilton2016usage">2016</a>)</span></h3>
+<p>This paper examines the usage, costs and benefits of Continuous Integration. A survey conducted in open-source projects indicated that 40% of all projects used CI. Of the projects that used CI, 90% used Travis for their CI services. They also determine that the more popular projects use CI but there is no correlation between the popularity of language and usage of CI. It also observes that the median project introduces CI a year into development. The paper claims that CI is widely used in practise nowadays and CI adoption rates will increase even further in the future.</p>
+</div>
+<div id="rausch2017empirical-1" class="section level3">
+<h3><span class="header-section-number">4.6.3</span> <span class="citation">Rausch et al. (<a href="#ref-rausch2017empirical">2017</a>)</span></h3>
+<p>Version Control Systems (VCS) such as GitHub, and hosted build automation platforms such as Travis, have made Continuous Integration is widely available for projects of every size. This paper suggests that CI is widely used and has improved the quality of processes and developed software itself. However, the article suggests that there is little known about the variety and frequency of errors that cause builds to fail. It suggests that developers should eliminate flaky tests and address common issues regularly such as broken interaction with repositories to keep the build system healthy.</p>
+</div>
+<div id="stolberg2009enabling" class="section level3">
+<h3><span class="header-section-number">4.6.4</span> <span class="citation">Stolberg (<a href="#ref-stolberg2009enabling">2009</a>)</span></h3>
+<p>This paper defines CI as a key element in agile software development and testing environment. It also uses Marin Fowler’s practises of CI (as discussed previously) and expresses the importance of CI in the software industry.</p>
+</div>
+</div>
+<div id="what-future-research-can-we-expect-in-the-field-of-build-analytics" class="section level2">
+<h2><span class="header-section-number">4.7</span> What future research can we expect in the field of build analytics?</h2>
+<p>Future research in build analytics branches in a couple of different topics. <span class="citation">Pinto and Rebouças (<a href="#ref-pinto2018work">2018</a>)</span> proposes to focus on getting a better understanding of the users and why they might choose to abandon an automatic build platform.</p>
+<p>According to <span class="citation">Baltes et al. (<a href="#ref-baltes2018no">2018</a>)</span> future work could look into more perspectives when analyzing commit data, for instance partitioning commits by developer. It also notes the importance of more qualitative research.</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-bird2017predicting">
+<p>Bird, Christian, and Thomas Zimmermann. 2017. “Predicting Software Build Errors.” Google Patents.</p>
+</div>
+<div id="ref-beller2017oops">
+<p>Beller, Moritz, Georgios Gousios, and Andy Zaidman. 2017a. “Oops, My Tests Broke the Build: An Explorative Analysis of Travis Ci with Github.” In <em>Mining Software Repositories (Msr), 2017 Ieee/Acm 14th International Conference on</em>, 356–67. IEEE.</p>
+</div>
+<div id="ref-rausch2017empirical">
+<p>Rausch, Thomas, Waldemar Hummer, Philipp Leitner, and Stefan Schulte. 2017. “An Empirical Analysis of Build Failures in the Continuous Integration Workflows of Java-Based Open-Source Software.” In <em>Proceedings of the 14th International Conference on Mining Software Repositories</em>, 345–55. IEEE Press.</p>
+</div>
+<div id="ref-beller2017travistorrent">
+<p>Beller, Moritz, Georgios Gousios, and Andy Zaidman. 2017b. “Travistorrent: Synthesizing Travis Ci and Github for Full-Stack Research on Continuous Integration.” In <em>Proceedings of the 14th International Conference on Mining Software Repositories</em>, 447–50. IEEE press.</p>
+</div>
+<div id="ref-pinto2018work">
+<p>Pinto, Gustavo, and Fernando Castor Rodrigo Bonifacio Marcel Rebouças. 2018. “Work Practices and Challenges in Continuous Integration: A Survey with Travis Ci Users.”</p>
+</div>
+<div id="ref-zhao2017impact">
+<p>Zhao, Yangyang, Alexander Serebrenik, Yuming Zhou, Vladimir Filkov, and Bogdan Vasilescu. 2017. “The Impact of Continuous Integration on Other Software Development Practices: A Large-Scale Empirical Study.” In <em>Proceedings of the 32nd Ieee/Acm International Conference on Automated Software Engineering</em>, 60–71. IEEE Press.</p>
+</div>
+<div id="ref-widder2018m">
+<p>Widder, David Gray, Michael Hilton, Christian Kästner, and Bogdan Vasilescu. 2018. “I’im Leaving You, Travis: A Continuous Integration Breakup Story.”</p>
+</div>
+<div id="ref-hilton2016usage">
+<p>Hilton, Michael, Timothy Tunnell, Kai Huang, Darko Marinov, and Danny Dig. 2016. “Usage, Costs, and Benefits of Continuous Integration in Open-Source Projects.” In <em>Proceedings of the 31st Ieee/Acm International Conference on Automated Software Engineering</em>, 426–37. ACM.</p>
+</div>
+<div id="ref-vassallo2017tale">
+<p>Vassallo, Carmine, Gerald Schermann, Fiorella Zampetti, Daniele Romano, Philipp Leitner, Andy Zaidman, Massimiliano Di Penta, and Sebastiano Panichella. 2017. “A Tale of Ci Build Failures: An Open Source and a Financial Organization Perspective.” In <em>Software Maintenance and Evolution (Icsme), 2017 Ieee International Conference on</em>, 183–93. IEEE.</p>
+</div>
+<div id="ref-hassan2018hirebuild">
+<p>Hassan, Foyzul, and Xiaoyin Wang. 2018. “HireBuild: An Automatic Approach to History-Driven Repair of Build Scripts.” In <em>Proceedings of the 40th International Conference on Software Engineering</em>, 1078–89. ACM.</p>
+</div>
+<div id="ref-vassallo2018break">
+<p>Vassallo, Carmine, Sebastian Proksch, Timothy Zemp, and Harald C Gall. 2018. “Un-Break My Build: Assisting Developers with Build Repair Hints.”</p>
+</div>
+<div id="ref-zampetti2017open">
+<p>Zampetti, Fiorella, Simone Scalabrino, Rocco Oliveto, Gerardo Canfora, and Massimiliano Di Penta. 2017. “How Open Source Projects Use Static Code Analysis Tools in Continuous Integration Pipelines.” In <em>Mining Software Repositories (Msr), 2017 Ieee/Acm 14th International Conference on</em>, 334–44. IEEE.</p>
+</div>
+<div id="ref-baltes2018no">
+<p>Baltes, Sebastian, Jascha Knack, Daniel Anastasiou, Ralf Tymann, and Stephan Diehl. 2018. “(No) Influence of Continuous Integration on the Commit Activity in Github Projects.” <em>arXiv Preprint arXiv:1802.08441</em>.</p>
+</div>
+<div id="ref-fowler2006continuous">
+<p>Fowler, Martin, and Matthew Foemmel. 2006. “Continuous Integration.” <em>Thought-Works) Http://Www. Thoughtworks. Com/Continuous Integration. Pdf</em> 122: 14.</p>
+</div>
+<div id="ref-stolberg2009enabling">
+<p>Stolberg, Sean. 2009. “Enabling Agile Testing Through Continuous Integration.” In <em>Agile Conference, 2009. Agile’09.</em>, 369–74. IEEE.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>See <a href="https://travis-ci.org" class="uri">https://travis-ci.org</a><a href="head02-build-analytics-rmd.html#fnref1">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="build-analytics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sample-sub-topic.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-build-analytics.Rmd",
+"text": "Edit"
+},
+"download": ["software-analytics-survey.pdf", "software-analytics-survey.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
