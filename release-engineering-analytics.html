@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>A Literature Survey of Software Analytics</title>
+  <meta name="description" content="This is a contemporary, systematic survey of literature on Software Analytics.">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="A Literature Survey of Software Analytics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a contemporary, systematic survey of literature on Software Analytics." />
+  <meta name="github-repo" content="saltudelft/software-analytics-book" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="A Literature Survey of Software Analytics" />
+  
+  <meta name="twitter:description" content="This is a contemporary, systematic survey of literature on Software Analytics." />
+  
+
+<meta name="author" content="Moritz Beller, IN4334 2018 TU Delft">
+
+
+<meta name="date" content="2018-09-24">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="build-analytics.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Software Analytics Survey Book</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preamble</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i><b>1.1</b> License</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="a-contemporary-view-on-software-analytics.html"><a href="a-contemporary-view-on-software-analytics.html"><i class="fa fa-check"></i><b>2</b> A contemporary view on Software Analytics</a><ul>
+<li class="chapter" data-level="2.1" data-path="a-contemporary-view-on-software-analytics.html"><a href="a-contemporary-view-on-software-analytics.html#what-is-software-analytics"><i class="fa fa-check"></i><b>2.1</b> What is Software Analytics?</a></li>
+<li class="chapter" data-level="2.2" data-path="a-contemporary-view-on-software-analytics.html"><a href="a-contemporary-view-on-software-analytics.html#a-list-of-software-analytics-sub-topics"><i class="fa fa-check"></i><b>2.2</b> A list of Software Analytics Sub-Topics</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sample-sub-topic.html"><a href="sample-sub-topic.html"><i class="fa fa-check"></i><b>3</b> Sample Sub-Topic</a><ul>
+<li class="chapter" data-level="3.1" data-path="sample-sub-topic.html"><a href="sample-sub-topic.html#motivation"><i class="fa fa-check"></i><b>3.1</b> Motivation</a></li>
+<li class="chapter" data-level="3.2" data-path="sample-sub-topic.html"><a href="sample-sub-topic.html#research-protocol"><i class="fa fa-check"></i><b>3.2</b> Research protocol</a></li>
+<li class="chapter" data-level="3.3" data-path="sample-sub-topic.html"><a href="sample-sub-topic.html#answers"><i class="fa fa-check"></i><b>3.3</b> Answers</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>4</b> Final Words</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="5" data-path="app-store-analytics.html"><a href="app-store-analytics.html"><i class="fa fa-check"></i><b>5</b> App Store analytics</a><ul>
+<li class="chapter" data-level="5.1" data-path="app-store-analytics.html"><a href="app-store-analytics.html#api-change-and-fault-proneness-a-threat-to-the-success-of-android-apps"><i class="fa fa-check"></i><b>5.1</b> API change and fault proneness: A threat to the success of Android apps</a></li>
+<li class="chapter" data-level="5.2" data-path="app-store-analytics.html"><a href="app-store-analytics.html#the-impact-of-api-change-and-fault-proneness-on-the-user-ratings-of-android-apps"><i class="fa fa-check"></i><b>5.2</b> The Impact of API Change and Fault-Proneness on the User Ratings of Android Apps</a></li>
+<li class="chapter" data-level="5.3" data-path="app-store-analytics.html"><a href="app-store-analytics.html#how-can-i-improve-my-app-classifying-user-reviews-for-software-maintenance-and-evolution"><i class="fa fa-check"></i><b>5.3</b> How can i improve my app? Classifying user reviews for software maintenance and evolution</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="build-analytics.html"><a href="build-analytics.html"><i class="fa fa-check"></i><b>6</b> Build analytics</a><ul>
+<li class="chapter" data-level="6.1" data-path="build-analytics.html"><a href="build-analytics.html#background"><i class="fa fa-check"></i><b>6.1</b> Background</a></li>
+<li class="chapter" data-level="6.2" data-path="build-analytics.html"><a href="build-analytics.html#research-questions"><i class="fa fa-check"></i><b>6.2</b> Research Questions</a></li>
+<li class="chapter" data-level="6.3" data-path="build-analytics.html"><a href="build-analytics.html#search-strategy"><i class="fa fa-check"></i><b>6.3</b> Search Strategy</a></li>
+<li class="chapter" data-level="6.4" data-path="build-analytics.html"><a href="build-analytics.html#study-selection"><i class="fa fa-check"></i><b>6.4</b> Study Selection</a></li>
+<li class="chapter" data-level="6.5" data-path="build-analytics.html"><a href="build-analytics.html#summary-of-papers"><i class="fa fa-check"></i><b>6.5</b> Summary of papers</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="build-analytics.html"><a href="build-analytics.html#bird2017predicting"><i class="fa fa-check"></i><b>6.5.1</b> <span class="citation">Bird and Zimmermann (<a href="#ref-bird2017predicting">2017</a>)</span></a></li>
+<li class="chapter" data-level="6.5.2" data-path="build-analytics.html"><a href="build-analytics.html#beller2017oops"><i class="fa fa-check"></i><b>6.5.2</b> <span class="citation">Beller, Gousios, and Zaidman (<a href="#ref-beller2017oops">2017</a><a href="#ref-beller2017oops">a</a>)</span></a></li>
+<li class="chapter" data-level="6.5.3" data-path="build-analytics.html"><a href="build-analytics.html#rausch2017empirical"><i class="fa fa-check"></i><b>6.5.3</b> <span class="citation">Rausch et al. (<a href="#ref-rausch2017empirical">2017</a>)</span></a></li>
+<li class="chapter" data-level="6.5.4" data-path="build-analytics.html"><a href="build-analytics.html#beller2017travistorrent"><i class="fa fa-check"></i><b>6.5.4</b> <span class="citation">Beller, Gousios, and Zaidman (<a href="#ref-beller2017travistorrent">2017</a><a href="#ref-beller2017travistorrent">b</a>)</span></a></li>
+<li class="chapter" data-level="6.5.5" data-path="build-analytics.html"><a href="build-analytics.html#pinto2018work"><i class="fa fa-check"></i><b>6.5.5</b> <span class="citation">Pinto and Rebouças (<a href="#ref-pinto2018work">2018</a>)</span></a></li>
+<li class="chapter" data-level="6.5.6" data-path="build-analytics.html"><a href="build-analytics.html#zhao2017impact"><i class="fa fa-check"></i><b>6.5.6</b> <span class="citation">Zhao et al. (<a href="#ref-zhao2017impact">2017</a>)</span></a></li>
+<li class="chapter" data-level="6.5.7" data-path="build-analytics.html"><a href="build-analytics.html#widder2018m"><i class="fa fa-check"></i><b>6.5.7</b> <span class="citation">Widder et al. (<a href="#ref-widder2018m">2018</a>)</span></a></li>
+<li class="chapter" data-level="6.5.8" data-path="build-analytics.html"><a href="build-analytics.html#hilton2016usage"><i class="fa fa-check"></i><b>6.5.8</b> <span class="citation">Hilton et al. (<a href="#ref-hilton2016usage">2016</a>)</span></a></li>
+<li class="chapter" data-level="6.5.9" data-path="build-analytics.html"><a href="build-analytics.html#vassallo2017tale"><i class="fa fa-check"></i><b>6.5.9</b> <span class="citation">Vassallo et al. (<a href="#ref-vassallo2017tale">2017</a>)</span></a></li>
+<li class="chapter" data-level="6.5.10" data-path="build-analytics.html"><a href="build-analytics.html#hassan2018hirebuild"><i class="fa fa-check"></i><b>6.5.10</b> <span class="citation">Hassan and Wang (<a href="#ref-hassan2018hirebuild">2018</a>)</span></a></li>
+<li class="chapter" data-level="6.5.11" data-path="build-analytics.html"><a href="build-analytics.html#vassallo2018break"><i class="fa fa-check"></i><b>6.5.11</b> <span class="citation">Vassallo et al. (<a href="#ref-vassallo2018break">2018</a>)</span></a></li>
+<li class="chapter" data-level="6.5.12" data-path="build-analytics.html"><a href="build-analytics.html#zampetti2017open"><i class="fa fa-check"></i><b>6.5.12</b> <span class="citation">Zampetti et al. (<a href="#ref-zampetti2017open">2017</a>)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="release-engineering-analytics.html"><a href="release-engineering-analytics.html"><i class="fa fa-check"></i><b>7</b> Release Engineering Analytics</a><ul>
+<li class="chapter" data-level="7.1" data-path="release-engineering-analytics.html"><a href="release-engineering-analytics.html#search-strategy-1"><i class="fa fa-check"></i><b>7.1</b> Search Strategy</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Literature Survey of Software Analytics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="release-engineering-analytics" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> Release Engineering Analytics</h1>
+<div id="search-strategy-1" class="section level2">
+<h2><span class="header-section-number">7.1</span> Search Strategy</h2>
+<p>Release engineering is a relatively new research topic, given that modern processes for releasing software (e.g. continuous delivery) are industry-driven. Therefore, we took an exploratory approach in collecting any literature revolving around the topic of release engineering from the perspective of software analytics. This will aid us in determining a more narrow scope for our survey, subsequently allowing us to find additional literature fitting this scope.</p>
+<p>At the start of this project, five papers were given to us as a starting point for the literature survey. These initial papers were <span class="citation">Adams and McIntosh (<a href="#ref-adams2016a">2016</a>)</span>, <span class="citation">Costa et al. (<a href="#ref-da2016a">2016</a>)</span>, <span class="citation">Costa et al. (<a href="#ref-d2014a">2014</a>)</span>, <span class="citation">Khomh et al. (<a href="#ref-khomh2012a">2012</a>)</span>, and <span class="citation">Khomh et al. (<a href="#ref-khomh2015a">2015</a>)</span>.</p>
+<p>We collected publications using two search engines: Scopus and Google Scholar. These each encompass various databases such as ACM Digital Library, Springer, IEEE Xplore and ScienceDirect. The queries we entered are summarized in Figure 1. The publications found using this query were:</p>
+<ul>
+<li><span class="citation">Kaur and Vig (<a href="#ref-kaur2019a">2019</a>)</span></li>
+<li><span class="citation">Kerzazi and Robillard (<a href="#ref-kerzazi2013a">2013</a>)</span></li>
+<li><span class="citation">Castelluccio, An, and Khomh (<a href="#ref-castelluccio2017a">2017</a>)</span></li>
+<li><span class="citation">Karvonen et al. (<a href="#ref-karvonen2017a">2017</a>)</span></li>
+<li><span class="citation">Claes et al. (<a href="#ref-claes2017a">2017</a>)</span></li>
+<li><span class="citation">Fujibayashi et al. (<a href="#ref-fujibayashi2017a">2017</a>)</span></li>
+<li><span class="citation">Souza, Chavez, and Bittencourt (<a href="#ref-souza2015a">2015</a>)</span></li>
+<li><span class="citation">Laukkanen et al. (<a href="#ref-laukkanen2018a">2018</a>)</span></li>
+</ul>
+<pre><code>TITLE-ABS-KEY(
+  (
+    &quot;continuous release&quot; OR &quot;rapid release&quot; OR &quot;frequent release&quot;
+    OR &quot;quick release&quot; OR &quot;speedy release&quot; OR &quot;accelerated release&quot;
+    OR &quot;agile release&quot; OR &quot;short release&quot; OR &quot;shorter release&quot;
+    OR &quot;lightning release&quot; OR &quot;brisk release&quot; OR &quot;hasty release&quot;
+    OR &quot;compressed release&quot; OR &quot;release length&quot; OR &quot;release size&quot;
+    OR &quot;release cadence&quot; OR &quot;release frequency&quot;
+    OR &quot;continuous delivery&quot; OR &quot;rapid delivery&quot; OR &quot;frequent delivery&quot;
+    OR &quot;fast delivery&quot; OR &quot;quick delivery&quot; OR &quot;speedy delivery&quot;
+    OR &quot;accelerated delivery&quot; OR &quot;agile delivery&quot; OR &quot;short delivery&quot;
+    OR &quot;lightning delivery&quot; OR &quot;brisk delivery&quot; OR &quot;hasty delivery&quot;
+    OR &quot;compressed delivery&quot; OR &quot;delivery length&quot; OR &quot;delivery size&quot;
+    OR &quot;delivery cadence&quot; OR &quot;continuous deployment&quot; OR &quot;rapid deployment&quot;
+    OR &quot;frequent deployment&quot; OR &quot;fast deployment&quot; OR &quot;quick deployment&quot;
+    OR &quot;speedy deployment&quot; OR &quot;accelerated deployment&quot; OR &quot;agile deployment&quot;
+    OR &quot;short deployment&quot; OR &quot;lightning deployment&quot; OR &quot;brisk deployment&quot;
+    OR &quot;hasty deployment&quot; OR &quot;compressed deployment&quot; OR &quot;deployment length&quot;
+    OR &quot;deployment size&quot; OR &quot;deployment cadence&quot;
+  ) AND (
+    &quot;release schedule&quot; OR &quot;release management&quot; OR &quot;release engineering&quot;
+    OR &quot;release cycle&quot; OR &quot;release pipeline&quot; OR &quot;release process&quot;
+    OR &quot;release model&quot; OR &quot;release strategy&quot; OR &quot;release strategies&quot;
+    OR &quot;release infrastructure&quot;
+  )
+  AND software
+) AND (
+    LIMIT-TO(SUBJAREA, &quot;COMP&quot;) OR LIMIT-TO(SUBJAREA, &quot;ENGI&quot;)
+)
+AND PUBYEAR AFT 2014</code></pre>
+<p><em>Figure 1. Query used for retrieving release engineering publications via Scopus.</em></p>
+<p>In addition to the search strategy that is based on a combination of keywords and subject headings as described above, a review of the list of publications that retrieved papers cite and are cited by is done. These lists are provided by Google Scholar, as well as the reference lists of the papers themselves. Results of which are listed in Table 1.</p>
+<p><em>Table 1. Papers found indirectly by investigating citations of/by other papers.</em></p>
+<table>
+<thead>
+<tr class="header">
+<th>Starting point</th>
+<th>Type</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="citation">Souza, Chavez, and Bittencourt (<a href="#ref-souza2015a">2015</a>)</span></td>
+<td>has cited</td>
+<td><span class="citation">Plewnia, Dyck, and Lichter (<a href="#ref-plewnia2014a">2014</a>)</span> <br> <span class="citation">Mäntylä et al. (<a href="#ref-mantyla2015a">2015</a>)</span></td>
+</tr>
+<tr class="even">
+<td><span class="citation">Khomh et al. (<a href="#ref-khomh2015a">2015</a>)</span></td>
+<td>is cited by</td>
+<td><span class="citation">Poo-Caamaño (<a href="#ref-poo-caama2016a">2016</a>)</span> <br> <span class="citation">Teixeira (<a href="#ref-teixeira2017a">2017</a>)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="citation">Mäntylä et al. (<a href="#ref-mantyla2015a">2015</a>)</span></td>
+<td>is cited by</td>
+<td><span class="citation">Rodríguez et al. (<a href="#ref-rodriguez2017a">2017</a>)</span> <br> <span class="citation">Cesar Brandão Gomes da Silva et al. (<a href="#ref-cesar2017a">2017</a>)</span></td>
+</tr>
+</tbody>
+</table>
+<p>In order to aggregate our collective efforts, selected sources were stored in a custom built web-based tool for conducting literature reviews. The source code of this tool is published in a <a href="https://github.com/jessetilro/research">GitHub repository</a>. By commenting on and tagging our findings we were able to export a filtered list of publications, the relevance of which was agreed upon.</p>
+
+<div id="refs" class="references">
+<div>
+<p>Adams, Bram, and Shane McIntosh. 2016. “Modern Release Engineering in a Nutshell–why Researchers Should Care.” In <em>Software Analysis, Evolution, and Reengineering (Saner), 2016 Ieee 23rd International Conference on</em>, 5:78–90. IEEE. <a href="https://doi.org/10.1109/SANER.2016.108" class="uri">https://doi.org/10.1109/SANER.2016.108</a>.</p>
+</div>
+<div>
+<p>Beller, Moritz, Georgios Gousios, and Andy Zaidman. 2017a. “Oops, My Tests Broke the Build: An Explorative Analysis of Travis Ci with Github.” In <em>Mining Software Repositories (Msr), 2017 Ieee/Acm 14th International Conference on</em>, 356–67. IEEE.</p>
+</div>
+<div>
+<p>———. 2017b. “Travistorrent: Synthesizing Travis Ci and Github for Full-Stack Research on Continuous Integration.” In <em>Proceedings of the 14th International Conference on Mining Software Repositories</em>, 447–50. IEEE press.</p>
+</div>
+<div>
+<p>Bird, Christian, and Thomas Zimmermann. 2017. “Predicting Software Build Errors.” Google Patents.</p>
+</div>
+<div>
+<p>Castelluccio, M., L. An, and F. Khomh. 2017. “Is It Safe to Uplift This Patch? An Empirical Study on Mozilla Firefox.” In <em>Proceedings - 2017 IEEE International Conference on Software Maintenance and Evolution, ICSME 2017</em>, 411–21. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85040634374\&amp;doi=10.1109%2fICSME.2017.82\&amp;partnerID=40\&amp;md5=db36b40c2534743b53a2379157b50a59">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85040634374\&amp;doi=10.1109%2fICSME.2017.82\&amp;partnerID=40\&amp;md5=db36b40c2534743b53a2379157b50a59</a>.</p>
+</div>
+<div>
+<p>Cesar Brandão Gomes da Silva, Antonio, Glauco de Figueiredo Carneiro, Fernando Brito e Abreu, and Miguel Pessoa Monteiro. 2017. “Frequent Releases in Open Source Software: A Systematic Review.” <em>Information</em> 8 (3). Multidisciplinary Digital Publishing Institute: 109.</p>
+</div>
+<div>
+<p>Claes, M., M. Mantyla, M. Kuutila, and B. Adams. 2017. “Abnormal Working Hours: Effect of Rapid Releases and Implications to Work Content.” In <em>IEEE International Working Conference on Mining Software Repositories</em>, 243–47. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85026506528\&amp;doi=10.1109%2fMSR.2017.3\&amp;partnerID=40\&amp;md5=2da8fa8a15b9ffb4b1969663af15ecac">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85026506528\&amp;doi=10.1109%2fMSR.2017.3\&amp;partnerID=40\&amp;md5=2da8fa8a15b9ffb4b1969663af15ecac</a>.</p>
+</div>
+<div>
+<p>Costa, D. A. d., S. L. Abebe, S. Mcintosh, U. Kulesza, and A. E. Hassan. 2014. “An Empirical Study of Delays in the Integration of Addressed Issues.” In <em>2014 Ieee International Conference on Software Maintenance and Evolution</em>, 281–90. <a href="https://doi.org/10.1109/ICSME.2014.50" class="uri">https://doi.org/10.1109/ICSME.2014.50</a>.</p>
+</div>
+<div>
+<p>Costa, D. A. da, S. McIntosh, U. Kulesza, and A. E. Hassan. 2016. “The Impact of Switching to a Rapid Release Cycle on the Integration Delay of Addressed Issues - an Empirical Study of the Mozilla Firefox Project.” In <em>2016 Ieee/Acm 13th Working Conference on Mining Software Repositories (Msr)</em>, 374–85. <a href="https://doi.org/10.1109/MSR.2016.045" class="uri">https://doi.org/10.1109/MSR.2016.045</a>.</p>
+</div>
+<div>
+<p>Fujibayashi, D., A. Ihara, H. Suwa, R.G. Kula, and K. Matsumoto. 2017. “Does the Release Cycle of a Library Project Influence When It Is Adopted by a Client Project?” In <em>SANER 2017 - 24th IEEE International Conference on Software Analysis, Evolution, and Reengineering</em>, 569–70. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85018384049\&amp;doi=10.1109%2fSANER.2017.7884681\&amp;partnerID=40\&amp;md5=83955b8bec9726f3eb1bc751b3c5f2f8">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85018384049\&amp;doi=10.1109%2fSANER.2017.7884681\&amp;partnerID=40\&amp;md5=83955b8bec9726f3eb1bc751b3c5f2f8</a>.</p>
+</div>
+<div>
+<p>Hassan, Foyzul, and Xiaoyin Wang. 2018. “HireBuild: An Automatic Approach to History-Driven Repair of Build Scripts.” In <em>Proceedings of the 40th International Conference on Software Engineering</em>, 1078–89. ACM.</p>
+</div>
+<div>
+<p>Hilton, Michael, Timothy Tunnell, Kai Huang, Darko Marinov, and Danny Dig. 2016. “Usage, Costs, and Benefits of Continuous Integration in Open-Source Projects.” In <em>Proceedings of the 31st Ieee/Acm International Conference on Automated Software Engineering</em>, 426–37. ACM.</p>
+</div>
+<div>
+<p>Karvonen, T., W. Behutiye, M. Oivo, and P. Kuvaja. 2017. “Systematic Literature Review on the Impacts of Agile Release Engineering Practices.” <em>Information and Software Technology</em> 86: 87–100. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85028272067\&amp;doi=10.1016%2fj.infsof.2017.01.009\&amp;partnerID=40\&amp;md5=001c120eea2481c21dae5a551b44dd39">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85028272067\&amp;doi=10.1016%2fj.infsof.2017.01.009\&amp;partnerID=40\&amp;md5=001c120eea2481c21dae5a551b44dd39</a>.</p>
+</div>
+<div>
+<p>Kaur, A., and V. Vig. 2019. “On Understanding the Release Patterns of Open Source Java Projects.” <em>Advances in Intelligent Systems and Computing</em> 711: 9–18. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85049941993\&amp;doi=10.1007%2f978-981-10-8055-5_2\&amp;partnerID=40\&amp;md5=7a255f14762205c60f618cfb97569650">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85049941993\&amp;doi=10.1007%2f978-981-10-8055-5_2\&amp;partnerID=40\&amp;md5=7a255f14762205c60f618cfb97569650</a>.</p>
+</div>
+<div>
+<p>Kerzazi, N., and P.N. Robillard. 2013. “Kanbanize the Release Engineering Process.” In <em>2013 1st International Workshop on Release Engineering, RELENG 2013 - Proceedings</em>, 9–12. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-84886059813\&amp;doi=10.1109%2fRELENG.2013.6607689\&amp;partnerID=40\&amp;md5=73eb9fc8ca1f9b6568975ff0c054308c">https://www.scopus.com/inward/record.uri?eid=2-s2.0-84886059813\&amp;doi=10.1109%2fRELENG.2013.6607689\&amp;partnerID=40\&amp;md5=73eb9fc8ca1f9b6568975ff0c054308c</a>.</p>
+</div>
+<div>
+<p>Khomh, Foutse, Bram Adams, Tejinder Dhaliwal, and Ying Zou. 2015. “Understanding the Impact of Rapid Releases on Software Quality.” <em>Empirical Software Engineering</em> 20 (2): 336–73. <a href="https://doi.org/10.1007/s10664-014-9308-x" class="uri">https://doi.org/10.1007/s10664-014-9308-x</a>.</p>
+</div>
+<div>
+<p>Khomh, Foutse, Tejinder Dhaliwal, Ying Zou, and Bram Adams. 2012. “Do Faster Releases Improve Software Quality?: An Empirical Case Study of Mozilla Firefox.” In <em>Proceedings of the 9th Ieee Working Conference on Mining Software Repositories</em>, 179–88. MSR ’12. Piscataway, NJ, USA: IEEE Press. <a href="http://dl.acm.org/citation.cfm?id=2664446.2664475" class="uri">http://dl.acm.org/citation.cfm?id=2664446.2664475</a>.</p>
+</div>
+<div>
+<p>Laukkanen, E., M. Paasivaara, J. Itkonen, and C. Lassenius. 2018. “Comparison of Release Engineering Practices in a Large Mature Company and a Startup.” <em>Empirical Software Engineering</em>, 1–43. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85044460784\&amp;doi=10.1007%2fs10664-018-9616-7\&amp;partnerID=40\&amp;md5=dcca7b080050cb81ac889e6eede2b3cc">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85044460784\&amp;doi=10.1007%2fs10664-018-9616-7\&amp;partnerID=40\&amp;md5=dcca7b080050cb81ac889e6eede2b3cc</a>.</p>
+</div>
+<div>
+<p>Mäntylä, Mika V., Bram Adams, Foutse Khomh, Emelie Engström, and Kai Petersen. 2015. “On Rapid Releases and Software Testing: A Case Study and a Semi-Systematic Literature Review.” <em>Empirical Software Engineering</em> 20 (5): 1384–1425. <a href="https://doi.org/10.1007/s10664-014-9338-4" class="uri">https://doi.org/10.1007/s10664-014-9338-4</a>.</p>
+</div>
+<div>
+<p>Pinto, Gustavo, and Fernando Castor Rodrigo Bonifacio Marcel Rebouças. 2018. “Work Practices and Challenges in Continuous Integration: A Survey with Travis Ci Users.”</p>
+</div>
+<div>
+<p>Plewnia, Christian, Andrej Dyck, and Horst Lichter. 2014. “On the Influence of Release Engineering on Software Reputation.” In <em>Mountain View, ca, Usa: In 2nd International Workshop on Release Engineering</em>.</p>
+</div>
+<div>
+<p>Poo-Caamaño, Germán. 2016. “Release Management in Free and Open Source Software Ecosystems.” PhD thesis. <a href="http://dspace.library.uvic.ca/handle/1828/7648" class="uri">http://dspace.library.uvic.ca/handle/1828/7648</a>.</p>
+</div>
+<div>
+<p>Rausch, Thomas, Waldemar Hummer, Philipp Leitner, and Stefan Schulte. 2017. “An Empirical Analysis of Build Failures in the Continuous Integration Workflows of Java-Based Open-Source Software.” In <em>Proceedings of the 14th International Conference on Mining Software Repositories</em>, 345–55. IEEE Press.</p>
+</div>
+<div>
+<p>Rodríguez, Pilar, Alireza Haghighatkhah, Lucy Ellen Lwakatare, Susanna Teppola, Tanja Suomalainen, Juho Eskeli, Teemu Karvonen, Pasi Kuvaja, June M Verner, and Markku Oivo. 2017. “Continuous Deployment of Software Intensive Products and Services: A Systematic Mapping Study.” <em>Journal of Systems and Software</em> 123. Elsevier: 263–91.</p>
+</div>
+<div>
+<p>Souza, R., C. Chavez, and R.A. Bittencourt. 2015. “Rapid Releases and Patch Backouts: A Software Analytics Approach.” <em>IEEE Software</em> 32 (2): 89–96. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-84925218343\&amp;doi=10.1109%2fMS.2015.30\&amp;partnerID=40\&amp;md5=d624ac5b06a61704543a6d72af3981a1">https://www.scopus.com/inward/record.uri?eid=2-s2.0-84925218343\&amp;doi=10.1109%2fMS.2015.30\&amp;partnerID=40\&amp;md5=d624ac5b06a61704543a6d72af3981a1</a>.</p>
+</div>
+<div>
+<p>Teixeira, Jose. 2017. “Release Early, Release Often and Release on Time. an Empirical Case Study of Release Management.” In <em>Open Source Systems: Towards Robust Practices</em>, 167–81. Cham: Springer International Publishing. doi:<a href="https://doi.org/10.1007/978-3-319-57735-7_16">10.1007/978-3-319-57735-7_16</a>.</p>
+</div>
+<div>
+<p>Vassallo, Carmine, Sebastian Proksch, Timothy Zemp, and Harald C Gall. 2018. “Un-Break My Build: Assisting Developers with Build Repair Hints.”</p>
+</div>
+<div>
+<p>Vassallo, Carmine, Gerald Schermann, Fiorella Zampetti, Daniele Romano, Philipp Leitner, Andy Zaidman, Massimiliano Di Penta, and Sebastiano Panichella. 2017. “A Tale of Ci Build Failures: An Open Source and a Financial Organization Perspective.” In <em>Software Maintenance and Evolution (Icsme), 2017 Ieee International Conference on</em>, 183–93. IEEE.</p>
+</div>
+<div>
+<p>Widder, David Gray, Michael Hilton, Christian Kästner, and Bogdan Vasilescu. 2018. “I’im Leaving You, Travis: A Continuous Integration Breakup Story.”</p>
+</div>
+<div>
+<p>Zampetti, Fiorella, Simone Scalabrino, Rocco Oliveto, Gerardo Canfora, and Massimiliano Di Penta. 2017. “How Open Source Projects Use Static Code Analysis Tools in Continuous Integration Pipelines.” In <em>Mining Software Repositories (Msr), 2017 Ieee/Acm 14th International Conference on</em>, 334–44. IEEE.</p>
+</div>
+<div>
+<p>Zhao, Yangyang, Alexander Serebrenik, Yuming Zhou, Vladimir Filkov, and Bogdan Vasilescu. 2017. “The Impact of Continuous Integration on Other Software Development Practices: A Large-Scale Empirical Study.” In <em>Proceedings of the 32nd Ieee/Acm International Conference on Automated Software Engineering</em>, 60–71. IEEE Press.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-adams2016a">
+<p>Adams, Bram, and Shane McIntosh. 2016. “Modern Release Engineering in a Nutshell–why Researchers Should Care.” In <em>Software Analysis, Evolution, and Reengineering (Saner), 2016 Ieee 23rd International Conference on</em>, 5:78–90. IEEE. <a href="https://doi.org/10.1109/SANER.2016.108" class="uri">https://doi.org/10.1109/SANER.2016.108</a>.</p>
+</div>
+<div id="ref-da2016a">
+<p>Costa, D. A. da, S. McIntosh, U. Kulesza, and A. E. Hassan. 2016. “The Impact of Switching to a Rapid Release Cycle on the Integration Delay of Addressed Issues - an Empirical Study of the Mozilla Firefox Project.” In <em>2016 Ieee/Acm 13th Working Conference on Mining Software Repositories (Msr)</em>, 374–85. <a href="https://doi.org/10.1109/MSR.2016.045" class="uri">https://doi.org/10.1109/MSR.2016.045</a>.</p>
+</div>
+<div id="ref-d2014a">
+<p>Costa, D. A. d., S. L. Abebe, S. Mcintosh, U. Kulesza, and A. E. Hassan. 2014. “An Empirical Study of Delays in the Integration of Addressed Issues.” In <em>2014 Ieee International Conference on Software Maintenance and Evolution</em>, 281–90. <a href="https://doi.org/10.1109/ICSME.2014.50" class="uri">https://doi.org/10.1109/ICSME.2014.50</a>.</p>
+</div>
+<div id="ref-khomh2012a">
+<p>Khomh, Foutse, Tejinder Dhaliwal, Ying Zou, and Bram Adams. 2012. “Do Faster Releases Improve Software Quality?: An Empirical Case Study of Mozilla Firefox.” In <em>Proceedings of the 9th Ieee Working Conference on Mining Software Repositories</em>, 179–88. MSR ’12. Piscataway, NJ, USA: IEEE Press. <a href="http://dl.acm.org/citation.cfm?id=2664446.2664475" class="uri">http://dl.acm.org/citation.cfm?id=2664446.2664475</a>.</p>
+</div>
+<div id="ref-khomh2015a">
+<p>Khomh, Foutse, Bram Adams, Tejinder Dhaliwal, and Ying Zou. 2015. “Understanding the Impact of Rapid Releases on Software Quality.” <em>Empirical Software Engineering</em> 20 (2): 336–73. <a href="https://doi.org/10.1007/s10664-014-9308-x" class="uri">https://doi.org/10.1007/s10664-014-9308-x</a>.</p>
+</div>
+<div id="ref-kaur2019a">
+<p>Kaur, A., and V. Vig. 2019. “On Understanding the Release Patterns of Open Source Java Projects.” <em>Advances in Intelligent Systems and Computing</em> 711: 9–18. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85049941993\&amp;doi=10.1007%2f978-981-10-8055-5_2\&amp;partnerID=40\&amp;md5=7a255f14762205c60f618cfb97569650">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85049941993\&amp;doi=10.1007%2f978-981-10-8055-5_2\&amp;partnerID=40\&amp;md5=7a255f14762205c60f618cfb97569650</a>.</p>
+</div>
+<div id="ref-kerzazi2013a">
+<p>Kerzazi, N., and P.N. Robillard. 2013. “Kanbanize the Release Engineering Process.” In <em>2013 1st International Workshop on Release Engineering, RELENG 2013 - Proceedings</em>, 9–12. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-84886059813\&amp;doi=10.1109%2fRELENG.2013.6607689\&amp;partnerID=40\&amp;md5=73eb9fc8ca1f9b6568975ff0c054308c">https://www.scopus.com/inward/record.uri?eid=2-s2.0-84886059813\&amp;doi=10.1109%2fRELENG.2013.6607689\&amp;partnerID=40\&amp;md5=73eb9fc8ca1f9b6568975ff0c054308c</a>.</p>
+</div>
+<div id="ref-castelluccio2017a">
+<p>Castelluccio, M., L. An, and F. Khomh. 2017. “Is It Safe to Uplift This Patch? An Empirical Study on Mozilla Firefox.” In <em>Proceedings - 2017 IEEE International Conference on Software Maintenance and Evolution, ICSME 2017</em>, 411–21. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85040634374\&amp;doi=10.1109%2fICSME.2017.82\&amp;partnerID=40\&amp;md5=db36b40c2534743b53a2379157b50a59">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85040634374\&amp;doi=10.1109%2fICSME.2017.82\&amp;partnerID=40\&amp;md5=db36b40c2534743b53a2379157b50a59</a>.</p>
+</div>
+<div id="ref-karvonen2017a">
+<p>Karvonen, T., W. Behutiye, M. Oivo, and P. Kuvaja. 2017. “Systematic Literature Review on the Impacts of Agile Release Engineering Practices.” <em>Information and Software Technology</em> 86: 87–100. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85028272067\&amp;doi=10.1016%2fj.infsof.2017.01.009\&amp;partnerID=40\&amp;md5=001c120eea2481c21dae5a551b44dd39">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85028272067\&amp;doi=10.1016%2fj.infsof.2017.01.009\&amp;partnerID=40\&amp;md5=001c120eea2481c21dae5a551b44dd39</a>.</p>
+</div>
+<div id="ref-claes2017a">
+<p>Claes, M., M. Mantyla, M. Kuutila, and B. Adams. 2017. “Abnormal Working Hours: Effect of Rapid Releases and Implications to Work Content.” In <em>IEEE International Working Conference on Mining Software Repositories</em>, 243–47. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85026506528\&amp;doi=10.1109%2fMSR.2017.3\&amp;partnerID=40\&amp;md5=2da8fa8a15b9ffb4b1969663af15ecac">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85026506528\&amp;doi=10.1109%2fMSR.2017.3\&amp;partnerID=40\&amp;md5=2da8fa8a15b9ffb4b1969663af15ecac</a>.</p>
+</div>
+<div id="ref-fujibayashi2017a">
+<p>Fujibayashi, D., A. Ihara, H. Suwa, R.G. Kula, and K. Matsumoto. 2017. “Does the Release Cycle of a Library Project Influence When It Is Adopted by a Client Project?” In <em>SANER 2017 - 24th IEEE International Conference on Software Analysis, Evolution, and Reengineering</em>, 569–70. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85018384049\&amp;doi=10.1109%2fSANER.2017.7884681\&amp;partnerID=40\&amp;md5=83955b8bec9726f3eb1bc751b3c5f2f8">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85018384049\&amp;doi=10.1109%2fSANER.2017.7884681\&amp;partnerID=40\&amp;md5=83955b8bec9726f3eb1bc751b3c5f2f8</a>.</p>
+</div>
+<div id="ref-souza2015a">
+<p>Souza, R., C. Chavez, and R.A. Bittencourt. 2015. “Rapid Releases and Patch Backouts: A Software Analytics Approach.” <em>IEEE Software</em> 32 (2): 89–96. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-84925218343\&amp;doi=10.1109%2fMS.2015.30\&amp;partnerID=40\&amp;md5=d624ac5b06a61704543a6d72af3981a1">https://www.scopus.com/inward/record.uri?eid=2-s2.0-84925218343\&amp;doi=10.1109%2fMS.2015.30\&amp;partnerID=40\&amp;md5=d624ac5b06a61704543a6d72af3981a1</a>.</p>
+</div>
+<div id="ref-laukkanen2018a">
+<p>Laukkanen, E., M. Paasivaara, J. Itkonen, and C. Lassenius. 2018. “Comparison of Release Engineering Practices in a Large Mature Company and a Startup.” <em>Empirical Software Engineering</em>, 1–43. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85044460784\&amp;doi=10.1007%2fs10664-018-9616-7\&amp;partnerID=40\&amp;md5=dcca7b080050cb81ac889e6eede2b3cc">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85044460784\&amp;doi=10.1007%2fs10664-018-9616-7\&amp;partnerID=40\&amp;md5=dcca7b080050cb81ac889e6eede2b3cc</a>.</p>
+</div>
+<div id="ref-plewnia2014a">
+<p>Plewnia, Christian, Andrej Dyck, and Horst Lichter. 2014. “On the Influence of Release Engineering on Software Reputation.” In <em>Mountain View, ca, Usa: In 2nd International Workshop on Release Engineering</em>.</p>
+</div>
+<div id="ref-mantyla2015a">
+<p>Mäntylä, Mika V., Bram Adams, Foutse Khomh, Emelie Engström, and Kai Petersen. 2015. “On Rapid Releases and Software Testing: A Case Study and a Semi-Systematic Literature Review.” <em>Empirical Software Engineering</em> 20 (5): 1384–1425. <a href="https://doi.org/10.1007/s10664-014-9338-4" class="uri">https://doi.org/10.1007/s10664-014-9338-4</a>.</p>
+</div>
+<div id="ref-poo-caama2016a">
+<p>Poo-Caamaño, Germán. 2016. “Release Management in Free and Open Source Software Ecosystems.” PhD thesis. <a href="http://dspace.library.uvic.ca/handle/1828/7648" class="uri">http://dspace.library.uvic.ca/handle/1828/7648</a>.</p>
+</div>
+<div id="ref-teixeira2017a">
+<p>Teixeira, Jose. 2017. “Release Early, Release Often and Release on Time. an Empirical Case Study of Release Management.” In <em>Open Source Systems: Towards Robust Practices</em>, 167–81. Cham: Springer International Publishing. doi:<a href="https://doi.org/10.1007/978-3-319-57735-7_16">10.1007/978-3-319-57735-7_16</a>.</p>
+</div>
+<div id="ref-rodriguez2017a">
+<p>Rodríguez, Pilar, Alireza Haghighatkhah, Lucy Ellen Lwakatare, Susanna Teppola, Tanja Suomalainen, Juho Eskeli, Teemu Karvonen, Pasi Kuvaja, June M Verner, and Markku Oivo. 2017. “Continuous Deployment of Software Intensive Products and Services: A Systematic Mapping Study.” <em>Journal of Systems and Software</em> 123. Elsevier: 263–91.</p>
+</div>
+<div id="ref-cesar2017a">
+<p>Cesar Brandão Gomes da Silva, Antonio, Glauco de Figueiredo Carneiro, Fernando Brito e Abreu, and Miguel Pessoa Monteiro. 2017. “Frequent Releases in Open Source Software: A Systematic Review.” <em>Information</em> 8 (3). Multidisciplinary Digital Publishing Institute: 109.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="build-analytics.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/release-engineering-analytics.Rmd",
+"text": "Edit"
+},
+"download": ["software-analytics-survey.pdf", "software-analytics-survey.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

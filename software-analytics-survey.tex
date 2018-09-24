@@ -228,6 +228,79 @@ analyzing.}
 
 We have finished a nice book on Software Analytics.
 
+\chapter{App Store analytics}\label{app-store-analytics}
+
+\section{API change and fault proneness: A threat to the success of
+Android
+apps}\label{api-change-and-fault-proneness-a-threat-to-the-success-of-android-apps}
+
+M. Linares-Vásquez, G. Bavota, C. Bernal-Cárdenas, M. Di Penta, R.
+Oliveto, and D. Poshyvanyk, in Proceedings of the 2013 9th joint meeting
+on foundations of software engineering, 2013, pp. 477--487.
+
+The paper presents an empirical study that aims to corroborate the
+relationship between the fault and change-proneness of APIs and the
+degree of success of Android apps measured by their user ratings. For
+this, the authors selected a sample of 7,097 free Android apps from the
+Google Play Market and gathered information of the changes and faults
+that the APIs used by them presented. Using this data and statistical
+tools such as box-plots and the Mann-Whitney test, two main hypotheses
+were analyzed. The first hypothesis tested the relationship between
+fault-proneness (number of bugs fixed in the API) and the success of an
+app. The second tested the relationship between change-proneness
+(overall method changes, changes in method signatures and changes to the
+set of exceptions thrown by methods) and the success of an app. Finally,
+although no causal relationships between the variables can be assumed,
+the paper found significant differences of the level of success of the
+apps taking into consideration the change and fault-proneness of the
+APIs they use.
+
+\section{The Impact of API Change and Fault-Proneness on the User
+Ratings of Android
+Apps}\label{the-impact-of-api-change-and-fault-proneness-on-the-user-ratings-of-android-apps}
+
+G. Bavota, M. Linares-Vásquez, C. E. Bernal-Cárdenas, M. D. Penta, R.
+Oliveto and D. Poshyvanyk, in IEEE Transactions on Software Engineering,
+vol.~41, no. 4, pp.~384-407, 1 April 2015. doi: 10.1109/TSE.2014.2367027
+
+The paper by Bavota et al. aims to find empirical evidence supporting
+the success of apps and the relationship with change- and
+fault-proneness of the underlying APIs, where the success of the app is
+measured by its user rating. They performed two case studies to find
+quantitative evidence using 5848 free Android apps as well as an
+explanation for these results doing a survey with 45 professional
+Android developers. The quantitative case study was done by comparing
+the user ratings to the number of bug fixes and changes in the API that
+an app uses. They found that apps with a high user rating are
+significantly less change- and fault-prone than APIs used by apps with a
+low user rating. In the second case study the paper found that most of
+the 45 developers observed a direct relationship between the user
+ratings of apps and the APIs those apps use.
+
+\section{How can i improve my app? Classifying user reviews for software
+maintenance and
+evolution}\label{how-can-i-improve-my-app-classifying-user-reviews-for-software-maintenance-and-evolution}
+
+S. Panichella, A. D. Sorbo, E. Guzman, C. A. Visaggio, G. Canfora, and
+H. C. Gall, in 2015 ieee international conference on software
+maintenance and evolution (icsme), 2015, pp.~281--290.
+
+The most popular apps in the app stores (such as Google Play or App
+Store) receive thousands of user reviews per day and therefore it would
+be very time demanding to go through the reviews manually to obtain
+relevant information for the future development of the apps. This paper
+uses a combination of Natural Language Processing Sentiment Analysis and
+Text Analysis to extract relevant sentences from the reviews and to
+classify them into the following categories: Information Seeking,
+Information Giving, Feature Request, Problem Discovery, and Others. The
+results show 75\% precision and 74\% recall when classifier (J48 using
+data from NLP+SA+TA) is trained on 20\% of the data (1421 manually
+labeled sentences from reviews of seven different apps) and the rest is
+used for testing. The paper also states that the results do not differ
+in a statistically significant manner when a different classifier is
+used and shows that precision and recall can be further improved by
+increasing the size of the data set.
+
 \chapter{Build analytics}\label{build-analytics}
 
 \section{Background}\label{background}
@@ -384,6 +457,116 @@ source software projects hosted on GitHub and using Travic CI as
 continuous integration infrastructure. There is investigated which tools
 are being used, what types of issues make the build fail or raise
 warnings and how is responded to broken builds.
+
+\chapter{Release Engineering
+Analytics}\label{release-engineering-analytics}
+
+\section{Search Strategy}\label{search-strategy-1}
+
+Release engineering is a relatively new research topic, given that
+modern processes for releasing software (e.g.~continuous delivery) are
+industry-driven. Therefore, we took an exploratory approach in
+collecting any literature revolving around the topic of release
+engineering from the perspective of software analytics. This will aid us
+in determining a more narrow scope for our survey, subsequently allowing
+us to find additional literature fitting this scope.
+
+At the start of this project, five papers were given to us as a starting
+point for the literature survey. These initial papers were
+\citet{adams2016a}, \citet{da2016a}, \citet{d2014a}, \citet{khomh2012a},
+and \citet{khomh2015a}.
+
+We collected publications using two search engines: Scopus and Google
+Scholar. These each encompass various databases such as ACM Digital
+Library, Springer, IEEE Xplore and ScienceDirect. The queries we entered
+are summarized in Figure 1. The publications found using this query
+were:
+
+\begin{itemize}
+\tightlist
+\item
+  \citet{kaur2019a}
+\item
+  \citet{kerzazi2013a}
+\item
+  \citet{castelluccio2017a}
+\item
+  \citet{karvonen2017a}
+\item
+  \citet{claes2017a}
+\item
+  \citet{fujibayashi2017a}
+\item
+  \citet{souza2015a}
+\item
+  \citet{laukkanen2018a}
+\end{itemize}
+
+\begin{verbatim}
+TITLE-ABS-KEY(
+  (
+    "continuous release" OR "rapid release" OR "frequent release"
+    OR "quick release" OR "speedy release" OR "accelerated release"
+    OR "agile release" OR "short release" OR "shorter release"
+    OR "lightning release" OR "brisk release" OR "hasty release"
+    OR "compressed release" OR "release length" OR "release size"
+    OR "release cadence" OR "release frequency"
+    OR "continuous delivery" OR "rapid delivery" OR "frequent delivery"
+    OR "fast delivery" OR "quick delivery" OR "speedy delivery"
+    OR "accelerated delivery" OR "agile delivery" OR "short delivery"
+    OR "lightning delivery" OR "brisk delivery" OR "hasty delivery"
+    OR "compressed delivery" OR "delivery length" OR "delivery size"
+    OR "delivery cadence" OR "continuous deployment" OR "rapid deployment"
+    OR "frequent deployment" OR "fast deployment" OR "quick deployment"
+    OR "speedy deployment" OR "accelerated deployment" OR "agile deployment"
+    OR "short deployment" OR "lightning deployment" OR "brisk deployment"
+    OR "hasty deployment" OR "compressed deployment" OR "deployment length"
+    OR "deployment size" OR "deployment cadence"
+  ) AND (
+    "release schedule" OR "release management" OR "release engineering"
+    OR "release cycle" OR "release pipeline" OR "release process"
+    OR "release model" OR "release strategy" OR "release strategies"
+    OR "release infrastructure"
+  )
+  AND software
+) AND (
+    LIMIT-TO(SUBJAREA, "COMP") OR LIMIT-TO(SUBJAREA, "ENGI")
+)
+AND PUBYEAR AFT 2014
+\end{verbatim}
+
+\emph{Figure 1. Query used for retrieving release engineering
+publications via Scopus.}
+
+In addition to the search strategy that is based on a combination of
+keywords and subject headings as described above, a review of the list
+of publications that retrieved papers cite and are cited by is done.
+These lists are provided by Google Scholar, as well as the reference
+lists of the papers themselves. Results of which are listed in Table 1.
+
+\emph{Table 1. Papers found indirectly by investigating citations of/by
+other papers.}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Starting point & Type & Result\tabularnewline
+\midrule
+\endhead
+\citet{souza2015a} & has cited & \citet{plewnia2014a}
+\citet{mantyla2015a}\tabularnewline
+\citet{khomh2015a} & is cited by & \citet{poo-caama2016a}
+\citet{teixeira2017a}\tabularnewline
+\citet{mantyla2015a} & is cited by & \citet{rodriguez2017a}
+\citet{cesar2017a}\tabularnewline
+\bottomrule
+\end{longtable}
+
+In order to aggregate our collective efforts, selected sources were
+stored in a custom built web-based tool for conducting literature
+reviews. The source code of this tool is published in a
+\href{https://github.com/jessetilro/research}{GitHub repository}. By
+commenting on and tagging our findings we were able to export a filtered
+list of publications, the relevance of which was agreed upon.
 
 \bibliography{book.bib}
 
