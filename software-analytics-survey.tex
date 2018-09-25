@@ -25,7 +25,7 @@
 \usepackage{hyperref}
 \hypersetup{unicode=true,
             pdftitle={A Literature Survey of Software Analytics},
-            pdfauthor={Moritz Beller, IN4334 2018 TU Delft},
+            pdfauthor={IN4334 2018 TU Delft},
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
@@ -80,12 +80,12 @@
   \title{A Literature Survey of Software Analytics}
     \pretitle{\vspace{\droptitle}\centering\huge}
   \posttitle{\par}
-    \author{Moritz Beller, IN4334 2018 TU Delft}
+    \author{IN4334 2018 TU Delft}
     \preauthor{\centering\large\emph}
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2018-09-24}
+    \date{2018-09-25}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -115,12 +115,12 @@ and is the outcome of a systematic literature review a laborious team of
 With this book, we hope to structure the new field of Software Analytics
 and show how it is related to many long existing research fields.
 
-\emph{Moritz Beller}
+\emph{The IN4334 -- Software Analytics class of 2018}
 
 \section{License}\label{license}
 
 \includegraphics{figures/cc-nc-sa.png} This book is copyrighted 2018 by
-TU Delft and its respective authors and distributed under a
+TU Delft and its respective authors and distributed under the
 \href{https://creativecommons.org/licenses/by-nc-sa/4.0/}{CC BY-NC-SA
 4.0 license}
 
@@ -223,83 +223,6 @@ analyzing.}
     works
   \end{itemize}
 \end{itemize}
-
-\chapter{Final Words}\label{final-words}
-
-We have finished a nice book on Software Analytics.
-
-\chapter{App Store analytics}\label{app-store-analytics}
-
-\section{API change and fault proneness: A threat to the success of
-Android
-apps}\label{api-change-and-fault-proneness-a-threat-to-the-success-of-android-apps}
-
-M. Linares-Vásquez, G. Bavota, C. Bernal-Cárdenas, M. Di Penta, R.
-Oliveto, and D. Poshyvanyk, in Proceedings of the 2013 9th joint meeting
-on foundations of software engineering, 2013, pp. 477--487.
-
-The paper presents an empirical study that aims to corroborate the
-relationship between the fault and change-proneness of APIs and the
-degree of success of Android apps measured by their user ratings. For
-this, the authors selected a sample of 7,097 free Android apps from the
-Google Play Market and gathered information of the changes and faults
-that the APIs used by them presented. Using this data and statistical
-tools such as box-plots and the Mann-Whitney test, two main hypotheses
-were analyzed. The first hypothesis tested the relationship between
-fault-proneness (number of bugs fixed in the API) and the success of an
-app. The second tested the relationship between change-proneness
-(overall method changes, changes in method signatures and changes to the
-set of exceptions thrown by methods) and the success of an app. Finally,
-although no causal relationships between the variables can be assumed,
-the paper found significant differences of the level of success of the
-apps taking into consideration the change and fault-proneness of the
-APIs they use.
-
-\section{The Impact of API Change and Fault-Proneness on the User
-Ratings of Android
-Apps}\label{the-impact-of-api-change-and-fault-proneness-on-the-user-ratings-of-android-apps}
-
-G. Bavota, M. Linares-Vásquez, C. E. Bernal-Cárdenas, M. D. Penta, R.
-Oliveto and D. Poshyvanyk, in IEEE Transactions on Software Engineering,
-vol.~41, no. 4, pp.~384-407, 1 April 2015. doi: 10.1109/TSE.2014.2367027
-
-The paper by Bavota et al. aims to find empirical evidence supporting
-the success of apps and the relationship with change- and
-fault-proneness of the underlying APIs, where the success of the app is
-measured by its user rating. They performed two case studies to find
-quantitative evidence using 5848 free Android apps as well as an
-explanation for these results doing a survey with 45 professional
-Android developers. The quantitative case study was done by comparing
-the user ratings to the number of bug fixes and changes in the API that
-an app uses. They found that apps with a high user rating are
-significantly less change- and fault-prone than APIs used by apps with a
-low user rating. In the second case study the paper found that most of
-the 45 developers observed a direct relationship between the user
-ratings of apps and the APIs those apps use.
-
-\section{How can i improve my app? Classifying user reviews for software
-maintenance and
-evolution}\label{how-can-i-improve-my-app-classifying-user-reviews-for-software-maintenance-and-evolution}
-
-S. Panichella, A. D. Sorbo, E. Guzman, C. A. Visaggio, G. Canfora, and
-H. C. Gall, in 2015 ieee international conference on software
-maintenance and evolution (icsme), 2015, pp.~281--290.
-
-The most popular apps in the app stores (such as Google Play or App
-Store) receive thousands of user reviews per day and therefore it would
-be very time demanding to go through the reviews manually to obtain
-relevant information for the future development of the apps. This paper
-uses a combination of Natural Language Processing Sentiment Analysis and
-Text Analysis to extract relevant sentences from the reviews and to
-classify them into the following categories: Information Seeking,
-Information Giving, Feature Request, Problem Discovery, and Others. The
-results show 75\% precision and 74\% recall when classifier (J48 using
-data from NLP+SA+TA) is trained on 20\% of the data (1421 manually
-labeled sentences from reviews of seven different apps) and the rest is
-used for testing. The paper also states that the results do not differ
-in a statistically significant manner when a different classifier is
-used and shows that precision and recall can be further improved by
-increasing the size of the data set.
 
 \chapter{Build analytics}\label{build-analytics}
 
@@ -466,6 +389,190 @@ continuous integration infrastructure. There is investigated which tools
 are being used, what types of issues make the build fail or raise
 warnings and how is responded to broken builds.
 
+\chapter{Sample Sub-Topic}\label{sample-sub-topic-1}
+
+\emph{This is an example for the deliverable every group works on. Every
+group works on one independent chapter (starting as one Rmd file).}
+
+\section{Motivation}\label{motivation-1}
+
+\emph{A short introduction about why the topic you are working on is
+interesting.}
+
+The RQs that everyone should be aiming at are:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{RQ1} Current state of the art in software analytics for
+  \emph{your topic }:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Topics that are being explored
+  \item
+    Research methods, tools and datasets being used
+  \item
+    Main research findings, aggregated
+  \end{itemize}
+\item
+  \textbf{RQ2} Current state of practice in software analytics for
+  \emph{your topic }:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Tools and companies creating / employing them
+  \item
+    Case studies and their findings
+  \end{itemize}
+\item
+  \textbf{RQ3} Open challenges and future research required
+\end{itemize}
+
+\section{Research protocol}\label{research-protocol-1}
+
+\emph{Here, you describe the details of applying Kitchenham's survey
+method for your topic, including search queries, fact extraction, coding
+process and an intial groupping of the papers that you will be
+analyzing.}
+
+\section{Answers}\label{answers-1}
+
+\emph{Aggregated answers to the RQs, per RQ. You need:}
+
+\begin{itemize}
+\tightlist
+\item
+  For \textbf{RQ1}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Topics that are being explored
+  \item
+    Research methods, tools and datasets being used
+  \item
+    Main research findings, aggregated
+  \end{itemize}
+\item
+  For \textbf{RQ2} :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Tools and companies creating / employing them
+  \item
+    Case studies and their findings
+  \end{itemize}
+\item
+  For \textbf{RQ3}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    List of challenges
+  \item
+    An aggregated set of open research items, as described in the papers
+  \item
+    Research questions that emerge from the synthesis of the presented
+    works
+  \end{itemize}
+\end{itemize}
+
+\chapter{Sample Sub-Topic}\label{sample-sub-topic-2}
+
+\emph{This is an example for the deliverable every group works on. Every
+group works on one independent chapter (starting as one Rmd file).}
+
+\section{Motivation}\label{motivation-2}
+
+\emph{A short introduction about why the topic you are working on is
+interesting.}
+
+The RQs that everyone should be aiming at are:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{RQ1} Current state of the art in software analytics for
+  \emph{your topic }:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Topics that are being explored
+  \item
+    Research methods, tools and datasets being used
+  \item
+    Main research findings, aggregated
+  \end{itemize}
+\item
+  \textbf{RQ2} Current state of practice in software analytics for
+  \emph{your topic }:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Tools and companies creating / employing them
+  \item
+    Case studies and their findings
+  \end{itemize}
+\item
+  \textbf{RQ3} Open challenges and future research required
+\end{itemize}
+
+\section{Research protocol}\label{research-protocol-2}
+
+\emph{Here, you describe the details of applying Kitchenham's survey
+method for your topic, including search queries, fact extraction, coding
+process and an intial groupping of the papers that you will be
+analyzing.}
+
+\section{Answers}\label{answers-2}
+
+\emph{Aggregated answers to the RQs, per RQ. You need:}
+
+\begin{itemize}
+\tightlist
+\item
+  For \textbf{RQ1}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Topics that are being explored
+  \item
+    Research methods, tools and datasets being used
+  \item
+    Main research findings, aggregated
+  \end{itemize}
+\item
+  For \textbf{RQ2} :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Tools and companies creating / employing them
+  \item
+    Case studies and their findings
+  \end{itemize}
+\item
+  For \textbf{RQ3}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    List of challenges
+  \item
+    An aggregated set of open research items, as described in the papers
+  \item
+    Research questions that emerge from the synthesis of the presented
+    works
+  \end{itemize}
+\end{itemize}
+
 \chapter{Release Engineering
 Analytics}\label{release-engineering-analytics}
 
@@ -575,6 +682,267 @@ reviews. The source code of this tool is published in a
 \href{https://github.com/jessetilro/research}{GitHub repository}. By
 commenting on and tagging our findings we were able to export a filtered
 list of publications, the relevance of which was agreed upon.
+
+\chapter{Sample Sub-Topic}\label{sample-sub-topic-3}
+
+\emph{This is an example for the deliverable every group works on. Every
+group works on one independent chapter (starting as one Rmd file).}
+
+\section{Motivation}\label{motivation-3}
+
+\emph{A short introduction about why the topic you are working on is
+interesting.}
+
+The RQs that everyone should be aiming at are:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{RQ1} Current state of the art in software analytics for
+  \emph{your topic }:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Topics that are being explored
+  \item
+    Research methods, tools and datasets being used
+  \item
+    Main research findings, aggregated
+  \end{itemize}
+\item
+  \textbf{RQ2} Current state of practice in software analytics for
+  \emph{your topic }:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Tools and companies creating / employing them
+  \item
+    Case studies and their findings
+  \end{itemize}
+\item
+  \textbf{RQ3} Open challenges and future research required
+\end{itemize}
+
+\section{Research protocol}\label{research-protocol-3}
+
+\emph{Here, you describe the details of applying Kitchenham's survey
+method for your topic, including search queries, fact extraction, coding
+process and an intial groupping of the papers that you will be
+analyzing.}
+
+\section{Answers}\label{answers-3}
+
+\emph{Aggregated answers to the RQs, per RQ. You need:}
+
+\begin{itemize}
+\tightlist
+\item
+  For \textbf{RQ1}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Topics that are being explored
+  \item
+    Research methods, tools and datasets being used
+  \item
+    Main research findings, aggregated
+  \end{itemize}
+\item
+  For \textbf{RQ2} :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Tools and companies creating / employing them
+  \item
+    Case studies and their findings
+  \end{itemize}
+\item
+  For \textbf{RQ3}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    List of challenges
+  \item
+    An aggregated set of open research items, as described in the papers
+  \item
+    Research questions that emerge from the synthesis of the presented
+    works
+  \end{itemize}
+\end{itemize}
+
+\chapter{Sample Sub-Topic}\label{sample-sub-topic-4}
+
+\emph{This is an example for the deliverable every group works on. Every
+group works on one independent chapter (starting as one Rmd file).}
+
+\section{Motivation}\label{motivation-4}
+
+\emph{A short introduction about why the topic you are working on is
+interesting.}
+
+The RQs that everyone should be aiming at are:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{RQ1} Current state of the art in software analytics for
+  \emph{your topic }:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Topics that are being explored
+  \item
+    Research methods, tools and datasets being used
+  \item
+    Main research findings, aggregated
+  \end{itemize}
+\item
+  \textbf{RQ2} Current state of practice in software analytics for
+  \emph{your topic }:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Tools and companies creating / employing them
+  \item
+    Case studies and their findings
+  \end{itemize}
+\item
+  \textbf{RQ3} Open challenges and future research required
+\end{itemize}
+
+\section{Research protocol}\label{research-protocol-4}
+
+\emph{Here, you describe the details of applying Kitchenham's survey
+method for your topic, including search queries, fact extraction, coding
+process and an intial groupping of the papers that you will be
+analyzing.}
+
+\section{Answers}\label{answers-4}
+
+\emph{Aggregated answers to the RQs, per RQ. You need:}
+
+\begin{itemize}
+\tightlist
+\item
+  For \textbf{RQ1}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Topics that are being explored
+  \item
+    Research methods, tools and datasets being used
+  \item
+    Main research findings, aggregated
+  \end{itemize}
+\item
+  For \textbf{RQ2} :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Tools and companies creating / employing them
+  \item
+    Case studies and their findings
+  \end{itemize}
+\item
+  For \textbf{RQ3}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    List of challenges
+  \item
+    An aggregated set of open research items, as described in the papers
+  \item
+    Research questions that emerge from the synthesis of the presented
+    works
+  \end{itemize}
+\end{itemize}
+
+\chapter{App Store analytics}\label{app-store-analytics}
+
+\section{API change and fault proneness: A threat to the success of
+Android
+apps}\label{api-change-and-fault-proneness-a-threat-to-the-success-of-android-apps}
+
+M. Linares-Vásquez, G. Bavota, C. Bernal-Cárdenas, M. Di Penta, R.
+Oliveto, and D. Poshyvanyk, in Proceedings of the 2013 9th joint meeting
+on foundations of software engineering, 2013, pp. 477--487.
+
+The paper presents an empirical study that aims to corroborate the
+relationship between the fault and change-proneness of APIs and the
+degree of success of Android apps measured by their user ratings. For
+this, the authors selected a sample of 7,097 free Android apps from the
+Google Play Market and gathered information of the changes and faults
+that the APIs used by them presented. Using this data and statistical
+tools such as box-plots and the Mann-Whitney test, two main hypotheses
+were analyzed. The first hypothesis tested the relationship between
+fault-proneness (number of bugs fixed in the API) and the success of an
+app. The second tested the relationship between change-proneness
+(overall method changes, changes in method signatures and changes to the
+set of exceptions thrown by methods) and the success of an app. Finally,
+although no causal relationships between the variables can be assumed,
+the paper found significant differences of the level of success of the
+apps taking into consideration the change and fault-proneness of the
+APIs they use.
+
+\section{The Impact of API Change and Fault-Proneness on the User
+Ratings of Android
+Apps}\label{the-impact-of-api-change-and-fault-proneness-on-the-user-ratings-of-android-apps}
+
+G. Bavota, M. Linares-Vásquez, C. E. Bernal-Cárdenas, M. D. Penta, R.
+Oliveto and D. Poshyvanyk, in IEEE Transactions on Software Engineering,
+vol.~41, no. 4, pp.~384-407, 1 April 2015. doi: 10.1109/TSE.2014.2367027
+
+The paper by Bavota et al. aims to find empirical evidence supporting
+the success of apps and the relationship with change- and
+fault-proneness of the underlying APIs, where the success of the app is
+measured by its user rating. They performed two case studies to find
+quantitative evidence using 5848 free Android apps as well as an
+explanation for these results doing a survey with 45 professional
+Android developers. The quantitative case study was done by comparing
+the user ratings to the number of bug fixes and changes in the API that
+an app uses. They found that apps with a high user rating are
+significantly less change- and fault-prone than APIs used by apps with a
+low user rating. In the second case study the paper found that most of
+the 45 developers observed a direct relationship between the user
+ratings of apps and the APIs those apps use.
+
+\section{How can i improve my app? Classifying user reviews for software
+maintenance and
+evolution}\label{how-can-i-improve-my-app-classifying-user-reviews-for-software-maintenance-and-evolution}
+
+S. Panichella, A. D. Sorbo, E. Guzman, C. A. Visaggio, G. Canfora, and
+H. C. Gall, in 2015 ieee international conference on software
+maintenance and evolution (icsme), 2015, pp.~281--290.
+
+The most popular apps in the app stores (such as Google Play or App
+Store) receive thousands of user reviews per day and therefore it would
+be very time demanding to go through the reviews manually to obtain
+relevant information for the future development of the apps. This paper
+uses a combination of Natural Language Processing Sentiment Analysis and
+Text Analysis to extract relevant sentences from the reviews and to
+classify them into the following categories: Information Seeking,
+Information Giving, Feature Request, Problem Discovery, and Others. The
+results show 75\% precision and 74\% recall when classifier (J48 using
+data from NLP+SA+TA) is trained on 20\% of the data (1421 manually
+labeled sentences from reviews of seven different apps) and the rest is
+used for testing. The paper also states that the results do not differ
+in a statistically significant manner when a different classifier is
+used and shows that precision and recall can be further improved by
+increasing the size of the data set.
+
+\chapter{Final Words}\label{final-words}
+
+We have finished a nice book on Software Analytics.
 
 \bibliography{book.bib}
 
