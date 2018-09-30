@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="ecosystem-analytics.html">
-<link rel="next" href="code-review.html">
+<link rel="prev" href="release-engineering-analytics.html">
+<link rel="next" href="runtime-and-performance-analytics.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -243,320 +243,387 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="release-engineering-analytics" class="section level1">
-<h1><span class="header-section-number">Chapter 7</span> Release Engineering Analytics</h1>
-<div id="motivation-4" class="section level2">
-<h2><span class="header-section-number">7.1</span> Motivation</h2>
-<p>Release engineering is a discipline involved with making software available for end users. Efforts spent within the development environment of a software system should eventually be integrated and deployed such that end users may benefit from them. In recent years, release engineers have developed and adopted techniques to build infrastructures and pipelines which automate the process of releasing software to an increasingly large degree. These modern approaches have resulted in various practices such as releasing new versions of a software system in significantly shorter cycles.</p>
-<p>Due to these developments being industry-driven, release engineering forms a largely uncharted territory for software engineering research. It requires the attention from researchers both because these new practices have an often unanticipated impact on software studies and because they require empirical validation <span class="citation">(Adams and McIntosh <a href="#ref-adams2016a">2016</a>)</span>.</p>
-<p>Therefore, this systematic literature review aims to provide an overview of the software analytics research that has been conducted so far on release engineering. Its main purpose is to identify the apparent gap between research and practice, in order to guide further research efforts.</p>
-<div id="research-questions-1" class="section level3">
-<h3><span class="header-section-number">7.1.1</span> Research Questions</h3>
-<p>Contrary to what is regularly the case, with release engineering, practice seems to be ahead of research. Building on this idea, our questions are constructed to identify in which ways existing modern release engineering practices should still be studied in software analytics research. Our review thus aims to answer the following questions.</p>
-<!-- TODO -->
+<div id="code-review" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Code Review</h1>
+<div id="review-protocol" class="section level2">
+<h2><span class="header-section-number">8.1</span> Review protocol</h2>
+<p>This section describes the review protocol used for the systematic review presented in this section. The protcol has been set up using Kitchenham’s method as described by Kitchenham et al. <span class="citation">(Kitchenham <a href="#ref-kitchenham2007">2007</a>)</span>.</p>
+<div id="research-questions-2" class="section level3">
+<h3><span class="header-section-number">8.1.1</span> Research questions</h3>
+<p>The goal of the review is to summarize the state of the art and identify future challenges in the code review area. The research questions are as follows:</p>
 <ul>
-<li><p><strong>RQ 1:</strong> <em>How is modern release engineering done in practice?</em><br> This question aims to identify the so-called “state of the practice” in release engineering. We will summarize practices that have been adopted to drive release engineering forward. In addition we will identify the tools utilized to bring this about. Case studies will also be analyzed to this end.</p></li>
-<li><p><strong>RQ 2:</strong> <em>What aspects of modern release engineering have been studied in software analytics research so far?</em><br> In order to answer this question we investigate the practices that previous empirical studies have focused on. In doing so, we identify the associated costs and benefits that have been found, and the analysis methods used.</p></li>
-<li><p><strong>RQ 3:</strong> <em>What aspects of modern release engineering make for relevant study objects in future software analytics research?</em><br> In answering this question we aim to identify the gap between practice and research in release engineering. This way, our intent is not only to guide but also to motivate future research.</p></li>
+<li><strong>RQ1</strong>: <em>What is the state of the art in the research area of code review?</em> This question focusses on topics that are researched often, the results of that research, and research methods, tools and datasets that are used.</li>
+<li><strong>RQ2</strong>: <em>What is the current state of practice in the area of code review?</em> This concerns tools and techniques that are developed and used in practice, by open source projects but also by commercial companies.</li>
+<li><strong>RQ3</strong>: <em>What are future challenges in the area of code review?</em> This concerns both research challenges and challenges for use in practice.</li>
 </ul>
 </div>
-</div>
-<div id="research-protocol-4" class="section level2">
-<h2><span class="header-section-number">7.2</span> Research Protocol</h2>
-<!-- TODO -->
-<p>In this section, we will describe…</p>
-<div id="search-strategy" class="section level3">
-<h3><span class="header-section-number">7.2.1</span> Search Strategy</h3>
-<p>Since release engineering is a relatively new research topic, we took an exploratory approach in collecting any literature revolving around the topic of release engineering from the perspective of software analytics. This aided us in determining a more narrow scope for our survey, subsequently allowing us to find additional literature fitting this scope.</p>
-<p>At the start of this project, we were provided with an initial seed of five papers as a starting point for our literature survey. These initial papers were <span class="citation">Adams and McIntosh (<a href="#ref-adams2016a">2016</a>)</span>, <span class="citation">Costa et al. (<a href="#ref-da2016a">2016</a>)</span>, <span class="citation">Costa et al. (<a href="#ref-d2014a">2014</a>)</span>, <span class="citation">Khomh et al. (<a href="#ref-khomh2012a">2012</a>)</span>, and <span class="citation">Khomh et al. (<a href="#ref-khomh2015a">2015</a>)</span>.</p>
-<p>We collected publications using two search engines: Scopus and Google Scholar. These each encompass various databases such as ACM Digital Library, Springer, IEEE Xplore and ScienceDirect. The main query that we constructed is displayed in Figure 1. The publications found using this query were:</p>
+<div id="search-process" class="section level3">
+<h3><span class="header-section-number">8.1.2</span> Search process</h3>
+<p>The search process consists of the following:</p>
 <ul>
-<li><span class="citation">Kaur and Vig (<a href="#ref-kaur2019a">2019</a>)</span></li>
-<li><span class="citation">Kerzazi and Robillard (<a href="#ref-kerzazi2013a">2013</a>)</span></li>
-<li><span class="citation">Castelluccio, An, and Khomh (<a href="#ref-castelluccio2017a">2017</a>)</span></li>
-<li><span class="citation">Karvonen et al. (<a href="#ref-karvonen2017a">2017</a>)</span></li>
-<li><span class="citation">Claes et al. (<a href="#ref-claes2017a">2017</a>)</span></li>
-<li><span class="citation">Fujibayashi et al. (<a href="#ref-fujibayashi2017a">2017</a>)</span></li>
-<li><span class="citation">Souza, Chavez, and Bittencourt (<a href="#ref-souza2015a">2015</a>)</span></li>
-<li><span class="citation">Laukkanen et al. (<a href="#ref-laukkanen2018a">2018</a>)</span></li>
+<li>A Google Scholar search using the search query <em>“modern code review” OR “modern code reviews”</em>. The results list will be sorted by decreasing relevance by Google Scholar and will be considered by us in order.</li>
+<li>A general Google search for non-scientific reports (e.g., blog posts) and implemented code review tools. For this search queries <em>code review</em> and <em>code review tools</em> are used, respectively. The result list will be considered in order.</li>
+<li>All papers in the initial seed provided by the course instructor will be considered.</li>
+<li>All papers referenced by already collected papers will be considered.</li>
 </ul>
-<pre><code>TITLE-ABS-KEY(
-  (
-    &quot;continuous release&quot; OR &quot;rapid release&quot; OR &quot;frequent release&quot;
-    OR &quot;quick release&quot; OR &quot;speedy release&quot; OR &quot;accelerated release&quot;
-    OR &quot;agile release&quot; OR &quot;short release&quot; OR &quot;shorter release&quot;
-    OR &quot;lightning release&quot; OR &quot;brisk release&quot; OR &quot;hasty release&quot;
-    OR &quot;compressed release&quot; OR &quot;release length&quot; OR &quot;release size&quot;
-    OR &quot;release cadence&quot; OR &quot;release frequency&quot;
-    OR &quot;continuous delivery&quot; OR &quot;rapid delivery&quot; OR &quot;frequent delivery&quot;
-    OR &quot;fast delivery&quot; OR &quot;quick delivery&quot; OR &quot;speedy delivery&quot;
-    OR &quot;accelerated delivery&quot; OR &quot;agile delivery&quot; OR &quot;short delivery&quot;
-    OR &quot;lightning delivery&quot; OR &quot;brisk delivery&quot; OR &quot;hasty delivery&quot;
-    OR &quot;compressed delivery&quot; OR &quot;delivery length&quot; OR &quot;delivery size&quot;
-    OR &quot;delivery cadence&quot; OR &quot;continuous deployment&quot; OR &quot;rapid deployment&quot;
-    OR &quot;frequent deployment&quot; OR &quot;fast deployment&quot; OR &quot;quick deployment&quot;
-    OR &quot;speedy deployment&quot; OR &quot;accelerated deployment&quot; OR &quot;agile deployment&quot;
-    OR &quot;short deployment&quot; OR &quot;lightning deployment&quot; OR &quot;brisk deployment&quot;
-    OR &quot;hasty deployment&quot; OR &quot;compressed deployment&quot; OR &quot;deployment length&quot;
-    OR &quot;deployment size&quot; OR &quot;deployment cadence&quot;
-  ) AND (
-    &quot;release schedule&quot; OR &quot;release management&quot; OR &quot;release engineering&quot;
-    OR &quot;release cycle&quot; OR &quot;release pipeline&quot; OR &quot;release process&quot;
-    OR &quot;release model&quot; OR &quot;release strategy&quot; OR &quot;release strategies&quot;
-    OR &quot;release infrastructure&quot;
-  )
-  AND software
-) AND (
-    LIMIT-TO(SUBJAREA, &quot;COMP&quot;) OR LIMIT-TO(SUBJAREA, &quot;ENGI&quot;)
-)
-AND PUBYEAR AFT 2014</code></pre>
-<p><em>Figure 1. Query used for retrieving release engineering publications via Scopus.</em></p>
-<p>In addition to querying search engines as described above, references related to retrieved papers were analyzed. For each paper, the review concerned the publications cited by the paper, as well as those citing the paper. These reference lists were obtained from Google Scholar and from the reference lists in the papers themselves. The results of the reference analysis are listed in Table 1.</p>
-<p><em>Table 1. Papers found indirectly by investigating citations of/by other papers.</em></p>
+<p>From now on, all four categories listed above in general will be called <em>resource</em>.</p>
+</div>
+<div id="inclusion-criteria" class="section level3">
+<h3><span class="header-section-number">8.1.3</span> Inclusion criteria</h3>
+<p>From the scientific literature, the following types of papers will be considered:</p>
+<p>Papers researching recent code review</p>
+<ul>
+<li>concepts,</li>
+<li>methodologies,</li>
+<li>tools and platforms,</li>
+<li>and experiments concerning the preceding.</li>
+</ul>
+<p>From non-scientific resources, all resources discussing recent tools and techniques used in practice will be considered.</p>
+</div>
+<div id="exclusion-criteria" class="section level3">
+<h3><span class="header-section-number">8.1.4</span> Exclusion criteria</h3>
+<p>Resources published before 2008 will be excluded from the study.</p>
+</div>
+<div id="primary-study-selection-process" class="section level3">
+<h3><span class="header-section-number">8.1.5</span> Primary study selection process</h3>
+<p>We will select a number of candidate resources based on the criteria stated above. For each resource, each person participating in the review can select it as a candidate.</p>
+<p>From all candidates, resource will be selected that will actually be reviewed. This can also be done by each person participating in the review. All resources that are candidates but are not selected for actual review must be explicitly rejected, with accompanying reasoning, by at least two persons participating in the review.</p>
+</div>
+<div id="data-collection" class="section level3">
+<h3><span class="header-section-number">8.1.6</span> Data collection</h3>
+<p>The following data will be collected from each considered resource:</p>
+<ul>
+<li>Source (for example, the blog website or specific journal)</li>
+<li>Year published</li>
+<li>Type of resource</li>
+<li>Author(s) and organization(s)</li>
+<li>Summary of the resource of a maximum of 100 words</li>
+<li>Data for answering <strong>RQ1</strong>:
+<ul>
+<li>Sub-topic of research</li>
+<li>Research method</li>
+<li>Used tools</li>
+<li>Used datasets</li>
+<li>Research questions and their answers</li>
+</ul></li>
+<li>Data for answering <strong>RQ2</strong>:
+<ul>
+<li>Tools used</li>
+<li>Company/organization using the tool</li>
+<li>Evaluation of the tool</li>
+</ul></li>
+<li>Data for answering <strong>RQ3</strong>:
+<ul>
+<li>Future research challenges posed</li>
+</ul></li>
+</ul>
+<p>All data will be collected by one person participating in the review and checked by another.</p>
+</div>
+</div>
+<div id="candidate-resources" class="section level2">
+<h2><span class="header-section-number">8.2</span> Candidate resources</h2>
+<p>In this section, all candidates that are collected using the described search process are presented. The in survey column in the tables below indicates whether the paper has been included in the survey in the end or if it has been excluded for some reason. If it has been excluded, the reason is stated along with the paper summary.</p>
+<div id="initial-seed-1" class="section level3">
+<h3><span class="header-section-number">8.2.1</span> Initial seed</h3>
+<p>These following table lists all initial seed papers provided by the course intructor. They are listed in alphabetical order of the first author’s name, and then by publish year.</p>
 <table>
 <thead>
 <tr class="header">
-<th>Starting point</th>
-<th>Type</th>
-<th>Result</th>
+<th>First author</th>
+<th>Year</th>
+<th>Reference</th>
+<th>In survey? (Y/N)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="citation">Souza, Chavez, and Bittencourt (<a href="#ref-souza2015a">2015</a>)</span></td>
-<td>has cited</td>
-<td><span class="citation">Plewnia, Dyck, and Lichter (<a href="#ref-plewnia2014a">2014</a>)</span> <br> <span class="citation">Mäntylä et al. (<a href="#ref-mantyla2015a">2015</a>)</span></td>
+<td>Bacchelli, A.</td>
+<td>2013</td>
+<td><span class="citation">Bacchelli and Bird (<a href="#ref-bacchelli2013expectations">2013</a>)</span></td>
+<td></td>
 </tr>
 <tr class="even">
-<td><span class="citation">Khomh et al. (<a href="#ref-khomh2015a">2015</a>)</span></td>
-<td>is cited by</td>
-<td><span class="citation">Poo-Caamaño (<a href="#ref-poo-caama2016a">2016</a>)</span> <br> <span class="citation">Teixeira (<a href="#ref-teixeira2017a">2017</a>)</span></td>
+<td>Beller, M.</td>
+<td>2014</td>
+<td><span class="citation">Beller et al. (<a href="#ref-beller2014modern">2014</a>)</span></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td><span class="citation">Mäntylä et al. (<a href="#ref-mantyla2015a">2015</a>)</span></td>
-<td>is cited by</td>
-<td><span class="citation">Rodríguez et al. (<a href="#ref-rodriguez2017a">2017</a>)</span> <br> <span class="citation">Cesar Brandão Gomes da Silva et al. (<a href="#ref-cesar2017a">2017</a>)</span></td>
+<td>Bird, C.</td>
+<td>2015</td>
+<td><span class="citation">Bird, Carnahan, and Greiler (<a href="#ref-bird2015lessons">2015</a>)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Fagan, M.</td>
+<td>2002</td>
+<td><span class="citation">Fagan (<a href="#ref-fagan2002design">2002</a>)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Gousios, G.</td>
+<td>2014</td>
+<td><span class="citation">Gousios, Pinzger, and Deursen (<a href="#ref-gousios2014exploratory">2014</a>)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>McIntosh, S.</td>
+<td>2014</td>
+<td><span class="citation">McIntosh et al. (<a href="#ref-mcintosh2014impact">2014</a>)</span></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<p>All the papers that were found, were stored in a custom built web-based tool for conducting literature reviews. The source code of this tool is published in a <a href="https://github.com/jessetilro/research">GitHub repository</a>. The tool was hosted on a virtual private server, such that all retrieved publications were stored centrally, accessible to all reviewers.</p>
 </div>
-<div id="study-selection" class="section level3">
-<h3><span class="header-section-number">7.2.2</span> Study Selection</h3>
-<p>In the utilized tool for conducting the survey, it is possible to label papers with tags and leave comments and ratings. Every paper is reviewed based on the selection criteria. Based on this, the tool allowed to filter out all papers that appeared not to be relevant for this literature survey.</p>
-<p>The selection criteria are as follows:</p>
-<ol style="list-style-type: decimal">
-<li>The study must show (at least) one release engineering technique.</li>
-<li>The study must not just show a release engineering technique, but analyze its performance compared to other techniques.</li>
-</ol>
-<p>Based on these selection criteria, the following papers appeared to be irrelevant for the scope of this survey:</p>
-<!-- Example. TODO: actually exclude papers -->
-<ul>
-<li>[link to paper] - Excluded based on rule 2.</li>
-</ul>
-</div>
-<div id="study-quality-assessment" class="section level3">
-<h3><span class="header-section-number">7.2.3</span> Study Quality Assessment</h3>
-<p>Based on <span class="citation">B. Kitchenham (<a href="#ref-kitchenham2004procedures">2004</a><a href="#ref-kitchenham2004procedures">b</a>)</span>, the quality of a paper will be assessed by the evidence it provides, based on the following scale. All levels of quality will be accepted, except for level 5 (expert opinion).</p>
-<ol style="list-style-type: decimal">
-<li>Evidence obtained from at least one properly-designed randomised controlled trial.</li>
-<li>Evidence obtained from well-designed pseudo-randomised controlled trials (i.e. non-random allocation to treatment).</li>
-<li>Comparative studies in a real-world setting:
-<ol style="list-style-type: decimal">
-<li>Evidence obtained from comparative studies with concurrent controls and allocation not randomised, cohort studies, case-control studies or interrupted time series with a control group.</li>
-<li>Evidence obtained from comparative studies with historical control, two or more single arm studies, or interrupted time series without a parallel control group.</li>
-</ol></li>
-<li>Experiments in artificial settings:
-<ol style="list-style-type: decimal">
-<li>Evidence obtained from a randomised experiment performed in an artificial setting.</li>
-<li>Evidence obtained from case series, either post-test or pre-test/post-test.</li>
-<li>Evidence obtained from a quasi-random experiment performed in an artificial setting.</li>
-</ol></li>
-<li>Evidence obtained from expert opinion based on theory or consensus.</li>
-</ol>
-<p>Also, the studies will be examined to see if they contain any type of bias. For this, the same types of biases will be used as described by <span class="citation">B. Kitchenham (<a href="#ref-kitchenham2004procedures">2004</a><a href="#ref-kitchenham2004procedures">b</a>)</span>:</p>
-<ul>
-<li>Selection/Allocation bias: Systematic difference between comparison groups with respect to treatment.</li>
-<li>Performance bias: Systematic difference is the conduct of comparison groups apart from the treatment being evaluated.</li>
-<li>Measurement/Detection bias: Systematic difference between the groups in how outcomes are ascertained.</li>
-<li>Attrition/Exclusion bias: Systematic differences between comparison groups in terms of withdrawals or exclusions of participants from the study sample.</li>
-</ul>
-<p>The studies will be labeled by their quality level and possible biases. This information can be used during the Data Synthesis phase to weigh the importance of individual studies <span class="citation">(B. Kitchenham <a href="#ref-kitchenham2004procedures">2004</a><a href="#ref-kitchenham2004procedures">b</a>)</span>.</p>
-</div>
-<div id="data-extraction" class="section level3">
-<h3><span class="header-section-number">7.2.4</span> Data Extraction</h3>
-<p>To accurately capture the information contributed by each publication in our survey, we will use a systematic approach to extracting data. To guide this process, we will be using a data extraction form which describes what aspects of a publication are crucial to record. Besides general publication information (title, author etc.), the form contains questions that are based on our defined research questions. Furthermore, the form contains a section for quantitative research, where aspects such as population and evaluation will be documented. The form that is used for this is shown below:</p>
-<pre><code>General information:
-    Name of person extracting data:
-    Date form completed (dd/mm/yyyy):
-    Publication title:
-    Author information:
-    Journal:
-    Publication type:
-    Type of study:
-
-What practices in release engineering does this publication mention?
-
-Are these practices to be classified under dated, state of the art or state of
-the practice? Why?
-
-What open challenges in release engineering does this publication mention?
-
-What research gaps does this publication contain?
-
-Are these research gaps filled by any other publications in this survey?
-
-Quantitative research publications:
-    Study start date:
-    Study end date or duration:
-    Population description:
-    Method(s) of recruitment of participants:
-    Sample size:
-    Evaluation/measurement description:
-    Outcomes:
-    Limitations:
-    Future research:
-
-Notes:
-</code></pre>
-</div>
-<div id="data-synthesis" class="section level3">
-<h3><span class="header-section-number">7.2.5</span> Data Synthesis</h3>
-<p>To summarize the contributions and limitations of each of the included publications, we will apply a descriptive synthesis approach. In this part of our survey, we will compare the data that was extracted of the included publications. Publications with similar findings will be grouped and evaluated, and differences between groups of publications will be structured and elaborated on. In this we will compare them using specifics such as their study types, time of publication and study quality.</p>
-<p>If the extracted data allows for a structured tabular visualization of similarities and differences between publications this we serve as an additional form of synthesis. However, this depends on the final included publications of this survey.</p>
-</div>
-<div id="included-and-excluded-studies" class="section level3">
-<h3><span class="header-section-number">7.2.6</span> Included and Excluded Studies</h3>
-</div>
-<div id="project-timetable" class="section level3">
-<h3><span class="header-section-number">7.2.7</span> Project timetable</h3>
-<p>The literature review was conducted over the course of four weeks. We worked iteratively and planned for four weekly milestones.</p>
-<table style="width:96%;">
-<colgroup>
-<col width="23%" />
-<col width="19%" />
-<col width="52%" />
-</colgroup>
+<div id="google-scholar" class="section level3">
+<h3><span class="header-section-number">8.2.2</span> Google Scholar</h3>
+<p>The following table lists all candidates that have been collected through the Google Scholar search described in the search process. They are listed in alphabetical order of the first author’s name, and then by publish year. Note that as described in the search process section, papers in the search are considered in order.</p>
+<table>
 <thead>
 <tr class="header">
-<th>Milestone</th>
-<th>Deadline</th>
-<th>Goals</th>
+<th>First author</th>
+<th>Year</th>
+<th>Reference</th>
+<th>In survey? (Y/N)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Milestone 1</td>
-<td>16/9/18</td>
-<td>- Develop the search strategy<br> - Collect initial publications</td>
+<td>Baysal, O.</td>
+<td>2016</td>
+<td><span class="citation">Baysal et al. (<a href="#ref-baysal2016investigating">2016</a>)</span></td>
+<td></td>
 </tr>
 <tr class="even">
-<td>Milestone 2</td>
-<td>23/9/18</td>
-<td>Write full research protocol</td>
+<td>Thongtanunam, P.</td>
+<td>2015</td>
+<td><span class="citation">Thongtanunam et al. (<a href="#ref-thongtanunam2015should">2015</a>)</span></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td>Milestone 3</td>
-<td>30/9/18</td>
-<td>- Collect additional literature according to the protocol<br> - Perform data extraction</td>
+<td>Thongtanunam, P.</td>
+<td>2016</td>
+<td><span class="citation">Thongtanunam et al. (<a href="#ref-thongtanunam2016revisiting">2016</a>)</span></td>
+<td></td>
 </tr>
 <tr class="even">
-<td>Milestone 4</td>
-<td>7/10/18</td>
-<td>- Perform data synthesis<br> - Write final version of the chapter</td>
+<td>Xia, X.</td>
+<td>2015</td>
+<td><span class="citation">Xia et al. (<a href="#ref-xia2015should">2015</a>)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Zanjani, M. B.</td>
+<td>2016</td>
+<td><span class="citation">Zanjani, Kagdi, and Bird (<a href="#ref-zanjani2016automatically">2016</a>)</span></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<!-- TODO -->
+</div>
+<div id="by-reference" class="section level3">
+<h3><span class="header-section-number">8.2.3</span> By reference</h3>
+<p>The following table lists all candidates that have been found by being referenced by another paper we found. They are listed in alphabetical order of the first author’s name, and then by publish year.</p>
+<table>
+<thead>
+<tr class="header">
+<th>First author</th>
+<th>Year</th>
+<th>Reference</th>
+<th>Referenced by</th>
+<th>In survey? (Y/N)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Baum</td>
+<td>2016</td>
+<td><span class="citation">Baum et al. (<a href="#ref-baum2016faceted">2016</a>)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Baum</td>
+<td>2017</td>
+<td><span class="citation">Baum, Leßmann, and Schneider (<a href="#ref-baum2017choice">2017</a>)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Baysal</td>
+<td>2013</td>
+<td><span class="citation">Baysal et al. (<a href="#ref-baysal2013influence">2013</a>)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Bosu</td>
+<td>2013</td>
+<td><span class="citation">Bosu and Carver (<a href="#ref-bosu2013impact">2013</a>)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ciolkowski</td>
+<td>2003</td>
+<td><span class="citation">Ciolkowski, Laitenberger, and Biffl (<a href="#ref-ciolkowski2003software">2003</a>)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Czerwonka</td>
+<td>2015</td>
+<td><span class="citation">Czerwonka, Greiler, and Tilford (<a href="#ref-czerwonka2015code">2015</a>)</span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
-<div id="answers-3" class="section level2">
-<h2><span class="header-section-number">7.3</span> Answers</h2>
-<!-- TODO -->
-<div id="rq1" class="section level3">
-<h3><span class="header-section-number">7.3.1</span> RQ1: …</h3>
-<!-- TODO -->
+<div id="paper-summaries" class="section level2">
+<h2><span class="header-section-number">8.3</span> Paper summaries</h2>
+<p>This section contains summaries of all papers included in the survey. They are listed in alphabetical order of first author name, and then by year published.</p>
+<div id="expectations-outcomes-and-challenges-of-modern-code-review" class="section level3">
+<h3><span class="header-section-number">8.3.1</span> Expectations, outcomes, and challenges of modern code review</h3>
+<p>Reference: <span class="citation">Bacchelli and Bird (<a href="#ref-bacchelli2013expectations">2013</a>)</span></p>
+<p>This paper describes research about the goals and actual effects of code reviews. Interviews and experiments have been done with people in the programming field.</p>
+<p>One of the main conclusions is that the main effect of doing code reviews is that everyone involved understands the code better. This is opposed to what the goal of code reviews is generally: discovering errors.</p>
 </div>
-<div id="rq2" class="section level3">
-<h3><span class="header-section-number">7.3.2</span> RQ2: …</h3>
-<!-- TODO -->
+<div id="a-faceted-classification-scheme-for-change-based-industrial-code-review-processes" class="section level3">
+<h3><span class="header-section-number">8.3.2</span> A Faceted Classification Scheme for Change-Based Industrial Code Review Processes</h3>
+<p>Reference: <span class="citation">Baum et al. (<a href="#ref-baum2016faceted">2016</a>)</span></p>
+<p>The broad research questions treated in this article are: How is code review performed in industry today? Which commonalities and variations exist between code review processes of different teams and companies? The article describes a classification scheme for change-based code review processes in industry. This scheme is based on descriptions of the code review processes of eleven companies, obtained from interviews with software engineering professionals that were performed during a Grounded Theory study.</p>
 </div>
-<div id="rq3" class="section level3">
-<h3><span class="header-section-number">7.3.3</span> RQ3: …</h3>
-<!-- TODO -->
+<div id="the-choice-of-code-review-process-a-survey-on-the-state-of-the-practice" class="section level3">
+<h3><span class="header-section-number">8.3.3</span> The Choice of Code Review Process: A Survey on the State of the Practice</h3>
+<p>Reference: <span class="citation">Baum, Leßmann, and Schneider (<a href="#ref-baum2017choice">2017</a>)</span></p>
+<p>This paper, published in 2017, is trying to answer 3 RQs. Firstly, how prevalent is change-based review in the industry? Secondly, does the chance that code review remains in use increase if code review is embedded into the process (and its supporting tools) so that it does not require a conscious decision to do a review? Thirdly, are the intended and acceptable levels of review effects a mediator in determining the code review process?</p>
 </div>
+<div id="the-influence-of-non-technical-factors-on-code-review" class="section level3">
+<h3><span class="header-section-number">8.3.4</span> The influence of non-technical factors on code review</h3>
+<p>Reference: <span class="citation">Baysal et al. (<a href="#ref-baysal2013influence">2013</a>)</span></p>
 </div>
-<div id="discussion" class="section level2">
-<h2><span class="header-section-number">7.4</span> Discussion</h2>
-<!-- TODO -->
+<div id="investigating-technical-and-non-technical-factors-influencing-modern-code-review" class="section level3">
+<h3><span class="header-section-number">8.3.5</span> Investigating technical and non-technical factors influencing modern code review</h3>
+<p>Reference: <span class="citation">Baysal et al. (<a href="#ref-baysal2016investigating">2016</a>)</span></p>
 </div>
-<div id="conclusion" class="section level2">
-<h2><span class="header-section-number">7.5</span> Conclusion</h2>
-<!-- TODO -->
+<div id="modern-code-reviews-in-open-source-projects-which-problems-do-they-fix" class="section level3">
+<h3><span class="header-section-number">8.3.6</span> Modern code reviews in open-source projects: Which problems do they fix?</h3>
+<p>Reference: <span class="citation">Beller et al. (<a href="#ref-beller2014modern">2014</a>)</span></p>
+<p>It has been researched what kinds of problems are solved by doing code reviews. The conclusion is that 75% are improvements in evolvability of the code, and 25% in functional aspects.</p>
+<p>It has also been researched which part of the review comments is actually followed up by an action, and which part of the edits after a review are actually caused by review comments.</p>
+</div>
+<div id="lessons-learned-from-building-and-deploying-a-code-review-analytics-platform" class="section level3">
+<h3><span class="header-section-number">8.3.7</span> Lessons learned from building and deploying a code review analytics platform</h3>
+<p>Reference: <span class="citation">Bird, Carnahan, and Greiler (<a href="#ref-bird2015lessons">2015</a>)</span></p>
+<p>A code review data analyzation platform developed and used by Microsoft is discussed. It is mainly presented what users of the system think of it and how its use influences development teams. One of the conclusions is that in general, the platform has a positive influence on development teams and their products.</p>
+</div>
+<div id="impact-of-peer-code-review-on-peer-impression-formation-a-survey" class="section level3">
+<h3><span class="header-section-number">8.3.8</span> Impact of peer code review on peer impression formation: A survey</h3>
+<p>Reference: <span class="citation">Bosu and Carver (<a href="#ref-bosu2013impact">2013</a>)</span></p>
+</div>
+<div id="software-reviews-the-state-of-the-practice" class="section level3">
+<h3><span class="header-section-number">8.3.9</span> Software Reviews: The State of the Practice</h3>
+<p>Reference: <span class="citation">Ciolkowski, Laitenberger, and Biffl (<a href="#ref-ciolkowski2003software">2003</a>)</span></p>
+<p>To investigate how industry carries out software reviews and in what forms, this paper con- ducted a two-part survey in 2002, the first part based on a national initiative in Germany and the second involving companies world- wide. Additionally, this paper also include some fundenmental concepts of code review, such as functionalities of code review.</p>
+</div>
+<div id="code-reviews-do-not-find-bugs-how-the-current-code-review-best-practice-slows-us-down" class="section level3">
+<h3><span class="header-section-number">8.3.10</span> Code reviews do not find bugs: how the current code review best practice slows us down</h3>
+<p>Reference: <span class="citation">Czerwonka, Greiler, and Tilford (<a href="#ref-czerwonka2015code">2015</a>)</span></p>
+<p>As code review has many uses and benefits, the authors hope to find out whether the current code review methods are sufficiently efficient. They also research whether other methods may be more efficient. With experience gained at Microsoft and with support of data, the authors posit (1) that code reviews often do not find functionality issues that should block a code submission; (2) that effective code reviews should be performed by people with a specific set of skills; and (3) that the social aspect of code reviews cannot be ignored.</p>
+</div>
+<div id="design-and-code-inspections-to-reduce-errors-in-program-development" class="section level3">
+<h3><span class="header-section-number">8.3.11</span> Design and code inspections to reduce errors in program development</h3>
+<p>Reference: <span class="citation">Fagan (<a href="#ref-fagan2002design">2002</a>)</span></p>
+<p>This paper describes a method to thoroughly check code quality after each step of the development process, in a heavyweight manner. It does not really concern agile development.</p>
+<p>The authors state that these methods do not affect the developing process negatively, and that they work well for improving software quality.</p>
+</div>
+<div id="an-exploratory-study-of-the-pull-based-software-development-model" class="section level3">
+<h3><span class="header-section-number">8.3.12</span> An exploratory study of the pull-based software development model</h3>
+<p>Reference: <span class="citation">Gousios, Pinzger, and Deursen (<a href="#ref-gousios2014exploratory">2014</a>)</span></p>
+<p>This article focusses on how much pull requests are being used and how they are used, focussing on GitHub. For example, it is concluded that pull-request are not being used that much, that pull-requests are being merged fast after they have been submitted, and that a pull request not being merged is most of the time not caused by technical errors in the pull-request.</p>
+</div>
+<div id="the-impact-of-code-review-coverage-and-code-review-participation-on-software-quality-a-case-study-of-the-qt-vtk-and-itk-projects" class="section level3">
+<h3><span class="header-section-number">8.3.13</span> The impact of code review coverage and code review participation on software quality: A case study of the qt, vtk, and itk projects</h3>
+<p>Reference: <span class="citation">McIntosh et al. (<a href="#ref-mcintosh2014impact">2014</a>)</span></p>
+<p>This paper focusses on the influence of doing light-weight code reviews on software quality. In particular, the effect of review coverage (the part of the code that has been reviewed) and review participation (a measure for how much reviewers are involved in the review process) are being assessed.</p>
+<p>It turns out that both aspects improve software quality when they are higher. Review participation is the most influential. According to the authors there are other aspects, which they have not looked into, that are of significant importance for the review process.</p>
+</div>
+<div id="who-should-review-my-code-a-file-location-based-code-reviewer-recommendation-approach-for-modern-code-review" class="section level3">
+<h3><span class="header-section-number">8.3.14</span> Who should review my code? A file location-based code-reviewer recommendation approach for modern code review</h3>
+<p>Reference: <span class="citation">Thongtanunam et al. (<a href="#ref-thongtanunam2015should">2015</a>)</span></p>
+</div>
+<div id="revisiting-code-ownership-and-its-relationship-with-software-quality-in-the-scope-of-modern-code-review" class="section level3">
+<h3><span class="header-section-number">8.3.15</span> Revisiting code ownership and its relationship with software quality in the scope of modern code review</h3>
+<p>Reference: <span class="citation">Thongtanunam et al. (<a href="#ref-thongtanunam2016revisiting">2016</a>)</span></p>
+</div>
+<div id="who-should-review-this-change-putting-text-and-file-location-analyses-together-for-more-accurate-recommendations" class="section level3">
+<h3><span class="header-section-number">8.3.16</span> Who should review this change?: Putting text and file location analyses together for more accurate recommendations</h3>
+<p>Reference: <span class="citation">Xia et al. (<a href="#ref-xia2015should">2015</a>)</span></p>
+</div>
+<div id="automatically-recommending-peer-reviewers-in-modern-code-review" class="section level3">
+<h3><span class="header-section-number">8.3.17</span> Automatically recommending peer reviewers in modern code review</h3>
+<p>Reference: <span class="citation">Zanjani, Kagdi, and Bird (<a href="#ref-zanjani2016automatically">2016</a>)</span></p>
 
+</div>
 </div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
-<div id="ref-adams2016a">
-<p>Adams, Bram, and Shane McIntosh. 2016. “Modern Release Engineering in a Nutshell–why Researchers Should Care.” In <em>Software Analysis, Evolution, and Reengineering (Saner), 2016 Ieee 23rd International Conference on</em>, 5:78–90. IEEE. <a href="https://doi.org/10.1109/SANER.2016.108" class="uri">https://doi.org/10.1109/SANER.2016.108</a>.</p>
+<div id="ref-kitchenham2007">
+<p>Kitchenham. 2007. “Guidelines for Performing Systematic Literature Reviews in Software Engineering.” Keele University; University of Durham.</p>
 </div>
-<div id="ref-da2016a">
-<p>Costa, D. A. da, S. McIntosh, U. Kulesza, and A. E. Hassan. 2016. “The Impact of Switching to a Rapid Release Cycle on the Integration Delay of Addressed Issues - an Empirical Study of the Mozilla Firefox Project.” In <em>2016 Ieee/Acm 13th Working Conference on Mining Software Repositories (Msr)</em>, 374–85. <a href="https://doi.org/10.1109/MSR.2016.045" class="uri">https://doi.org/10.1109/MSR.2016.045</a>.</p>
+<div id="ref-bacchelli2013expectations">
+<p>Bacchelli, Alberto, and Christian Bird. 2013. “Expectations, Outcomes, and Challenges of Modern Code Review.” In <em>Proceedings of the 2013 International Conference on Software Engineering</em>, 712–21. IEEE Press.</p>
 </div>
-<div id="ref-d2014a">
-<p>Costa, D. A. d., S. L. Abebe, S. Mcintosh, U. Kulesza, and A. E. Hassan. 2014. “An Empirical Study of Delays in the Integration of Addressed Issues.” In <em>2014 Ieee International Conference on Software Maintenance and Evolution</em>, 281–90. <a href="https://doi.org/10.1109/ICSME.2014.50" class="uri">https://doi.org/10.1109/ICSME.2014.50</a>.</p>
+<div id="ref-beller2014modern">
+<p>Beller, Moritz, Alberto Bacchelli, Andy Zaidman, and Elmar Juergens. 2014. “Modern Code Reviews in Open-Source Projects: Which Problems Do They Fix?” In <em>Proceedings of the 11th Working Conference on Mining Software Repositories</em>, 202–11. ACM.</p>
 </div>
-<div id="ref-khomh2012a">
-<p>Khomh, Foutse, Tejinder Dhaliwal, Ying Zou, and Bram Adams. 2012. “Do Faster Releases Improve Software Quality?: An Empirical Case Study of Mozilla Firefox.” In <em>Proceedings of the 9th Ieee Working Conference on Mining Software Repositories</em>, 179–88. MSR ’12. Piscataway, NJ, USA: IEEE Press. <a href="http://dl.acm.org/citation.cfm?id=2664446.2664475" class="uri">http://dl.acm.org/citation.cfm?id=2664446.2664475</a>.</p>
+<div id="ref-bird2015lessons">
+<p>Bird, Christian, Trevor Carnahan, and Michaela Greiler. 2015. “Lessons Learned from Building and Deploying a Code Review Analytics Platform.” In <em>Proceedings of the 12th Working Conference on Mining Software Repositories</em>, 191–201. IEEE Press.</p>
 </div>
-<div id="ref-khomh2015a">
-<p>Khomh, Foutse, Bram Adams, Tejinder Dhaliwal, and Ying Zou. 2015. “Understanding the Impact of Rapid Releases on Software Quality.” <em>Empirical Software Engineering</em> 20 (2): 336–73. <a href="https://doi.org/10.1007/s10664-014-9308-x" class="uri">https://doi.org/10.1007/s10664-014-9308-x</a>.</p>
+<div id="ref-fagan2002design">
+<p>Fagan, Michael. 2002. “Design and Code Inspections to Reduce Errors in Program Development.” In <em>Software Pioneers</em>, 575–607. Springer.</p>
 </div>
-<div id="ref-kaur2019a">
-<p>Kaur, A., and V. Vig. 2019. “On Understanding the Release Patterns of Open Source Java Projects.” <em>Advances in Intelligent Systems and Computing</em> 711: 9–18. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85049941993\&amp;doi=10.1007%2f978-981-10-8055-5_2\&amp;partnerID=40\&amp;md5=7a255f14762205c60f618cfb97569650">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85049941993\&amp;doi=10.1007%2f978-981-10-8055-5_2\&amp;partnerID=40\&amp;md5=7a255f14762205c60f618cfb97569650</a>.</p>
+<div id="ref-gousios2014exploratory">
+<p>Gousios, Georgios, Martin Pinzger, and Arie van Deursen. 2014. “An Exploratory Study of the Pull-Based Software Development Model.” In <em>Proceedings of the 36th International Conference on Software Engineering</em>, 345–55. ACM.</p>
 </div>
-<div id="ref-kerzazi2013a">
-<p>Kerzazi, N., and P.N. Robillard. 2013. “Kanbanize the Release Engineering Process.” In <em>2013 1st International Workshop on Release Engineering, RELENG 2013 - Proceedings</em>, 9–12. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-84886059813\&amp;doi=10.1109%2fRELENG.2013.6607689\&amp;partnerID=40\&amp;md5=73eb9fc8ca1f9b6568975ff0c054308c">https://www.scopus.com/inward/record.uri?eid=2-s2.0-84886059813\&amp;doi=10.1109%2fRELENG.2013.6607689\&amp;partnerID=40\&amp;md5=73eb9fc8ca1f9b6568975ff0c054308c</a>.</p>
+<div id="ref-mcintosh2014impact">
+<p>McIntosh, Shane, Yasutaka Kamei, Bram Adams, and Ahmed E Hassan. 2014. “The Impact of Code Review Coverage and Code Review Participation on Software Quality: A Case Study of the Qt, Vtk, and Itk Projects.” In <em>Proceedings of the 11th Working Conference on Mining Software Repositories</em>, 192–201. ACM.</p>
 </div>
-<div id="ref-castelluccio2017a">
-<p>Castelluccio, M., L. An, and F. Khomh. 2017. “Is It Safe to Uplift This Patch? An Empirical Study on Mozilla Firefox.” In <em>Proceedings - 2017 IEEE International Conference on Software Maintenance and Evolution, ICSME 2017</em>, 411–21. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85040634374\&amp;doi=10.1109%2fICSME.2017.82\&amp;partnerID=40\&amp;md5=db36b40c2534743b53a2379157b50a59">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85040634374\&amp;doi=10.1109%2fICSME.2017.82\&amp;partnerID=40\&amp;md5=db36b40c2534743b53a2379157b50a59</a>.</p>
+<div id="ref-baysal2016investigating">
+<p>Baysal, Olga, Oleksii Kononenko, Reid Holmes, and Michael W Godfrey. 2016. “Investigating Technical and Non-Technical Factors Influencing Modern Code Review.” <em>Empirical Software Engineering</em> 21 (3). Springer: 932–59.</p>
 </div>
-<div id="ref-karvonen2017a">
-<p>Karvonen, T., W. Behutiye, M. Oivo, and P. Kuvaja. 2017. “Systematic Literature Review on the Impacts of Agile Release Engineering Practices.” <em>Information and Software Technology</em> 86: 87–100. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85028272067\&amp;doi=10.1016%2fj.infsof.2017.01.009\&amp;partnerID=40\&amp;md5=001c120eea2481c21dae5a551b44dd39">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85028272067\&amp;doi=10.1016%2fj.infsof.2017.01.009\&amp;partnerID=40\&amp;md5=001c120eea2481c21dae5a551b44dd39</a>.</p>
+<div id="ref-thongtanunam2015should">
+<p>Thongtanunam, Patanamon, Chakkrit Tantithamthavorn, Raula Gaikovina Kula, Norihiro Yoshida, Hajimu Iida, and Ken-ichi Matsumoto. 2015. “Who Should Review My Code? A File Location-Based Code-Reviewer Recommendation Approach for Modern Code Review.” In <em>Software Analysis, Evolution and Reengineering (Saner), 2015 Ieee 22nd International Conference on</em>, 141–50. IEEE.</p>
 </div>
-<div id="ref-claes2017a">
-<p>Claes, M., M. Mantyla, M. Kuutila, and B. Adams. 2017. “Abnormal Working Hours: Effect of Rapid Releases and Implications to Work Content.” In <em>IEEE International Working Conference on Mining Software Repositories</em>, 243–47. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85026506528\&amp;doi=10.1109%2fMSR.2017.3\&amp;partnerID=40\&amp;md5=2da8fa8a15b9ffb4b1969663af15ecac">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85026506528\&amp;doi=10.1109%2fMSR.2017.3\&amp;partnerID=40\&amp;md5=2da8fa8a15b9ffb4b1969663af15ecac</a>.</p>
+<div id="ref-thongtanunam2016revisiting">
+<p>Thongtanunam, Patanamon, Shane McIntosh, Ahmed E Hassan, and Hajimu Iida. 2016. “Revisiting Code Ownership and Its Relationship with Software Quality in the Scope of Modern Code Review.” In <em>Proceedings of the 38th International Conference on Software Engineering</em>, 1039–50. ACM.</p>
 </div>
-<div id="ref-fujibayashi2017a">
-<p>Fujibayashi, D., A. Ihara, H. Suwa, R.G. Kula, and K. Matsumoto. 2017. “Does the Release Cycle of a Library Project Influence When It Is Adopted by a Client Project?” In <em>SANER 2017 - 24th IEEE International Conference on Software Analysis, Evolution, and Reengineering</em>, 569–70. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85018384049\&amp;doi=10.1109%2fSANER.2017.7884681\&amp;partnerID=40\&amp;md5=83955b8bec9726f3eb1bc751b3c5f2f8">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85018384049\&amp;doi=10.1109%2fSANER.2017.7884681\&amp;partnerID=40\&amp;md5=83955b8bec9726f3eb1bc751b3c5f2f8</a>.</p>
+<div id="ref-xia2015should">
+<p>Xia, Xin, David Lo, Xinyu Wang, and Xiaohu Yang. 2015. “Who Should Review This Change?: Putting Text and File Location Analyses Together for More Accurate Recommendations.” In <em>Software Maintenance and Evolution (Icsme), 2015 Ieee International Conference on</em>, 261–70. IEEE.</p>
 </div>
-<div id="ref-souza2015a">
-<p>Souza, R., C. Chavez, and R.A. Bittencourt. 2015. “Rapid Releases and Patch Backouts: A Software Analytics Approach.” <em>IEEE Software</em> 32 (2): 89–96. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-84925218343\&amp;doi=10.1109%2fMS.2015.30\&amp;partnerID=40\&amp;md5=d624ac5b06a61704543a6d72af3981a1">https://www.scopus.com/inward/record.uri?eid=2-s2.0-84925218343\&amp;doi=10.1109%2fMS.2015.30\&amp;partnerID=40\&amp;md5=d624ac5b06a61704543a6d72af3981a1</a>.</p>
+<div id="ref-zanjani2016automatically">
+<p>Zanjani, Motahareh Bahrami, Huzefa Kagdi, and Christian Bird. 2016. “Automatically Recommending Peer Reviewers in Modern Code Review.” <em>IEEE Transactions on Software Engineering</em> 42 (6). IEEE: 530–43.</p>
 </div>
-<div id="ref-laukkanen2018a">
-<p>Laukkanen, E., M. Paasivaara, J. Itkonen, and C. Lassenius. 2018. “Comparison of Release Engineering Practices in a Large Mature Company and a Startup.” <em>Empirical Software Engineering</em>, 1–43. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85044460784\&amp;doi=10.1007%2fs10664-018-9616-7\&amp;partnerID=40\&amp;md5=dcca7b080050cb81ac889e6eede2b3cc">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85044460784\&amp;doi=10.1007%2fs10664-018-9616-7\&amp;partnerID=40\&amp;md5=dcca7b080050cb81ac889e6eede2b3cc</a>.</p>
+<div id="ref-baum2016faceted">
+<p>Baum, Tobias, Olga Liskin, Kai Niklas, and Kurt Schneider. 2016. “A Faceted Classification Scheme for Change-Based Industrial Code Review Processes.” In <em>Software Quality, Reliability and Security (Qrs), 2016 Ieee International Conference on</em>, 74–85. IEEE.</p>
 </div>
-<div id="ref-plewnia2014a">
-<p>Plewnia, Christian, Andrej Dyck, and Horst Lichter. 2014. “On the Influence of Release Engineering on Software Reputation.” In <em>Mountain View, ca, Usa: In 2nd International Workshop on Release Engineering</em>.</p>
+<div id="ref-baum2017choice">
+<p>Baum, Tobias, Hendrik Leßmann, and Kurt Schneider. 2017. “The Choice of Code Review Process: A Survey on the State of the Practice.” In <em>International Conference on Product-Focused Software Process Improvement</em>, 111–27. Springer.</p>
 </div>
-<div id="ref-mantyla2015a">
-<p>Mäntylä, Mika V., Bram Adams, Foutse Khomh, Emelie Engström, and Kai Petersen. 2015. “On Rapid Releases and Software Testing: A Case Study and a Semi-Systematic Literature Review.” <em>Empirical Software Engineering</em> 20 (5): 1384–1425. <a href="https://doi.org/10.1007/s10664-014-9338-4" class="uri">https://doi.org/10.1007/s10664-014-9338-4</a>.</p>
+<div id="ref-baysal2013influence">
+<p>Baysal, Olga, Oleksii Kononenko, Reid Holmes, and Michael W Godfrey. 2013. “The Influence of Non-Technical Factors on Code Review.” In <em>Reverse Engineering (Wcre), 2013 20th Working Conference on</em>, 122–31. IEEE.</p>
 </div>
-<div id="ref-poo-caama2016a">
-<p>Poo-Caamaño, Germán. 2016. “Release Management in Free and Open Source Software Ecosystems.” PhD thesis. <a href="http://dspace.library.uvic.ca/handle/1828/7648" class="uri">http://dspace.library.uvic.ca/handle/1828/7648</a>.</p>
+<div id="ref-bosu2013impact">
+<p>Bosu, Amiangshu, and Jeffrey C Carver. 2013. “Impact of Peer Code Review on Peer Impression Formation: A Survey.” In <em>Empirical Software Engineering and Measurement, 2013 Acm/Ieee International Symposium on</em>, 133–42. IEEE.</p>
 </div>
-<div id="ref-teixeira2017a">
-<p>Teixeira, Jose. 2017. “Release Early, Release Often and Release on Time. an Empirical Case Study of Release Management.” In <em>Open Source Systems: Towards Robust Practices</em>, 167–81. Cham: Springer International Publishing. doi:<a href="https://doi.org/10.1007/978-3-319-57735-7_16">10.1007/978-3-319-57735-7_16</a>.</p>
+<div id="ref-ciolkowski2003software">
+<p>Ciolkowski, Marcus, Oliver Laitenberger, and Stefan Biffl. 2003. “Software Reviews: The State of the Practice.” <em>IEEE Software</em>, no. 6. IEEE: 46–51.</p>
 </div>
-<div id="ref-rodriguez2017a">
-<p>Rodríguez, Pilar, Alireza Haghighatkhah, Lucy Ellen Lwakatare, Susanna Teppola, Tanja Suomalainen, Juho Eskeli, Teemu Karvonen, Pasi Kuvaja, June M Verner, and Markku Oivo. 2017. “Continuous Deployment of Software Intensive Products and Services: A Systematic Mapping Study.” <em>Journal of Systems and Software</em> 123. Elsevier: 263–91.</p>
-</div>
-<div id="ref-cesar2017a">
-<p>Cesar Brandão Gomes da Silva, Antonio, Glauco de Figueiredo Carneiro, Fernando Brito e Abreu, and Miguel Pessoa Monteiro. 2017. “Frequent Releases in Open Source Software: A Systematic Review.” <em>Information</em> 8 (3). Multidisciplinary Digital Publishing Institute: 109.</p>
-</div>
-<div id="ref-kitchenham2004procedures">
-<p>Kitchenham, Barbara. 2004b. “Procedures for Performing Systematic Reviews.” <em>Keele, UK, Keele University</em> 33 (2004): 1–26.</p>
+<div id="ref-czerwonka2015code">
+<p>Czerwonka, Jacek, Michaela Greiler, and Jack Tilford. 2015. “Code Reviews Do Not Find Bugs: How the Current Code Review Best Practice Slows Us down.” In <em>Proceedings of the 37th International Conference on Software Engineering-Volume 2</em>, 27–28. IEEE Press.</p>
 </div>
 </div>
             </section>
@@ -564,8 +631,8 @@ Notes:
           </div>
         </div>
       </div>
-<a href="ecosystem-analytics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="code-review.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="release-engineering-analytics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="runtime-and-performance-analytics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -595,7 +662,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/06-release-engineering-analytics.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/07-code-review.Rmd",
 "text": "Edit"
 },
 "download": ["software-analytics-survey.pdf", "software-analytics-survey.epub"],

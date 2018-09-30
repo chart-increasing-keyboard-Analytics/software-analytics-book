@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="ecosystem-analytics.html">
-<link rel="next" href="code-review.html">
+<link rel="prev" href="build-analytics.html">
+<link rel="next" href="ecosystem-analytics.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -243,76 +243,46 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="release-engineering-analytics" class="section level1">
-<h1><span class="header-section-number">Chapter 7</span> Release Engineering Analytics</h1>
-<div id="motivation-4" class="section level2">
-<h2><span class="header-section-number">7.1</span> Motivation</h2>
-<p>Release engineering is a discipline involved with making software available for end users. Efforts spent within the development environment of a software system should eventually be integrated and deployed such that end users may benefit from them. In recent years, release engineers have developed and adopted techniques to build infrastructures and pipelines which automate the process of releasing software to an increasingly large degree. These modern approaches have resulted in various practices such as releasing new versions of a software system in significantly shorter cycles.</p>
-<p>Due to these developments being industry-driven, release engineering forms a largely uncharted territory for software engineering research. It requires the attention from researchers both because these new practices have an often unanticipated impact on software studies and because they require empirical validation <span class="citation">(Adams and McIntosh <a href="#ref-adams2016a">2016</a>)</span>.</p>
-<p>Therefore, this systematic literature review aims to provide an overview of the software analytics research that has been conducted so far on release engineering. Its main purpose is to identify the apparent gap between research and practice, in order to guide further research efforts.</p>
-<div id="research-questions-1" class="section level3">
-<h3><span class="header-section-number">7.1.1</span> Research Questions</h3>
-<p>Contrary to what is regularly the case, with release engineering, practice seems to be ahead of research. Building on this idea, our questions are constructed to identify in which ways existing modern release engineering practices should still be studied in software analytics research. Our review thus aims to answer the following questions.</p>
-<!-- TODO -->
+<div id="bug-prediction" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Bug Prediction</h1>
+<div id="motivation-2" class="section level2">
+<h2><span class="header-section-number">5.1</span> Motivation</h2>
+<p>Minimizing the number of bugs in software is an effort central to software engineering - faulty code fails to fullfill the purpose it was written for, its impact ranges from sligthly embarrassing to disastrous and dangerous, and last but not least - fixing it costs time and money. Resources in a software development lifecycle are almost always limited and therefore should be allocated to where they are needed most - in order to avoid bugs, they should be focused on the most fault-prone areas of the project. Being able to predict where such areas might be would allow more development and testing efforts to be allocated on the right places.</p>
+<p>However, as noted in <span class="citation">D’Ambros, Lanza, and Robbes (<a href="#ref-DAmbros2012">2012</a>)</span>, reliably predicting which parts of source code are the most fault-prone is one of the holy-grails of software engineering. Thus it is not surprising that bug-prediction continues to garner a widespread research interest in software analytics, now equipped with the ever-expanding toolbox of data-mining and machine learning techniques. In this survey we investigate the current efforts in bug-prediction in the light of the advances in software analytics methods and focus our attention on answering the following research questions:</p>
 <ul>
-<li><p><strong>RQ 1:</strong> <em>How is modern release engineering done in practice?</em><br> This question aims to identify the so-called “state of the practice” in release engineering. We will summarize practices that have been adopted to drive release engineering forward. In addition we will identify the tools utilized to bring this about. Case studies will also be analyzed to this end.</p></li>
-<li><p><strong>RQ 2:</strong> <em>What aspects of modern release engineering have been studied in software analytics research so far?</em><br> In order to answer this question we investigate the practices that previous empirical studies have focused on. In doing so, we identify the associated costs and benefits that have been found, and the analysis methods used.</p></li>
-<li><p><strong>RQ 3:</strong> <em>What aspects of modern release engineering make for relevant study objects in future software analytics research?</em><br> In answering this question we aim to identify the gap between practice and research in release engineering. This way, our intent is not only to guide but also to motivate future research.</p></li>
+<li><strong>RQ1</strong> What is the current state of the art in bug prediction? More specifically, we aim to answer the following:
+<ul>
+<li>What software or other metrics does bug prediction rely on and how good are they?</li>
+<li>What kind prediction models are predominantly used?</li>
+<li>How are bug prediction models and results validated and evaluated?</li>
+</ul></li>
+<li><strong>RQ2</strong> What is the current state of practice in bug prediction?
+<ul>
+<li>Are bug prediction techniques applied in practice and if so, how?</li>
+<li>Are the current developments in the field able to provide actionable tools for developers?</li>
+</ul></li>
+<li><strong>RQ3</strong> What are some of the open challenges and directions for future research?</li>
 </ul>
 </div>
-</div>
-<div id="research-protocol-4" class="section level2">
-<h2><span class="header-section-number">7.2</span> Research Protocol</h2>
-<!-- TODO -->
-<p>In this section, we will describe…</p>
-<div id="search-strategy" class="section level3">
-<h3><span class="header-section-number">7.2.1</span> Search Strategy</h3>
-<p>Since release engineering is a relatively new research topic, we took an exploratory approach in collecting any literature revolving around the topic of release engineering from the perspective of software analytics. This aided us in determining a more narrow scope for our survey, subsequently allowing us to find additional literature fitting this scope.</p>
-<p>At the start of this project, we were provided with an initial seed of five papers as a starting point for our literature survey. These initial papers were <span class="citation">Adams and McIntosh (<a href="#ref-adams2016a">2016</a>)</span>, <span class="citation">Costa et al. (<a href="#ref-da2016a">2016</a>)</span>, <span class="citation">Costa et al. (<a href="#ref-d2014a">2014</a>)</span>, <span class="citation">Khomh et al. (<a href="#ref-khomh2012a">2012</a>)</span>, and <span class="citation">Khomh et al. (<a href="#ref-khomh2015a">2015</a>)</span>.</p>
-<p>We collected publications using two search engines: Scopus and Google Scholar. These each encompass various databases such as ACM Digital Library, Springer, IEEE Xplore and ScienceDirect. The main query that we constructed is displayed in Figure 1. The publications found using this query were:</p>
+<div id="research-protocol-2" class="section level2">
+<h2><span class="header-section-number">5.2</span> Research protocol</h2>
+<p>We started by studying the initial 6 seed papers which were selected based on domain knowledge:</p>
 <ul>
-<li><span class="citation">Kaur and Vig (<a href="#ref-kaur2019a">2019</a>)</span></li>
-<li><span class="citation">Kerzazi and Robillard (<a href="#ref-kerzazi2013a">2013</a>)</span></li>
-<li><span class="citation">Castelluccio, An, and Khomh (<a href="#ref-castelluccio2017a">2017</a>)</span></li>
-<li><span class="citation">Karvonen et al. (<a href="#ref-karvonen2017a">2017</a>)</span></li>
-<li><span class="citation">Claes et al. (<a href="#ref-claes2017a">2017</a>)</span></li>
-<li><span class="citation">Fujibayashi et al. (<a href="#ref-fujibayashi2017a">2017</a>)</span></li>
-<li><span class="citation">Souza, Chavez, and Bittencourt (<a href="#ref-souza2015a">2015</a>)</span></li>
-<li><span class="citation">Laukkanen et al. (<a href="#ref-laukkanen2018a">2018</a>)</span></li>
+<li><span class="citation">Gyimothy, Ferenc, and Siket (<a href="#ref-Gyimothy2005">2005</a>)</span></li>
+<li><span class="citation">Cagatay Catal and Diri (<a href="#ref-Catal2009review">2009</a>)</span></li>
+<li><span class="citation">Arisholm, Briand, and Johannessen (<a href="#ref-Arisholm2010">2010</a>)</span></li>
+<li><span class="citation">D’Ambros, Lanza, and Robbes (<a href="#ref-DAmbros2010">2010</a>)</span></li>
+<li><span class="citation">Hall et al. (<a href="#ref-Hall2012">2012</a>)</span></li>
+<li><span class="citation">Lewis et al. (<a href="#ref-Lewis2013">2013</a>)</span></li>
 </ul>
-<pre><code>TITLE-ABS-KEY(
-  (
-    &quot;continuous release&quot; OR &quot;rapid release&quot; OR &quot;frequent release&quot;
-    OR &quot;quick release&quot; OR &quot;speedy release&quot; OR &quot;accelerated release&quot;
-    OR &quot;agile release&quot; OR &quot;short release&quot; OR &quot;shorter release&quot;
-    OR &quot;lightning release&quot; OR &quot;brisk release&quot; OR &quot;hasty release&quot;
-    OR &quot;compressed release&quot; OR &quot;release length&quot; OR &quot;release size&quot;
-    OR &quot;release cadence&quot; OR &quot;release frequency&quot;
-    OR &quot;continuous delivery&quot; OR &quot;rapid delivery&quot; OR &quot;frequent delivery&quot;
-    OR &quot;fast delivery&quot; OR &quot;quick delivery&quot; OR &quot;speedy delivery&quot;
-    OR &quot;accelerated delivery&quot; OR &quot;agile delivery&quot; OR &quot;short delivery&quot;
-    OR &quot;lightning delivery&quot; OR &quot;brisk delivery&quot; OR &quot;hasty delivery&quot;
-    OR &quot;compressed delivery&quot; OR &quot;delivery length&quot; OR &quot;delivery size&quot;
-    OR &quot;delivery cadence&quot; OR &quot;continuous deployment&quot; OR &quot;rapid deployment&quot;
-    OR &quot;frequent deployment&quot; OR &quot;fast deployment&quot; OR &quot;quick deployment&quot;
-    OR &quot;speedy deployment&quot; OR &quot;accelerated deployment&quot; OR &quot;agile deployment&quot;
-    OR &quot;short deployment&quot; OR &quot;lightning deployment&quot; OR &quot;brisk deployment&quot;
-    OR &quot;hasty deployment&quot; OR &quot;compressed deployment&quot; OR &quot;deployment length&quot;
-    OR &quot;deployment size&quot; OR &quot;deployment cadence&quot;
-  ) AND (
-    &quot;release schedule&quot; OR &quot;release management&quot; OR &quot;release engineering&quot;
-    OR &quot;release cycle&quot; OR &quot;release pipeline&quot; OR &quot;release process&quot;
-    OR &quot;release model&quot; OR &quot;release strategy&quot; OR &quot;release strategies&quot;
-    OR &quot;release infrastructure&quot;
-  )
-  AND software
-) AND (
-    LIMIT-TO(SUBJAREA, &quot;COMP&quot;) OR LIMIT-TO(SUBJAREA, &quot;ENGI&quot;)
-)
-AND PUBYEAR AFT 2014</code></pre>
-<p><em>Figure 1. Query used for retrieving release engineering publications via Scopus.</em></p>
-<p>In addition to querying search engines as described above, references related to retrieved papers were analyzed. For each paper, the review concerned the publications cited by the paper, as well as those citing the paper. These reference lists were obtained from Google Scholar and from the reference lists in the papers themselves. The results of the reference analysis are listed in Table 1.</p>
-<p><em>Table 1. Papers found indirectly by investigating citations of/by other papers.</em></p>
+<p>Our searches were based on the following elements:</p>
+<ol style="list-style-type: decimal">
+<li><p>Keyword search using search engines (Scopus, ACM Digital Library, IEEE Explorer). The search query was constructed so that the paper title had to contain the phrase bug prediction, but also the other more general variants used in literature: <em>bug/defect/fault prediction</em>. The title also had to contain at least one of following keywords: <em>metrics</em>, <em>models</em>, <em>validation</em>, <em>evaluation</em>, <em>developers</em>. To remain within the bug prediction field we required <em>software</em> to appear in the abstract.</p></li>
+<li><p>Filtering search results by publication date. We excluded papers older than 10 years; that is, published before 2008.</p></li>
+<li><p>Filtering by the number of citations. We selected papers with 10 or more citations in order to focus on the ones that already have some visibility within the field.</p></li>
+<li><p>Exploring other impactful publications by the same authors.</p></li>
+</ol>
+<p><em>Table 1. Papers found by investigating the authors of other papers.</em></p>
 <table>
 <thead>
 <tr class="header">
@@ -323,240 +293,51 @@ AND PUBYEAR AFT 2014</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="citation">Souza, Chavez, and Bittencourt (<a href="#ref-souza2015a">2015</a>)</span></td>
-<td>has cited</td>
-<td><span class="citation">Plewnia, Dyck, and Lichter (<a href="#ref-plewnia2014a">2014</a>)</span> <br> <span class="citation">Mäntylä et al. (<a href="#ref-mantyla2015a">2015</a>)</span></td>
+<td><span class="citation">D’Ambros, Lanza, and Robbes (<a href="#ref-DAmbros2010">2010</a>)</span></td>
+<td>is author of</td>
+<td><span class="citation">D’Ambros, Lanza, and Robbes (<a href="#ref-DAmbros2012">2012</a>)</span></td>
 </tr>
 <tr class="even">
-<td><span class="citation">Khomh et al. (<a href="#ref-khomh2015a">2015</a>)</span></td>
-<td>is cited by</td>
-<td><span class="citation">Poo-Caamaño (<a href="#ref-poo-caama2016a">2016</a>)</span> <br> <span class="citation">Teixeira (<a href="#ref-teixeira2017a">2017</a>)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="citation">Mäntylä et al. (<a href="#ref-mantyla2015a">2015</a>)</span></td>
-<td>is cited by</td>
-<td><span class="citation">Rodríguez et al. (<a href="#ref-rodriguez2017a">2017</a>)</span> <br> <span class="citation">Cesar Brandão Gomes da Silva et al. (<a href="#ref-cesar2017a">2017</a>)</span></td>
+<td><span class="citation">Cagatay Catal and Diri (<a href="#ref-Catal2009review">2009</a>)</span></td>
+<td>is author of</td>
+<td><span class="citation">Catal (<a href="#ref-Catal2011">2011</a>)</span> <br> <span class="citation">C. Catal and Diri (<a href="#ref-Catal2009investigating">2009</a>)</span></td>
 </tr>
 </tbody>
 </table>
-<p>All the papers that were found, were stored in a custom built web-based tool for conducting literature reviews. The source code of this tool is published in a <a href="https://github.com/jessetilro/research">GitHub repository</a>. The tool was hosted on a virtual private server, such that all retrieved publications were stored centrally, accessible to all reviewers.</p>
 </div>
-<div id="study-selection" class="section level3">
-<h3><span class="header-section-number">7.2.2</span> Study Selection</h3>
-<p>In the utilized tool for conducting the survey, it is possible to label papers with tags and leave comments and ratings. Every paper is reviewed based on the selection criteria. Based on this, the tool allowed to filter out all papers that appeared not to be relevant for this literature survey.</p>
-<p>The selection criteria are as follows:</p>
-<ol style="list-style-type: decimal">
-<li>The study must show (at least) one release engineering technique.</li>
-<li>The study must not just show a release engineering technique, but analyze its performance compared to other techniques.</li>
-</ol>
-<p>Based on these selection criteria, the following papers appeared to be irrelevant for the scope of this survey:</p>
-<!-- Example. TODO: actually exclude papers -->
-<ul>
-<li>[link to paper] - Excluded based on rule 2.</li>
-</ul>
-</div>
-<div id="study-quality-assessment" class="section level3">
-<h3><span class="header-section-number">7.2.3</span> Study Quality Assessment</h3>
-<p>Based on <span class="citation">B. Kitchenham (<a href="#ref-kitchenham2004procedures">2004</a><a href="#ref-kitchenham2004procedures">b</a>)</span>, the quality of a paper will be assessed by the evidence it provides, based on the following scale. All levels of quality will be accepted, except for level 5 (expert opinion).</p>
-<ol style="list-style-type: decimal">
-<li>Evidence obtained from at least one properly-designed randomised controlled trial.</li>
-<li>Evidence obtained from well-designed pseudo-randomised controlled trials (i.e. non-random allocation to treatment).</li>
-<li>Comparative studies in a real-world setting:
-<ol style="list-style-type: decimal">
-<li>Evidence obtained from comparative studies with concurrent controls and allocation not randomised, cohort studies, case-control studies or interrupted time series with a control group.</li>
-<li>Evidence obtained from comparative studies with historical control, two or more single arm studies, or interrupted time series without a parallel control group.</li>
-</ol></li>
-<li>Experiments in artificial settings:
-<ol style="list-style-type: decimal">
-<li>Evidence obtained from a randomised experiment performed in an artificial setting.</li>
-<li>Evidence obtained from case series, either post-test or pre-test/post-test.</li>
-<li>Evidence obtained from a quasi-random experiment performed in an artificial setting.</li>
-</ol></li>
-<li>Evidence obtained from expert opinion based on theory or consensus.</li>
-</ol>
-<p>Also, the studies will be examined to see if they contain any type of bias. For this, the same types of biases will be used as described by <span class="citation">B. Kitchenham (<a href="#ref-kitchenham2004procedures">2004</a><a href="#ref-kitchenham2004procedures">b</a>)</span>:</p>
-<ul>
-<li>Selection/Allocation bias: Systematic difference between comparison groups with respect to treatment.</li>
-<li>Performance bias: Systematic difference is the conduct of comparison groups apart from the treatment being evaluated.</li>
-<li>Measurement/Detection bias: Systematic difference between the groups in how outcomes are ascertained.</li>
-<li>Attrition/Exclusion bias: Systematic differences between comparison groups in terms of withdrawals or exclusions of participants from the study sample.</li>
-</ul>
-<p>The studies will be labeled by their quality level and possible biases. This information can be used during the Data Synthesis phase to weigh the importance of individual studies <span class="citation">(B. Kitchenham <a href="#ref-kitchenham2004procedures">2004</a><a href="#ref-kitchenham2004procedures">b</a>)</span>.</p>
-</div>
-<div id="data-extraction" class="section level3">
-<h3><span class="header-section-number">7.2.4</span> Data Extraction</h3>
-<p>To accurately capture the information contributed by each publication in our survey, we will use a systematic approach to extracting data. To guide this process, we will be using a data extraction form which describes what aspects of a publication are crucial to record. Besides general publication information (title, author etc.), the form contains questions that are based on our defined research questions. Furthermore, the form contains a section for quantitative research, where aspects such as population and evaluation will be documented. The form that is used for this is shown below:</p>
-<pre><code>General information:
-    Name of person extracting data:
-    Date form completed (dd/mm/yyyy):
-    Publication title:
-    Author information:
-    Journal:
-    Publication type:
-    Type of study:
-
-What practices in release engineering does this publication mention?
-
-Are these practices to be classified under dated, state of the art or state of
-the practice? Why?
-
-What open challenges in release engineering does this publication mention?
-
-What research gaps does this publication contain?
-
-Are these research gaps filled by any other publications in this survey?
-
-Quantitative research publications:
-    Study start date:
-    Study end date or duration:
-    Population description:
-    Method(s) of recruitment of participants:
-    Sample size:
-    Evaluation/measurement description:
-    Outcomes:
-    Limitations:
-    Future research:
-
-Notes:
-</code></pre>
-</div>
-<div id="data-synthesis" class="section level3">
-<h3><span class="header-section-number">7.2.5</span> Data Synthesis</h3>
-<p>To summarize the contributions and limitations of each of the included publications, we will apply a descriptive synthesis approach. In this part of our survey, we will compare the data that was extracted of the included publications. Publications with similar findings will be grouped and evaluated, and differences between groups of publications will be structured and elaborated on. In this we will compare them using specifics such as their study types, time of publication and study quality.</p>
-<p>If the extracted data allows for a structured tabular visualization of similarities and differences between publications this we serve as an additional form of synthesis. However, this depends on the final included publications of this survey.</p>
-</div>
-<div id="included-and-excluded-studies" class="section level3">
-<h3><span class="header-section-number">7.2.6</span> Included and Excluded Studies</h3>
-</div>
-<div id="project-timetable" class="section level3">
-<h3><span class="header-section-number">7.2.7</span> Project timetable</h3>
-<p>The literature review was conducted over the course of four weeks. We worked iteratively and planned for four weekly milestones.</p>
-<table style="width:96%;">
-<colgroup>
-<col width="23%" />
-<col width="19%" />
-<col width="52%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Milestone</th>
-<th>Deadline</th>
-<th>Goals</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Milestone 1</td>
-<td>16/9/18</td>
-<td>- Develop the search strategy<br> - Collect initial publications</td>
-</tr>
-<tr class="even">
-<td>Milestone 2</td>
-<td>23/9/18</td>
-<td>Write full research protocol</td>
-</tr>
-<tr class="odd">
-<td>Milestone 3</td>
-<td>30/9/18</td>
-<td>- Collect additional literature according to the protocol<br> - Perform data extraction</td>
-</tr>
-<tr class="even">
-<td>Milestone 4</td>
-<td>7/10/18</td>
-<td>- Perform data synthesis<br> - Write final version of the chapter</td>
-</tr>
-</tbody>
-</table>
-<!-- TODO -->
-</div>
-</div>
-<div id="answers-3" class="section level2">
-<h2><span class="header-section-number">7.3</span> Answers</h2>
-<!-- TODO -->
-<div id="rq1" class="section level3">
-<h3><span class="header-section-number">7.3.1</span> RQ1: …</h3>
-<!-- TODO -->
-</div>
-<div id="rq2" class="section level3">
-<h3><span class="header-section-number">7.3.2</span> RQ2: …</h3>
-<!-- TODO -->
-</div>
-<div id="rq3" class="section level3">
-<h3><span class="header-section-number">7.3.3</span> RQ3: …</h3>
-<!-- TODO -->
-</div>
-</div>
-<div id="discussion" class="section level2">
-<h2><span class="header-section-number">7.4</span> Discussion</h2>
-<!-- TODO -->
-</div>
-<div id="conclusion" class="section level2">
-<h2><span class="header-section-number">7.5</span> Conclusion</h2>
-<!-- TODO -->
+<div id="answers-1" class="section level2">
+<h2><span class="header-section-number">5.3</span> Answers</h2>
 
 </div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
-<div id="ref-adams2016a">
-<p>Adams, Bram, and Shane McIntosh. 2016. “Modern Release Engineering in a Nutshell–why Researchers Should Care.” In <em>Software Analysis, Evolution, and Reengineering (Saner), 2016 Ieee 23rd International Conference on</em>, 5:78–90. IEEE. <a href="https://doi.org/10.1109/SANER.2016.108" class="uri">https://doi.org/10.1109/SANER.2016.108</a>.</p>
+<div id="ref-DAmbros2012">
+<p>D’Ambros, M., M. Lanza, and R. Robbes. 2012. “Evaluating Defect Prediction Approaches: A Benchmark and an Extensive Comparison.” <em>Empirical Software Engineering</em> 17 (4-5): 531–77. <a href="www.scopus.com" class="uri">www.scopus.com</a>.</p>
 </div>
-<div id="ref-da2016a">
-<p>Costa, D. A. da, S. McIntosh, U. Kulesza, and A. E. Hassan. 2016. “The Impact of Switching to a Rapid Release Cycle on the Integration Delay of Addressed Issues - an Empirical Study of the Mozilla Firefox Project.” In <em>2016 Ieee/Acm 13th Working Conference on Mining Software Repositories (Msr)</em>, 374–85. <a href="https://doi.org/10.1109/MSR.2016.045" class="uri">https://doi.org/10.1109/MSR.2016.045</a>.</p>
+<div id="ref-Gyimothy2005">
+<p>Gyimothy, T., R. Ferenc, and I. Siket. 2005. “Empirical validation of object-oriented metrics on open source software for fault prediction.” <em>IEEE Transactions on Software Engineering</em> 31 (10): 897–910. doi:<a href="https://doi.org/10.1109/TSE.2005.112">10.1109/TSE.2005.112</a>.</p>
 </div>
-<div id="ref-d2014a">
-<p>Costa, D. A. d., S. L. Abebe, S. Mcintosh, U. Kulesza, and A. E. Hassan. 2014. “An Empirical Study of Delays in the Integration of Addressed Issues.” In <em>2014 Ieee International Conference on Software Maintenance and Evolution</em>, 281–90. <a href="https://doi.org/10.1109/ICSME.2014.50" class="uri">https://doi.org/10.1109/ICSME.2014.50</a>.</p>
+<div id="ref-Catal2009review">
+<p>Catal, Cagatay, and Banu Diri. 2009. “A systematic review of software fault prediction studies.” doi:<a href="https://doi.org/10.1016/j.eswa.2008.10.027">10.1016/j.eswa.2008.10.027</a>.</p>
 </div>
-<div id="ref-khomh2012a">
-<p>Khomh, Foutse, Tejinder Dhaliwal, Ying Zou, and Bram Adams. 2012. “Do Faster Releases Improve Software Quality?: An Empirical Case Study of Mozilla Firefox.” In <em>Proceedings of the 9th Ieee Working Conference on Mining Software Repositories</em>, 179–88. MSR ’12. Piscataway, NJ, USA: IEEE Press. <a href="http://dl.acm.org/citation.cfm?id=2664446.2664475" class="uri">http://dl.acm.org/citation.cfm?id=2664446.2664475</a>.</p>
+<div id="ref-Arisholm2010">
+<p>Arisholm, Erik, Lionel C Briand, and Eivind B Johannessen. 2010. “A systematic and comprehensive investigation of methods to build and evaluate fault prediction models.” <em>Journal of Systems and Software</em> 83 (1): 2–17. doi:<a href="https://doi.org/10.1016/j.jss.2009.06.055">10.1016/j.jss.2009.06.055</a>.</p>
 </div>
-<div id="ref-khomh2015a">
-<p>Khomh, Foutse, Bram Adams, Tejinder Dhaliwal, and Ying Zou. 2015. “Understanding the Impact of Rapid Releases on Software Quality.” <em>Empirical Software Engineering</em> 20 (2): 336–73. <a href="https://doi.org/10.1007/s10664-014-9308-x" class="uri">https://doi.org/10.1007/s10664-014-9308-x</a>.</p>
+<div id="ref-DAmbros2010">
+<p>D’Ambros, Marco, Michele Lanza, and Romain Robbes. 2010. “An extensive comparison of bug prediction approaches.” <em>Proceedings - International Conference on Software Engineering</em>, 31–41. doi:<a href="https://doi.org/10.1109/MSR.2010.5463279">10.1109/MSR.2010.5463279</a>.</p>
 </div>
-<div id="ref-kaur2019a">
-<p>Kaur, A., and V. Vig. 2019. “On Understanding the Release Patterns of Open Source Java Projects.” <em>Advances in Intelligent Systems and Computing</em> 711: 9–18. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85049941993\&amp;doi=10.1007%2f978-981-10-8055-5_2\&amp;partnerID=40\&amp;md5=7a255f14762205c60f618cfb97569650">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85049941993\&amp;doi=10.1007%2f978-981-10-8055-5_2\&amp;partnerID=40\&amp;md5=7a255f14762205c60f618cfb97569650</a>.</p>
+<div id="ref-Hall2012">
+<p>Hall, T., S. Beecham, D. Bowes, D. Gray, and S. Counsell. 2012. “A Systematic Literature Review on Fault Prediction Performance in Software Engineering.” <em>IEEE Transactions on Software Engineering</em> 38 (6): 1276–1304. doi:<a href="https://doi.org/10.1109/TSE.2011.103">10.1109/TSE.2011.103</a>.</p>
 </div>
-<div id="ref-kerzazi2013a">
-<p>Kerzazi, N., and P.N. Robillard. 2013. “Kanbanize the Release Engineering Process.” In <em>2013 1st International Workshop on Release Engineering, RELENG 2013 - Proceedings</em>, 9–12. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-84886059813\&amp;doi=10.1109%2fRELENG.2013.6607689\&amp;partnerID=40\&amp;md5=73eb9fc8ca1f9b6568975ff0c054308c">https://www.scopus.com/inward/record.uri?eid=2-s2.0-84886059813\&amp;doi=10.1109%2fRELENG.2013.6607689\&amp;partnerID=40\&amp;md5=73eb9fc8ca1f9b6568975ff0c054308c</a>.</p>
+<div id="ref-Lewis2013">
+<p>Lewis, Chris, Zhongpeng Lin, Caitlin Sadowski, Xiaoyan Zhu, Rong Ou, and E. James Whitehead. 2013. “Does bug prediction support human developers? Findings from a Google case study.” In <em>2013 35th International Conference on Software Engineering (Icse)</em>, 372–81. IEEE. doi:<a href="https://doi.org/10.1109/ICSE.2013.6606583">10.1109/ICSE.2013.6606583</a>.</p>
 </div>
-<div id="ref-castelluccio2017a">
-<p>Castelluccio, M., L. An, and F. Khomh. 2017. “Is It Safe to Uplift This Patch? An Empirical Study on Mozilla Firefox.” In <em>Proceedings - 2017 IEEE International Conference on Software Maintenance and Evolution, ICSME 2017</em>, 411–21. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85040634374\&amp;doi=10.1109%2fICSME.2017.82\&amp;partnerID=40\&amp;md5=db36b40c2534743b53a2379157b50a59">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85040634374\&amp;doi=10.1109%2fICSME.2017.82\&amp;partnerID=40\&amp;md5=db36b40c2534743b53a2379157b50a59</a>.</p>
+<div id="ref-Catal2011">
+<p>Catal, C. 2011. “Software Fault Prediction: A Literature Review and Current Trends.” <em>Expert Systems with Applications</em> 38 (4): 4626–36. <a href="www.scopus.com" class="uri">www.scopus.com</a>.</p>
 </div>
-<div id="ref-karvonen2017a">
-<p>Karvonen, T., W. Behutiye, M. Oivo, and P. Kuvaja. 2017. “Systematic Literature Review on the Impacts of Agile Release Engineering Practices.” <em>Information and Software Technology</em> 86: 87–100. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85028272067\&amp;doi=10.1016%2fj.infsof.2017.01.009\&amp;partnerID=40\&amp;md5=001c120eea2481c21dae5a551b44dd39">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85028272067\&amp;doi=10.1016%2fj.infsof.2017.01.009\&amp;partnerID=40\&amp;md5=001c120eea2481c21dae5a551b44dd39</a>.</p>
-</div>
-<div id="ref-claes2017a">
-<p>Claes, M., M. Mantyla, M. Kuutila, and B. Adams. 2017. “Abnormal Working Hours: Effect of Rapid Releases and Implications to Work Content.” In <em>IEEE International Working Conference on Mining Software Repositories</em>, 243–47. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85026506528\&amp;doi=10.1109%2fMSR.2017.3\&amp;partnerID=40\&amp;md5=2da8fa8a15b9ffb4b1969663af15ecac">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85026506528\&amp;doi=10.1109%2fMSR.2017.3\&amp;partnerID=40\&amp;md5=2da8fa8a15b9ffb4b1969663af15ecac</a>.</p>
-</div>
-<div id="ref-fujibayashi2017a">
-<p>Fujibayashi, D., A. Ihara, H. Suwa, R.G. Kula, and K. Matsumoto. 2017. “Does the Release Cycle of a Library Project Influence When It Is Adopted by a Client Project?” In <em>SANER 2017 - 24th IEEE International Conference on Software Analysis, Evolution, and Reengineering</em>, 569–70. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85018384049\&amp;doi=10.1109%2fSANER.2017.7884681\&amp;partnerID=40\&amp;md5=83955b8bec9726f3eb1bc751b3c5f2f8">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85018384049\&amp;doi=10.1109%2fSANER.2017.7884681\&amp;partnerID=40\&amp;md5=83955b8bec9726f3eb1bc751b3c5f2f8</a>.</p>
-</div>
-<div id="ref-souza2015a">
-<p>Souza, R., C. Chavez, and R.A. Bittencourt. 2015. “Rapid Releases and Patch Backouts: A Software Analytics Approach.” <em>IEEE Software</em> 32 (2): 89–96. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-84925218343\&amp;doi=10.1109%2fMS.2015.30\&amp;partnerID=40\&amp;md5=d624ac5b06a61704543a6d72af3981a1">https://www.scopus.com/inward/record.uri?eid=2-s2.0-84925218343\&amp;doi=10.1109%2fMS.2015.30\&amp;partnerID=40\&amp;md5=d624ac5b06a61704543a6d72af3981a1</a>.</p>
-</div>
-<div id="ref-laukkanen2018a">
-<p>Laukkanen, E., M. Paasivaara, J. Itkonen, and C. Lassenius. 2018. “Comparison of Release Engineering Practices in a Large Mature Company and a Startup.” <em>Empirical Software Engineering</em>, 1–43. <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85044460784\&amp;doi=10.1007%2fs10664-018-9616-7\&amp;partnerID=40\&amp;md5=dcca7b080050cb81ac889e6eede2b3cc">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85044460784\&amp;doi=10.1007%2fs10664-018-9616-7\&amp;partnerID=40\&amp;md5=dcca7b080050cb81ac889e6eede2b3cc</a>.</p>
-</div>
-<div id="ref-plewnia2014a">
-<p>Plewnia, Christian, Andrej Dyck, and Horst Lichter. 2014. “On the Influence of Release Engineering on Software Reputation.” In <em>Mountain View, ca, Usa: In 2nd International Workshop on Release Engineering</em>.</p>
-</div>
-<div id="ref-mantyla2015a">
-<p>Mäntylä, Mika V., Bram Adams, Foutse Khomh, Emelie Engström, and Kai Petersen. 2015. “On Rapid Releases and Software Testing: A Case Study and a Semi-Systematic Literature Review.” <em>Empirical Software Engineering</em> 20 (5): 1384–1425. <a href="https://doi.org/10.1007/s10664-014-9338-4" class="uri">https://doi.org/10.1007/s10664-014-9338-4</a>.</p>
-</div>
-<div id="ref-poo-caama2016a">
-<p>Poo-Caamaño, Germán. 2016. “Release Management in Free and Open Source Software Ecosystems.” PhD thesis. <a href="http://dspace.library.uvic.ca/handle/1828/7648" class="uri">http://dspace.library.uvic.ca/handle/1828/7648</a>.</p>
-</div>
-<div id="ref-teixeira2017a">
-<p>Teixeira, Jose. 2017. “Release Early, Release Often and Release on Time. an Empirical Case Study of Release Management.” In <em>Open Source Systems: Towards Robust Practices</em>, 167–81. Cham: Springer International Publishing. doi:<a href="https://doi.org/10.1007/978-3-319-57735-7_16">10.1007/978-3-319-57735-7_16</a>.</p>
-</div>
-<div id="ref-rodriguez2017a">
-<p>Rodríguez, Pilar, Alireza Haghighatkhah, Lucy Ellen Lwakatare, Susanna Teppola, Tanja Suomalainen, Juho Eskeli, Teemu Karvonen, Pasi Kuvaja, June M Verner, and Markku Oivo. 2017. “Continuous Deployment of Software Intensive Products and Services: A Systematic Mapping Study.” <em>Journal of Systems and Software</em> 123. Elsevier: 263–91.</p>
-</div>
-<div id="ref-cesar2017a">
-<p>Cesar Brandão Gomes da Silva, Antonio, Glauco de Figueiredo Carneiro, Fernando Brito e Abreu, and Miguel Pessoa Monteiro. 2017. “Frequent Releases in Open Source Software: A Systematic Review.” <em>Information</em> 8 (3). Multidisciplinary Digital Publishing Institute: 109.</p>
-</div>
-<div id="ref-kitchenham2004procedures">
-<p>Kitchenham, Barbara. 2004b. “Procedures for Performing Systematic Reviews.” <em>Keele, UK, Keele University</em> 33 (2004): 1–26.</p>
+<div id="ref-Catal2009investigating">
+<p>Catal, C., and B. Diri. 2009. “Investigating the Effect of Dataset Size, Metrics Sets, and Feature Selection Techniques on Software Fault Prediction Problem.” <em>Information Sciences</em> 179 (8): 1040–58. <a href="www.scopus.com" class="uri">www.scopus.com</a>.</p>
 </div>
 </div>
             </section>
@@ -564,8 +345,8 @@ Notes:
           </div>
         </div>
       </div>
-<a href="ecosystem-analytics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="code-review.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="build-analytics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ecosystem-analytics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -595,7 +376,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/06-release-engineering-analytics.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/04-bug-prediction.Rmd",
 "text": "Edit"
 },
 "download": ["software-analytics-survey.pdf", "software-analytics-survey.epub"],
