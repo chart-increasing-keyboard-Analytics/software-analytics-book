@@ -85,7 +85,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2018-09-30}
+    \date{2018-10-01}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -1028,18 +1028,28 @@ made in build analytics field and Continuous Integration (CI) as an
 increasingly common development practice in many projects.
 
 Build analytics covers research done on data extracted from a build
-process inisde a project. This contains amongst others, build logs from
-continuous integration such as Travis CI, Circle CI, Jenkins and
-TeamCity or surveys among developers about their usage of continuous
-integration or build systems. This information is often paired with data
-from version control systems such as git
+process inside a project. This contains amongst others, build logs from
+continuous integration such as Travis CI\footnote{\url{https://travis-ci.org/}},
+Circle
+CI\textsuperscript{{[}\url{https://circleci.com/}{]},Jenkins}{[}\url{https://jenkins.io/}{]},
+AppVeyor\footnote{\url{https://www.appveyor.com/}} and
+TeamCity\footnote{\url{https://www.jetbrains.com/teamcity/}} or surveys
+among developers about their usage of Continuous Integration or build
+systems. This information is often paired with data from Version Control
+Systems (VCS) such as git.
 
 In order to get a complete view of the current state of the build
-analytics field we ask the following research questions.
+analytics field, we ask the following research questions.
 
 \textbf{RQ1}: What is the current state of the art in the field of build
-analytics? \textbf{RQ2}: What is the current state of practice in the
-field of build analytics?
+analytics?
+
+In order to answer to the first reseacrh question, we need to present
+the current topics that are being explored in the build analytics domain
+alogside with the research methods, tools and datasets acquired for the
+problems in hand and aggregate and reflect about the main research
+findings that the state-of-the-art papers display. \textbf{RQ2}: What is
+the current state of practice in the field of build analytics?
 
 \textbf{RQ3}: What future research can we expect in the field of build
 analytics?
@@ -1053,20 +1063,68 @@ on the open research and challenges in current research.
 
 Using the initial seed consisting of \citet{bird2017predicting},
 \citet{beller2017oops}, \citet{rausch2017empirical},
-\citet{beller2017travistorrent}, \citet{pinto2018work},
-\citet{zhao2017impact}, \citet{widder2018m} and \citet{hilton2016usage}
-we used references to find new papers to analyze. Moreover, we used
-academical search engines like \emph{GoogleScholar} to perform a keyword
-based search for other relevant build analytics domain papers. The
-keywords used were: build analytics, machine learning, build time,
-prediction, continuous integration, build failures, active learning,
-build errors, mining, software repositories, open-source software.
+\citet{beller2017travistorrent}, \citet{pinto2018work}, 1,
+\citet{widder2018m} and \citet{hilton2016usage} we used references to
+find new papers to analyze. Moreover, we used academical search engines
+like \emph{GoogleScholar} to perform a keyword based search for other
+relevant build analytics domain papers. The keywords used were: build
+analytics, machine learning, build time, prediction, continuous
+integration, build failures, active learning, build errors, mining,
+software repositories, open-source software.
 
 \section{Answers}\label{answers}
 
-\textbf{RQ1}: \textbf{RQ2}:
+\textbf{RQ1}: The current state-of-the-art in build analytics domain
+refers to the use of machine learning techniques to increase the
+productivity when using Continuos Integration (CI), to generate
+contraints on the configuration of the CI that could improve build
+success rate and to predict build failures even for newer projects with
+less training data available.
+
+The topics that are being explored are: * the importance of the build
+process in a VCS project \citet{hassan2018hirebuild} * the impact
+factors of user satisfaction from using a CI tools \citet{widder2018m} *
+methods from helping the developer to fix bugs
+\citet{hassan2018hirebuild}, \citet{vassallo2018break} * predicting
+build time \citet{bisong2017built} * predicting build failures
+\citet{santolucito2018statically}, \citet{ni2018acona}
+
+The tools that are being proposed are: * BART to help developers fix
+build errors by generating a summary of the failures with useful
+information, thus eliminating the need to browse error logs
+\citet{vassallo2018break} * HireBuild to automatically fix build
+failures based on previous changes \citet{hassan2018hirebuild} * VeriCI
+capable of checking the errors in CI configurations files before the
+developer push a commit and without needing to wait for the build result
+\citet{santolucito2018statically} * ACONA capable of predicting build
+failure prediction in CI environment for newer projects with less data
+available \citet{ni2018acona}
+
+The build process is important part of a project that uses VCS in the
+way that based on the findings from \citet{hassan2018hirebuild} 22\% of
+code commits include changes in build script files for either build
+working or build fixing purposes. Moreover, recent studies has focused
+on how satisfied are the users of CI tools, one particular paper
+\citet{widder2018m} analyzing what factors have an impact on abandonment
+of Travis CI. The paper finds that increased build complexity reduces
+the chance of abandonment, but larger projects abandon at a higher rate
+and that a project's language has significant but varying effect. A
+surprising result is that metrics of configuration attempts and
+knowledge dispersion in the project do not affect the rate of
+abandonment.
+
+\textbf{RQ2}:
 
 \textbf{RQ3}:
+
+Currently research on build analytics is limited by some challenges,
+some are specific to build analytics and some are applicable to the
+entire field of software engineering.
+
+In \citet{bisong2017built} the main limitation was the performance of
+the machine learning algorithm used. In the implementation R was used
+and it proved not capable of processing the amounts of data needed. This
+shows that it is important to choose the right tool when analyzing data.
 
 Future research in build analytics branches in a couple of different
 topics. \citet{pinto2018work} proposes to focus on getting a better
@@ -1077,6 +1135,18 @@ According to \citet{baltes2018no} future work could look into more
 perspectives when analyzing commit data, for instance partitioning
 commits by developer. It also notes the importance of more qualitative
 research.
+
+\begin{itemize}
+\item
+  \begin{enumerate}
+  \def\labelenumi{(\arabic{enumi})}
+  \tightlist
+  \item
+    How do teams change their pull request review practices in response
+    to the introduction of continuous integration?
+  \end{enumerate}
+\item
+\end{itemize}
 
 \section{Summary of papers}\label{summary-of-papers}
 
@@ -1130,7 +1200,7 @@ inadequate testing is the most common (technical) reason for build
 breakage and that people feel that there is a false sense of confidence
 when blindly trusing tests.
 
-\subsection{\texorpdfstring{\citet{zhao2017impact}}{@zhao2017impact}}\label{zhao2017impact}
+\subsection{1}\label{zhao2017impact}
 
 \emph{Initial Seed}
 
