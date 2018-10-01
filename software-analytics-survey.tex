@@ -1029,14 +1029,14 @@ increasingly common development practice in many projects.
 
 Build analytics covers research done on data extracted from a build
 process inside a project. This contains amongst others, build logs from
-continuous integration such as Travis CI\footnote{\url{https://travis-ci.org/}},
-Circle
-CI\textsuperscript{{[}\url{https://circleci.com/}{]},Jenkins}{[}\url{https://jenkins.io/}{]},
-AppVeyor\footnote{\url{https://www.appveyor.com/}} and
-TeamCity\footnote{\url{https://www.jetbrains.com/teamcity/}} or surveys
-among developers about their usage of Continuous Integration or build
-systems. This information is often paired with data from Version Control
-Systems (VCS) such as git.
+continuous integration such as Travis~CI\footnote{See~
+  \url{https://travis-ci.org/}}, Circle~CI\footnote{See
+  \url{https://circleci.com/}}, Jenkins\footnote{See
+  \url{https://jenkins.io/}}, AppVeyor\footnote{See~\url{https://www.appveyor.com/}}
+and TeamCity\footnote{See \url{https://www.jetbrains.com/teamcity/}} or
+surveys among developers about their usage of Continuous Integration or
+build systems. This information is often paired with data from Version
+Control Systems (VCS) such as git.
 
 In order to get a complete view of the current state of the build
 analytics field, we ask the following research questions.
@@ -1048,8 +1048,10 @@ In order to answer to the first reseacrh question, we need to present
 the current topics that are being explored in the build analytics domain
 alogside with the research methods, tools and datasets acquired for the
 problems in hand and aggregate and reflect about the main research
-findings that the state-of-the-art papers display. \textbf{RQ2}: What is
-the current state of practice in the field of build analytics?
+findings that the state-of-the-art papers display.
+
+\textbf{RQ2}: What is the current state of practice in the field of
+build analytics?
 
 \textbf{RQ3}: What future research can we expect in the field of build
 analytics?
@@ -1063,14 +1065,14 @@ on the open research and challenges in current research.
 
 Using the initial seed consisting of \citet{bird2017predicting},
 \citet{beller2017oops}, \citet{rausch2017empirical},
-\citet{beller2017travistorrent}, \citet{pinto2018work}, 1,
-\citet{widder2018m} and \citet{hilton2016usage} we used references to
-find new papers to analyze. Moreover, we used academical search engines
-like \emph{GoogleScholar} to perform a keyword based search for other
-relevant build analytics domain papers. The keywords used were: build
-analytics, machine learning, build time, prediction, continuous
-integration, build failures, active learning, build errors, mining,
-software repositories, open-source software.
+\citet{beller2017travistorrent}, \citet{pinto2018work},
+\citet{zhao2017impact}, \citet{widder2018m} and \citet{hilton2016usage}
+we used references to find new papers to analyze. Moreover, we used
+academical search engines like \emph{GoogleScholar} to perform a keyword
+based search for other relevant build analytics domain papers. The
+keywords used were: build analytics, machine learning, build time,
+prediction, continuous integration, build failures, active learning,
+build errors, mining, software repositories, open-source software.
 
 \section{Answers}\label{answers}
 
@@ -1137,15 +1139,28 @@ commits by developer. It also notes the importance of more qualitative
 research.
 
 \begin{itemize}
+\tightlist
 \item
-  \begin{enumerate}
-  \def\labelenumi{(\arabic{enumi})}
-  \tightlist
-  \item
-    How do teams change their pull request review practices in response
-    to the introduction of continuous integration?
-  \end{enumerate}
+  How do teams change their pull request review practices in response to
+  the introduction of continuous integration? (\citet{zhao2017impact})
 \item
+  How can we detect if fixing a build configuration requires changes in
+  the remote environment? (\citet{vassallo2018break})
+\item
+  Does breaking the build often translate to worse project quality and
+  decreased productivity? (\citet{beller2017oops})
+\end{itemize}
+
+From the synthesis of the works discussed in this section the following
+research questions emerged:
+
+\begin{itemize}
+\tightlist
+\item
+  What is the impact of the choice of Continuos Integration platform?
+  Most of the research is done on users using Travis~CI, there are many
+  other platforms out there. Every platform has their own
+  characteristics.
 \end{itemize}
 
 \section{Summary of papers}\label{summary-of-papers}
@@ -1166,7 +1181,7 @@ until the build works again.
 
 \emph{Initial Seed}
 
-This paper explores data from Travis CI\footnote{See
+This paper explores data from Travis~CI\footnote{See
   \url{https://travis-ci.org}} on a large scale by analyzing 2,640,825
 build logs of Java and Ruby builds. It uses \textsc{TravisTorrent} as a
 data source. It is found that the number one reason for failing builds
@@ -1200,7 +1215,7 @@ inadequate testing is the most common (technical) reason for build
 breakage and that people feel that there is a false sense of confidence
 when blindly trusing tests.
 
-\subsection{1}\label{zhao2017impact}
+\subsection{\texorpdfstring{\citet{zhao2017impact}}{@zhao2017impact}}\label{zhao2017impact}
 
 \emph{Initial Seed}
 
@@ -1214,9 +1229,9 @@ developers to learn about their experiences in adopting Travis CI.
 
 \emph{Initial Seed}
 
-This paper analyzes what factors have impact on abandonment of Travis.
-They find that increased build complexity reduces the chance of
-abandonment, but larger projects abandon at a higher rate and that a
+This paper analyzes what factors have impact on abandonment of
+Travis~CI. They find that increased build complexity reduces the chance
+of abandonment, but larger projects abandon at a higher rate and that a
 project's language has significant but varying effect. A surprising
 result is that metrics of configuration attempts and knowledge
 dispersion in the project do not affect the rate of abandonment.
@@ -1227,7 +1242,7 @@ dispersion in the project do not affect the rate of abandonment.
 
 This paper explores which CI system developers use, how developers use
 CI and why developers use CI. For this it analyzes data from Github,
-Travis CI and it conducts a developer survey. It finds that projects
+Travis~CI and it conducts a developer survey. It finds that projects
 using CI release twice as often, accept pull requests faster and have
 developers who are less worried about breaking the build.
 
