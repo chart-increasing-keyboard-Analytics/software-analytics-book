@@ -260,9 +260,10 @@ there _must_ be a space, else it is interpreted as superscript. -->
   - Research methods, tools and datasets being used
   - Main research findings, aggregated --></p>
 <p><strong>RQ2</strong>: What is the current state of practice in the field of build analytics?</p>
-<p>This section examines scientific papers to analyse the current trend of build analytics in the software development industry. We looks at the popularity of CI in the industry as <span class="citation">Hilton et al. (<a href="#ref-hilton2016usage">2016</a>)</span> describes. In addition, it also explores the increase in the use of Continuous Integration (CI) by discussing its ample benefits as <span class="citation">Fowler and Foemmel (<a href="#ref-fowler2006continuous">2006</a>)</span> presents. Furthermore, it will discuss the practises used by engineers in the industry to ensure that their code is improving and not decaying. <!--
+<p>This section examines scientific papers to analyse the current trend of build analytics in the software development industry. We looks at the popularity of CI in the industry as <span class="citation">Hilton et al. (<a href="#ref-hilton2016usage">2016</a>)</span> describes. In addition, it also explores the increase in the use of Continuous Integration (CI) by discussing its ample benefits as <span class="citation">Fowler and Foemmel (<a href="#ref-fowler2006continuous">2006</a>)</span> present. Furthermore, it will discuss the practises used by engineers in the industry to ensure that their code is improving and not decaying.</p>
+<!--
   - Tools and companies creating / employing them
-  - Case studies and their findings --></p>
+  - Case studies and their findings -->
 <p><strong>RQ3</strong>: What future research can we expect in the field of build analytics?</p>
 <p>In this section we will explore where new challenges lie in the field of build analytics. We will also show what open research items are described in the papers. This section ends with research questions based on the open research and challenges in current research.</p>
 </div>
@@ -276,13 +277,32 @@ there _must_ be a space, else it is interpreted as superscript. -->
 <p>The topics that are being explored are: * the importance of the build process in a VCS project <span class="citation">Hassan and Wang (<a href="#ref-hassan2018hirebuild">2018</a>)</span> * the impact factors of user satisfaction from using a CI tools <span class="citation">Widder et al. (<a href="#ref-widder2018m">2018</a>)</span> * methods from helping the developer to fix bugs <span class="citation">Hassan and Wang (<a href="#ref-hassan2018hirebuild">2018</a>)</span>, <span class="citation">Vassallo et al. (<a href="#ref-vassallo2018break">2018</a>)</span> * predicting build time <span class="citation">Bisong, Tran, and Baysal (<a href="#ref-bisong2017built">2017</a>)</span> * predicting build failures <span class="citation">Santolucito et al. (<a href="#ref-santolucito2018statically">2018</a>)</span>, <span class="citation">Ni and Li (<a href="#ref-ni2018acona">2018</a>)</span></p>
 <p>The tools that are being proposed are: * BART to help developers fix build errors by generating a summary of the failures with useful information, thus eliminating the need to browse error logs <span class="citation">Vassallo et al. (<a href="#ref-vassallo2018break">2018</a>)</span> * HireBuild to automatically fix build failures based on previous changes <span class="citation">Hassan and Wang (<a href="#ref-hassan2018hirebuild">2018</a>)</span> * VeriCI capable of checking the errors in CI configurations files before the developer push a commit and without needing to wait for the build result <span class="citation">Santolucito et al. (<a href="#ref-santolucito2018statically">2018</a>)</span> * ACONA capable of predicting build failure prediction in CI environment for newer projects with less data available <span class="citation">Ni and Li (<a href="#ref-ni2018acona">2018</a>)</span></p>
 <p>The build process is important part of a project that uses VCS in the way that based on the findings from <span class="citation">Hassan and Wang (<a href="#ref-hassan2018hirebuild">2018</a>)</span> 22% of code commits include changes in build script files for either build working or build fixing purposes. Moreover, recent studies has focused on how satisfied are the users of CI tools, one particular paper <span class="citation">Widder et al. (<a href="#ref-widder2018m">2018</a>)</span> analyzing what factors have an impact on abandonment of Travis CI. The paper finds that increased build complexity reduces the chance of abandonment, but larger projects abandon at a higher rate and that a project’s language has significant but varying effect. A surprising result is that metrics of configuration attempts and knowledge dispersion in the project do not affect the rate of abandonment.</p>
+<p>The topics that are being explored are: * the importance of the build process in a VCS project <span class="citation">Hassan and Wang (<a href="#ref-hassan2018hirebuild">2018</a>)</span> * the impact factors of user satisfaction from using a CI tools <span class="citation">Widder et al. (<a href="#ref-widder2018m">2018</a>)</span> * methods from helping the developer to fix bugs <span class="citation">Hassan and Wang (<a href="#ref-hassan2018hirebuild">2018</a>)</span>, <span class="citation">Vassallo et al. (<a href="#ref-vassallo2018break">2018</a>)</span> * predicting build time <span class="citation">Bisong, Tran, and Baysal (<a href="#ref-bisong2017built">2017</a>)</span> * predicting build failures <span class="citation">Santolucito et al. (<a href="#ref-santolucito2018statically">2018</a>)</span>, <span class="citation">Ni and Li (<a href="#ref-ni2018acona">2018</a>)</span></p>
 <!--
     - Topics that are being explored
     - Research methods, tools and datasets being used
     - Main research findings, aggregated -->
-<p><strong>RQ2</strong>: <!--
+<p><strong>RQ2</strong>:</p>
+<p>Continuous Integration is a development practise that requires developers to integrate code into a share repository several times a day. Each check-in is then verified by an automated build which allows engineers to detect any bugs early.</p>
+<p>A survey conduced in open-source projects by <span class="citation">Hilton et al. (<a href="#ref-hilton2016usage">2016</a>)</span> indicated that 40% of all projects used CI. It observed that a median project introduces CI a year into development. Furthermore, the paper claims that CI is widely used in practise nowadays. The paper by <span class="citation">Rausch et al. (<a href="#ref-rausch2017empirical">2017</a>)</span> explores how CI is widely available for projects of every size with the introduction of Version Control Systems (VCS) such as GitHub, and hosted build automation platforms such as Travis. In this way, CI adoption rates will increase further in the future.</p>
+<p>This is an overview of CI and how it works in daily life. Maintaining this system requires engineers to follow fundamental practises presented by <span class="citation">Fowler and Foemmel (<a href="#ref-fowler2006continuous">2006</a>)</span>. The practises presented by <span class="citation">Fowler and Foemmel (<a href="#ref-fowler2006continuous">2006</a>)</span> are still commonly used today, particularly in the agile software industry as suggested by <span class="citation">Stolberg (<a href="#ref-stolberg2009enabling">2009</a>)</span>.</p>
+<ul>
+<li>Maintain a Single Source Repository</li>
+<li>Automate the Build</li>
+<li>Make Your Build Self-Testing</li>
+<li>Everyone Commits To the Mainline Every Day</li>
+<li>Every Commit Should Build the Mainline on an Integration Machine</li>
+<li>Fix Broken Builds Immediately</li>
+<li>Keep the Build Fast</li>
+<li>Test in a Clone of the Production Environment</li>
+<li>Make it Easy for Anyone to Get the Latest Executable</li>
+<li>Everyone can see what’s happening</li>
+<li>Automate Deployment</li>
+</ul>
+<p>It is important to note that CI does not get rid of bugs, but it does make them dramatically easier to find and remove. The above practises are important for the smooth functioning of CI framework.</p>
+<!--
     - Tools and companies creating / employing them
-    - Case studies and their findings --></p>
+    - Case studies and their findings -->
 <p><strong>RQ3</strong>: <!-- List of challenges --></p>
 <p>Currently research on build analytics is limited by some challenges, some are specific to build analytics and some are applicable to the entire field of software engineering.</p>
 <p>In <span class="citation">Bisong, Tran, and Baysal (<a href="#ref-bisong2017built">2017</a>)</span> the main limitation was the performance of the machine learning algorithm used. In the implementation R was used and it proved not capable of processing the amounts of data needed. This shows that it is important to choose the right tool when analyzing data.</p>
@@ -392,7 +412,7 @@ to research questions or additional information below research questions. -->
 </div>
 <div id="what-is-the-current-state-of-practice-in-the-field-of-build-analytics" class="section level2">
 <h2><span class="header-section-number">4.6</span> What is the current state of practice in the field of build analytics?</h2>
-<p>In this section, I will examine scientific papers to analyse the current trend of build analytics in the software development industry.</p>
+<p>IBM’s Grady Booch first proposed the methodology of Continuous Integration in the 1990s. It became widely used when adopted by Extreme Programming in the 1996. In 2000, <span class="citation">Fowler and Foemmel (<a href="#ref-fowler2006continuous">2006</a>)</span> wrote the cornerstone description of integration practises. The following section provides critical analysis of the papers presented and explains the current practises of build analytics in our industry.</p>
 <div id="fowler2006continuous" class="section level3">
 <h3><span class="header-section-number">4.6.1</span> <span class="citation">Fowler and Foemmel (<a href="#ref-fowler2006continuous">2006</a>)</span></h3>
 <p>In this paper, Martin talks about the current state of the software industry in terms of Continuous Integration (CI) and comments on the practises required to implement CI effectively. He talks about his experience working for a large English electronics company where the development of a project took two years and the integration process took several months. Integration is a long and unpredictable process. Martin suggested this approach and that the two most common reactions he got were: “it can’t work (here)” or “doing it won’t make much difference”. He expresses that most engineers don’t know how simple the process can be of setting the CI framework up. In this way, we get a glimpse into the practises popular within the industry regarding build analytics.</p>
@@ -403,7 +423,7 @@ to research questions or additional information below research questions. -->
 </div>
 <div id="rausch2017empirical-1" class="section level3">
 <h3><span class="header-section-number">4.6.3</span> <span class="citation">Rausch et al. (<a href="#ref-rausch2017empirical">2017</a>)</span></h3>
-<p>Version Control Systems (VCS) such as GitHub, and hosted build automation platforms such as Travis, have made Continuous Integration is widely available for projects of every size. This paper suggests that CI is widely used and has improved the quality of processes and developed software itself. However, the article suggests that there is little known about the variety and frequency of errors that cause builds to fail. It suggests that developers should eliminate flaky tests and address common issues regularly such as broken interaction with repositories to keep the build system healthy.</p>
+<p>Version Control Systems (VCS) such as GitHub, and hosted build automation platforms such as Travis, have made Continuous Integration is widely available for projects of every size. This paper suggests that CI is widely used and has improved the quality of processes and developed software itself. However, the article suggests that there is little known about the variety and frequency of errors that cause builds to fail. It suggests that developers should eliminate flaky tests and address common issues regularly to keep the build system healthy.</p>
 </div>
 <div id="stolberg2009enabling" class="section level3">
 <h3><span class="header-section-number">4.6.4</span> <span class="citation">Stolberg (<a href="#ref-stolberg2009enabling">2009</a>)</span></h3>
@@ -456,6 +476,9 @@ to research questions or additional information below research questions. -->
 <div id="ref-ni2018acona">
 <p>Ni, Ansong, and Ming Li. 2018. “ACONA: Active Online Model Adaptation for Predicting Continuous Integration Build Failures.” In <em>Proceedings of the 40th International Conference on Software Engineering: Companion Proceeedings</em>, 366–67. ACM.</p>
 </div>
+<div id="ref-stolberg2009enabling">
+<p>Stolberg, Sean. 2009. “Enabling Agile Testing Through Continuous Integration.” In <em>Agile Conference, 2009. Agile’09.</em>, 369–74. IEEE.</p>
+</div>
 <div id="ref-baltes2018no">
 <p>Baltes, Sebastian, Jascha Knack, Daniel Anastasiou, Ralf Tymann, and Stephan Diehl. 2018. “(No) Influence of Continuous Integration on the Commit Activity in Github Projects.” <em>arXiv Preprint arXiv:1802.08441</em>.</p>
 </div>
@@ -464,9 +487,6 @@ to research questions or additional information below research questions. -->
 </div>
 <div id="ref-zampetti2017open">
 <p>Zampetti, Fiorella, Simone Scalabrino, Rocco Oliveto, Gerardo Canfora, and Massimiliano Di Penta. 2017. “How Open Source Projects Use Static Code Analysis Tools in Continuous Integration Pipelines.” In <em>Mining Software Repositories (Msr), 2017 Ieee/Acm 14th International Conference on</em>, 334–44. IEEE.</p>
-</div>
-<div id="ref-stolberg2009enabling">
-<p>Stolberg, Sean. 2009. “Enabling Agile Testing Through Continuous Integration.” In <em>Agile Conference, 2009. Agile’09.</em>, 369–74. IEEE.</p>
 </div>
 </div>
 <div class="footnotes">
