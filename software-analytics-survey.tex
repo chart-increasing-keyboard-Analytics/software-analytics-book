@@ -85,7 +85,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2018-10-02}
+    \date{2018-10-03}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -1029,7 +1029,7 @@ increasingly common development practice in many projects.
 
 Build analytics covers research done on data extracted from a build
 process inside a project. This contains amongst others, build logs from
-continuous integration such as Travis~CI\footnote{See~
+continuous integration such as Travis~CI\footnote{See
   \url{https://travis-ci.org/}}, Circle~CI\footnote{See
   \url{https://circleci.com/}}, Jenkins\footnote{See
   \url{https://jenkins.io/}}, AppVeyor\footnote{See~\url{https://www.appveyor.com/}}
@@ -1054,12 +1054,12 @@ findings that the state-of-the-art papers display.
 build analytics?
 
 This section examines scientific papers to analyse the current trend of
-build analytics in the software development industry. We looks at the
+build analytics in the software development industry. We look at the
 popularity of CI in the industry as \citet{hilton2016usage} describes.
 In addition, it also explores the increase in the use of Continuous
 Integration (CI) by discussing its ample benefits as
-\citet{fowler2006continuous} present. Furthermore, it will discuss the
-practises used by engineers in the industry to ensure that their code is
+\citet{fowler2006continuous} presents. Furthermore, it will discuss the
+practices used by engineers in the industry to ensure that their code is
 improving and not decaying.
 
 \textbf{RQ3}: What future research can we expect in the field of build
@@ -1083,56 +1083,302 @@ keywords used were: build analytics, machine learning, build time,
 prediction, continuous integration, build failures, active learning,
 build errors, mining, software repositories, open-source software.
 
+\begin{longtable}[]{@{}lllll@{}}
+\toprule
+\begin{minipage}[b]{0.18\columnwidth}\raggedright\strut
+Paper\strut
+\end{minipage} & \begin{minipage}[b]{0.17\columnwidth}\raggedright\strut
+Source\strut
+\end{minipage} & \begin{minipage}[b]{0.26\columnwidth}\raggedright\strut
+Reference\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
+RQ\strut
+\end{minipage} & \begin{minipage}[b]{0.19\columnwidth}\raggedright\strut
+Obs.\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
+1. Bird et al.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Initial seed\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+\citet{bird2017predicting}\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+US patent\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
+2. Beller et al.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Initial seed\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+\citet{beller2017oops}\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
+3. Rausch et al.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Initial seed\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+\citet{rausch2017empirical}\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
+4. Beller et al.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Initial seed\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+\citet{beller2017travistorrent}\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
+5. Pinto et al.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Initial seed\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+\citet{pinto2018work}\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
+6. Zhao et al.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Initial seed\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+\citet{zhao2017impact}\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+Collab China, Netherlands, USA Univ\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
+7. Widder et al.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Initial seed\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+\citet{widder2018m}\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
+8. Hilton et al.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Initial seed\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+\citet{hilton2016usage}\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
+9. Vassallo et al.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Ref 2\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+\citet{vassallo2017tale}\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
+11. Hassan et al.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Ref 4\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+\citet{hassan2018hirebuild}\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+RQ1\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
+12. Vassallo et al.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Ref 2,3\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+\citet{vassallo2018break}\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+RQ1\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
+13. Zampetti et al.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Ref by 12\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+\citet{zampetti2017open}\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
+14. Baltes et al.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+GScholar Search\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+\citet{baltes2018no}\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+RQ1\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+Search term ``Github Continuous Integration''\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
+15. Bisong et al.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+GScholar Search\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+\citet{bisong2017built}\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+RQ1\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
+16. Santolucito et al.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+GScholar Search\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+\citet{santolucito2018statically}\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+RQ1\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
+17. Ni et al.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+GScholar Search\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+\citet{ni2018acona}\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+RQ1\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
 \section{Answers}\label{answers}
 
-\textbf{RQ1}: The current state-of-the-art in build analytics domain
-refers to the use of machine learning techniques to increase the
-productivity when using Continuos Integration (CI), to generate
-contraints on the configuration of the CI that could improve build
-success rate and to predict build failures even for newer projects with
-less training data available.
+\textbf{RQ1}: What is the current state of the art in the field of build
+analytics?
 
-The topics that are being explored are: * the importance of the build
-process in a VCS project \citet{hassan2018hirebuild} * the impact
-factors of user satisfaction from using a CI tools \citet{widder2018m} *
-methods from helping the developer to fix bugs
-\citet{hassan2018hirebuild}, \citet{vassallo2018break} * predicting
-build time \citet{bisong2017built} * predicting build failures
-\citet{santolucito2018statically}, \citet{ni2018acona}
+The current state-of-the-art in build analytics domain refers to the use
+of machine learning techniques to increase the productivity when using
+Continuos Integration (CI), to generate constraints on the configuration
+of the CI that could improve build success rate and to predict build
+failures even for newer projects with less training data available.
 
-The tools that are being proposed are: * BART to help developers fix
-build errors by generating a summary of the failures with useful
-information, thus eliminating the need to browse error logs
-\citet{vassallo2018break} * HireBuild to automatically fix build
-failures based on previous changes \citet{hassan2018hirebuild} * VeriCI
-capable of checking the errors in CI configurations files before the
-developer push a commit and without needing to wait for the build result
-\citet{santolucito2018statically} * ACONA capable of predicting build
-failure prediction in CI environment for newer projects with less data
-available \citet{ni2018acona}
+The papers identified using the research protocol defined in the
+previous section that give as an overview of the current state of the
+art in build analytics domain are: * Hassan et al. 2018 * Vassallo et
+al. 2018 * Baltes et al. 2018 * Bisong et al. 2017 * Santolucito et al.
+2018 * Ni et al. 2018
+
+The topics that are being explored are:
+
+\begin{itemize}
+\tightlist
+\item
+  the importance of the build process in a VCS project
+  \citet{hassan2018hirebuild}
+\item
+  the impact factors of user satisfaction from using a CI tools
+  \citet{widder2018m}
+\item
+  methods from helping the developer to fix bugs
+  \citet{hassan2018hirebuild}, \citet{vassallo2018break}
+\item
+  predicting build time \citet{bisong2017built}
+\item
+  predicting build failures \citet{santolucito2018statically},
+  \citet{ni2018acona}
+\end{itemize}
+
+The tools that are being proposed are:
+
+\begin{itemize}
+\tightlist
+\item
+  BART to help developers fix build errors by generating a summary of
+  the failures with useful information, thus eliminating the need to
+  browse error logs \citet{vassallo2018break}
+\item
+  HireBuild to automatically fix build failures based on previous
+  changes \citet{hassan2018hirebuild}
+\item
+  VeriCI capable of checking the errors in CI configurations files
+  before the developer push a commit and without needing to wait for the
+  build result \citet{santolucito2018statically}
+\item
+  ACONA capable of predicting build failure prediction in CI environment
+  for newer projects with less data available \citet{ni2018acona}
+\end{itemize}
 
 The build process is important part of a project that uses VCS in the
 way that based on the findings from \citet{hassan2018hirebuild} 22\% of
 code commits include changes in build script files for either build
-working or build fixing purposes. Moreover, recent studies has focused
+working or build fixing purposes. Moreover, recent studies have focused
 on how satisfied are the users of CI tools, one particular paper
 \citet{widder2018m} analyzing what factors have an impact on abandonment
-of Travis CI. The paper finds that increased build complexity reduces
+of Travis~CI. The paper finds that increased build complexity reduces
 the chance of abandonment, but larger projects abandon at a higher rate
 and that a project's language has significant but varying effect. A
 surprising result is that metrics of configuration attempts and
 knowledge dispersion in the project do not affect the rate of
 abandonment.
 
-The topics that are being explored are: * the importance of the build
-process in a VCS project \citet{hassan2018hirebuild} * the impact
-factors of user satisfaction from using a CI tools \citet{widder2018m} *
-methods from helping the developer to fix bugs
-\citet{hassan2018hirebuild}, \citet{vassallo2018break} * predicting
-build time \citet{bisong2017built} * predicting build failures
-\citet{santolucito2018statically}, \citet{ni2018acona}
+Another important aspect is the impact of CI in the development process
+efficiency. On of the papers that adresses this matters is
+\citet{bisong2017built}. This paper aims to find a balance between the
+frequency of integration and developer's productivity by proposing a
+machine learning models that were able to predict the build taking
+advantage of the 56 features presented in TravisTorrent build records.
+There models performed quite well with an R-Squared of around 80\%,
+meaning that they were able to capture the variation of build time over
+multiple projects. Their research could be useful on one hand for
+software developers and project managers for a better time management
+scheme and one the other hand for other researchers that may improve
+their proposed models.
 
-\textbf{RQ2}:
+Moreover, the usage of automation build tools introduces a delay in the
+development cycle generated by the waiting time until the build finish
+successfully. One of the most recent papers analyzed
+\citet{santolucito2018statically} presents a tool VeriCI capable of
+checking the errors in CI configurations files before the developer push
+a commit and without needing to wait for the build result. This paper
+focuses on prediction of build failure without using metadata like
+number of commits, code churn also in the learning process, but relying
+on the actual user programs and configuration scripts. This fact makes
+the identification of the error cause possible. VeriCI achieve 83\%
+accuracy of predicting build failure on real data from GitHub projects
+and 30-48\% of time the error justification provided by the tool matched
+the actual error cause. These results seem promising, but there is a
+need in focusing more on producing the error justification fact that
+could make the use of machine learning tools in real build analytics
+tools achievable and tolerated.
+
+\textbf{RQ2}: What is the current state of practice in the field of
+build analytics?
 
 Continuous Integration is a development practise that requires
 developers to integrate code into a share repository several times a
@@ -1186,7 +1432,8 @@ It is important to note that CI does not get rid of bugs, but it does
 make them dramatically easier to find and remove. The above practises
 are important for the smooth functioning of CI framework.
 
-\textbf{RQ3}:
+\textbf{RQ3}: What future research can we expect in the field of build
+analytics?
 
 Currently research on build analytics is limited by some challenges,
 some are specific to build analytics and some are applicable to the
@@ -1231,267 +1478,6 @@ research questions emerged:
   other platforms out there. Every platform has their own
   characteristics.
 \end{itemize}
-
-\section{Summary of papers}\label{summary-of-papers}
-
-Through this we found the following papers
-
-\subsection{\texorpdfstring{\citet{bird2017predicting}}{@bird2017predicting}}\label{bird2017predicting}
-
-\emph{Initial Seed}
-
-This is a US patent grant for a method of predicting software build
-errors. This patent is owned by Microsoft. Using logistic regression a
-prediction can be made on the probability of a build failing. Using this
-method build errors can be better anticipated, which decreases the time
-until the build works again.
-
-\subsection{\texorpdfstring{\citet{beller2017oops}}{@beller2017oops}}\label{beller2017oops}
-
-\emph{Initial Seed}
-
-This paper explores data from Travis~CI\footnote{See
-  \url{https://travis-ci.org}} on a large scale by analyzing 2,640,825
-build logs of Java and Ruby builds. It uses \textsc{TravisTorrent} as a
-data source. It is found that the number one reason for failing builds
-it test failure. It also explores differences in testing between Java
-and Ruby.
-
-\subsection{\texorpdfstring{\citet{rausch2017empirical}}{@rausch2017empirical}}\label{rausch2017empirical}
-
-\emph{Initial Seed}
-
-A stuy on the build results of 14 open source software Java projects. It
-is similar to \citet{beller2017oops}, albeit on a smaller scale. It does
-go more in depth on the result and changes over time.
-
-\subsection{\texorpdfstring{\citet{beller2017travistorrent}}{@beller2017travistorrent}}\label{beller2017travistorrent}
-
-\emph{Initial Seed}
-
-This paper introduces \textsc{TravisTorrent}, a dataset containing
-analyzed builds from more than 1,000 projects. This data is freely
-downloadable from the internet. It uses \textsc{GHTorrent} to link the
-information from travis to commits on GitHub.
-
-\subsection{\texorpdfstring{\citet{pinto2018work}}{@pinto2018work}}\label{pinto2018work}
-
-\emph{Initial Seed}
-
-This paper is a survey amongst Travis CI users. It found that users are
-not sure whether a job failure represents a failure or not, that
-inadequate testing is the most common (technical) reason for build
-breakage and that people feel that there is a false sense of confidence
-when blindly trusing tests.
-
-\subsection{\texorpdfstring{\citet{zhao2017impact}}{@zhao2017impact}}\label{zhao2017impact}
-
-\emph{Initial Seed}
-
-This paper analyzed approximately 160,000 projects written in seven
-different programming languages. It notes that adoption of CI is often
-part of a reorganization. It collected information on the differences
-before and after adoption of CI. There is also a survey amongst
-developers to learn about their experiences in adopting Travis CI.
-
-\subsection{\texorpdfstring{\citet{widder2018m}}{@widder2018m}}\label{widder2018m}
-
-\emph{Initial Seed}
-
-This paper analyzes what factors have impact on abandonment of
-Travis~CI. They find that increased build complexity reduces the chance
-of abandonment, but larger projects abandon at a higher rate and that a
-project's language has significant but varying effect. A surprising
-result is that metrics of configuration attempts and knowledge
-dispersion in the project do not affect the rate of abandonment.
-
-\subsection{\texorpdfstring{\citet{hilton2016usage}}{@hilton2016usage}}\label{hilton2016usage}
-
-\emph{Initial Seed}
-
-This paper explores which CI system developers use, how developers use
-CI and why developers use CI. For this it analyzes data from Github,
-Travis~CI and it conducts a developer survey. It finds that projects
-using CI release twice as often, accept pull requests faster and have
-developers who are less worried about breaking the build.
-
-\subsection{\texorpdfstring{\citet{vassallo2017tale}}{@vassallo2017tale}}\label{vassallo2017tale}
-
-\emph{References \citet{beller2017oops} }
-
-This paper discusses the difference in failures on continuous
-integration between open source software (OSS) and industrial software
-projects. For this 349 Java OSS projects and 418 project from ING
-Nederland, a financial organization.
-
-Using cluser analysis it was observed that both kinds of projects share
-similar build failures, but in other cases very different patterns
-emerge.
-
-\subsection{\texorpdfstring{\citet{hassan2018hirebuild}}{@hassan2018hirebuild}}\label{hassan2018hirebuild}
-
-\emph{References \citet{beller2017travistorrent} }
-
-This paper uses TravisTorrent (\citet{beller2017travistorrent}) to show
-that 22\% of code commits include changes in build script files to keep
-the build working or to fix the build.
-
-In the paper a tool is proposed to automatically fix build failures
-based on previous changes.
-
-\subsection{\texorpdfstring{\citet{vassallo2018break}}{@vassallo2018break}}\label{vassallo2018break}
-
-\emph{References \citet{beller2017oops}, \citet{rausch2017empirical} }
-
-This paper proposes a tool called \textsc{BART} to help developers fix
-build errors. This tool eliminates the need to browse error logs which
-can be very long by generating a summary of the failure with useful
-information.
-
-\subsection{\texorpdfstring{\citet{zampetti2017open}}{@zampetti2017open}}\label{zampetti2017open}
-
-\emph{Referenced by \citet{vassallo2018break} }
-
-This paper studies the usage of static analysis tools in 20 Java open
-source software projects hosted on GitHub and using Travic CI as
-continuous integration infrastructure. There is investigated which tools
-are being used, what types of issues make the build fail or raise
-warnings and how is responded to broken builds.
-
-\subsection{\texorpdfstring{\citet{baltes2018no}}{@baltes2018no}}\label{baltes2018no}
-
-\emph{Google Scholar search term
-\texttt{Github\ "Continuous\ Integration"}, papers from 2018}
-
-This paper analyses 93 GitHub projects before and after adoption of
-Travis CI. It finds only one non-negligible effect, an increasing merge
-ratio, meaning that more merging commits in relation to all commits
-after a project started using Travis CI. But the paper also shows that
-this effect can be seen on projects not adopting CI. It shows the
-importance of having a proper dataset with as little bias as possible.
-
-\section{What is the current state of the art in the field of build
-analytics?}\label{what-is-the-current-state-of-the-art-in-the-field-of-build-analytics}
-
-The current state-of-the-art in build analytics domain refers to the use
-of machine learning techniques to increase the productivity when using
-Continuos Integration (CI), to generate contraints on the configuration
-of the CI that could improve build success rate and to predict build
-failures even for newer projects with less training data available.
-Beside the papers from the initial seed, we will discuss the following
-state-of-the-art aproaches papers:
-
-\subsection{\texorpdfstring{\citet{bisong2017built}}{@bisong2017built}}\label{bisong2017built}
-
-This paper aims to find a balance between the frequency of integration
-and developers productivity. They proposed models able to predict the
-build time of a job taking advantage of data from TravisTorrent. Their
-research is also slighty addressing the problem of optimal build time.
-Their method consists of selecting using different strategies to select
-the relevant features from the 56 features presented in TravisTorrent
-build records and applying a set of both linear and non-linear algorithm
-for predicting the time of a build. They evaluate the models performance
-using Root Mean Square Error (RMSE) and R-Squared and obtained for some
-models like Extreme-Gradient-Boosting(XGBOOST) a very high R-Squared
-around 80\%, which shows that their model was able to capture the
-variation of build time over multiple projects. The main downfall of
-this paper is the testing size of only 10000 records of the 1,846,396
-available data due to computational limits resulted probably from the
-usage of R machine learning packages, instead of python with TensorFlow.
-Their research could be useful on one hand for software developers and
-project managers for a better time management scheme and one the other
-hand for other researchers that may improve their proposed models.
-
-\subsection{\texorpdfstring{\citet{santolucito2018statically}}{@santolucito2018statically}}\label{santolucito2018statically}
-
-The paper presents a tool VeriCI capable of checking the errors in CI
-configurations files before the developer push a commit and without
-needing to wait for the build result. Even if there are some other
-papers that achieve even higher accuracy in prediction of build
-failures, this paper is unique by not using metadata in the learning
-process like number of commits, code churn and so on. The authors rely
-on the actual user programs and configuration scripts, fact that make
-the identification of the error cause possible. Their approach consists
-of the following steps: give a formal description to the CI build
-process, extract the right code features and train self-explainable
-decision trees. VeriCI achieve 83\% accuracy of predicting build failure
-on real data from GitHub projects and 30-48\% of time the error
-justification provided by the tool matched the actual error cause. Even
-if VeriCI is capable of locate and give a reason for the expected
-failure, the false positive rate is quite high, therefore the authors
-proposed as a future work the analysis of the cost impact that a high
-rate of false positive has and also deploying the tool in large scale of
-CI enviroments.
-
-\subsection{\texorpdfstring{\citet{ni2018acona}}{@ni2018acona}}\label{ni2018acona}
-
-This paper is posted only as a cover so far. It is the most recent paper
-of this survey, with the poster being published in June 2018. The paper
-addresses the problem of build failure prediction in CI environment for
-newer projects with less data available. It is using already trained
-models from other project with more data available and combined them by
-the means of active learning in order to find which of that models
-generalized better from the problem in hand and to update the models
-weights accordingly. It is also aimed to cut the expense that CI
-introduce by reducing the label data necessarily for training. Even if
-the method seems promising, the results presented in the poster shows an
-F-Measure (harmonic average of recall and precision) of around 40\% that
-could be better improved.
-
-\section{What is the current state of practice in the field of build
-analytics?}\label{what-is-the-current-state-of-practice-in-the-field-of-build-analytics}
-
-IBM's Grady Booch first proposed the methodology of Continuous
-Integration in the 1990s. It became widely used when adopted by Extreme
-Programming in the 1996. In 2000, \citet{fowler2006continuous} wrote the
-cornerstone description of integration practises. The following section
-provides critical analysis of the papers presented and explains the
-current practises of build analytics in our industry.
-
-\subsection{\texorpdfstring{\citet{fowler2006continuous}}{@fowler2006continuous}}\label{fowler2006continuous}
-
-In this paper, Martin talks about the current state of the software
-industry in terms of Continuous Integration (CI) and comments on the
-practises required to implement CI effectively. He talks about his
-experience working for a large English electronics company where the
-development of a project took two years and the integration process took
-several months. Integration is a long and unpredictable process. Martin
-suggested this approach and that the two most common reactions he got
-were: ``it can't work (here)'' or ``doing it won't make much
-difference''. He expresses that most engineers don't know how simple the
-process can be of setting the CI framework up. In this way, we get a
-glimpse into the practises popular within the industry regarding build
-analytics.
-
-\subsection{\texorpdfstring{\citet{hilton2016usage}}{@hilton2016usage}}\label{hilton2016usage-1}
-
-This paper examines the usage, costs and benefits of Continuous
-Integration. A survey conducted in open-source projects indicated that
-40\% of all projects used CI. Of the projects that used CI, 90\% used
-Travis for their CI services. They also determine that the more popular
-projects use CI but there is no correlation between the popularity of
-language and usage of CI. It also observes that the median project
-introduces CI a year into development. The paper claims that CI is
-widely used in practise nowadays and CI adoption rates will increase
-even further in the future.
-
-\subsection{\texorpdfstring{\citet{rausch2017empirical}}{@rausch2017empirical}}\label{rausch2017empirical-1}
-
-Version Control Systems (VCS) such as GitHub, and hosted build
-automation platforms such as Travis, have made Continuous Integration is
-widely available for projects of every size. This paper suggests that CI
-is widely used and has improved the quality of processes and developed
-software itself. However, the article suggests that there is little
-known about the variety and frequency of errors that cause builds to
-fail. It suggests that developers should eliminate flaky tests and
-address common issues regularly to keep the build system healthy.
-
-\subsection{\texorpdfstring{\citet{stolberg2009enabling}}{@stolberg2009enabling}}\label{stolberg2009enabling}
-
-This paper defines CI as a key element in agile software development and
-testing environment. It also uses Marin Fowler's practises of CI (as
-discussed previously) and expresses the importance of CI in the software
-industry.
 
 \chapter{Bug Prediction}\label{bug-prediction}
 
