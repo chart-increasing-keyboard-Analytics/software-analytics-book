@@ -1051,7 +1051,7 @@ analytics field, we ask the following research questions.
 \textbf{RQ1}: What is the current state of the art in the field of build
 analytics?
 
-In order to answer to the first reseacrh question, we need to present
+In order to answer to the first research question, we need to present
 the current topics that are being explored in the build analytics domain
 alogside with the research methods, tools and datasets acquired for the
 problems in hand and aggregate and reflect about the main research
@@ -1077,7 +1077,7 @@ build analytics. We will also show what open research items are
 described in the papers. This section ends with research questions based
 on the open research and challenges in current research.
 
-\section{Research protocol}\label{research-protocol-1}
+\section{Research protocol}\label{build-analytics-research-protocol}
 
 Using the initial seed consisting of \citet{bird2017predicting},
 \citet{beller2017oops}, \citet{rausch2017empirical},
@@ -1090,199 +1090,71 @@ keywords used were: build analytics, machine learning, build time,
 prediction, continuous integration, build failures, active learning,
 build errors, mining, software repositories, open-source software.
 
-\begin{longtable}[]{@{}lllll@{}}
+\begin{longtable}[]{@{}llll@{}}
 \toprule
-\begin{minipage}[b]{0.18\columnwidth}\raggedright\strut
-Paper\strut
-\end{minipage} & \begin{minipage}[b]{0.17\columnwidth}\raggedright\strut
-Source\strut
-\end{minipage} & \begin{minipage}[b]{0.26\columnwidth}\raggedright\strut
-Reference\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
-RQ\strut
-\end{minipage} & \begin{minipage}[b]{0.19\columnwidth}\raggedright\strut
-Obs.\strut
-\end{minipage}\tabularnewline
+Paper with reference & Source & RQ & Notes\tabularnewline
 \midrule
 \endhead
-\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
-1. Bird et al.\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-Initial seed\strut
-\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
-\citet{bird2017predicting}\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-RQ1\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-US patent\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
-2. Beller et al.\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-Initial seed\strut
-\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
-\citet{beller2017oops}\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-RQ3\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
-3. Rausch et al.\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-Initial seed\strut
-\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
-\citet{rausch2017empirical}\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
-4. Beller et al.\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-Initial seed\strut
-\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
-\citet{beller2017travistorrent}\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
-5. Pinto et al.\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-Initial seed\strut
-\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
-\citet{pinto2018work}\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-RQ3\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
-6. Zhao et al.\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-Initial seed\strut
-\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
-\citet{zhao2017impact}\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-RQ3\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-Collab China, Netherlands, USA Univ\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
-7. Widder et al.\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-Initial seed\strut
-\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
-\citet{widder2018m}\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-RQ1\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
-8. Hilton et al.\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-Initial seed\strut
-\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
-\citet{hilton2016usage}\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
-9. Vassallo et al.\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-Ref 2\strut
-\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
-\citet{vassallo2017tale}\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
-11. Hassan et al.\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-Ref 4\strut
-\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
-\citet{hassan2018hirebuild}\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-RQ1\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
-12. Vassallo et al.\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-Ref 2,3\strut
-\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
-\citet{vassallo2018break}\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-RQ1, RQ3\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
-13. Zampetti et al.\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-Ref by 12\strut
-\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
-\citet{zampetti2017open}\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
-14. Baltes et al.\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-GScholar Search\strut
-\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
-\citet{baltes2018no}\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-RQ1, RQ3\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-Search term ``Github Continuous Integration''\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
-15. Bisong et al.\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-GScholar Search\strut
-\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
-\citet{bisong2017built}\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-RQ1, RQ3\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
-16. Santolucito et al.\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-GScholar Search\strut
-\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
-\citet{santolucito2018statically}\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-RQ1\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedright\strut
-17. Ni et al.\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
-GScholar Search\strut
-\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
-\citet{ni2018acona}\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-RQ1\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-\strut
-\end{minipage}\tabularnewline
+1. \citet{bird2017predicting} & Initial seed & RQ1 & 1\tabularnewline
+2. \citet{beller2017oops} & Initial seed & RQ3 &\tabularnewline
+3. \citet{rausch2017empirical} & Initial seed & RQ2 &\tabularnewline
+4. \citet{beller2017travistorrent} & Initial seed & RQ2 &\tabularnewline
+5. \citet{pinto2018work} & Initial seed & RQ3 &\tabularnewline
+6. \citet{zhao2017impact} & Initial seed & RQ3 & 2\tabularnewline
+7. \citet{widder2018m} & Initial seed & RQ1 &\tabularnewline
+8. \citet{hilton2016usage} & Initial seed & RQ2 &\tabularnewline
+9. \citet{vassallo2017tale} & Ref 2 & - & 3\tabularnewline
+11. \citet{hassan2018hirebuild} & Ref 4 & RQ1 &\tabularnewline
+12. \citet{vassallo2018break} & Ref 2,3 & RQ1, RQ3 &\tabularnewline
+13. \citet{zampetti2017open} & Ref by 12 & - & 3\tabularnewline
+14. \citet{baltes2018no} & GScholar Search & RQ1, RQ3 & 4\tabularnewline
+15. \citet{bisong2017built} & GScholar Search & RQ1, RQ3 &
+5\tabularnewline
+16. \citet{santolucito2018statically} & GScholar Search & RQ1 &
+4\tabularnewline
+17. \citet{ni2018acona} & GScholar Search & RQ1 & 6\tabularnewline
+18. \citet{fowler2006continuous} & GScholar Search & RQ2 &
+7\tabularnewline
+19. \citet{stolberg2009enabling} & GScholar Search & RQ2 &
+7\tabularnewline
 \bottomrule
 \end{longtable}
+
+\textbf{Notes}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  US patent owned by Microsoft.
+\item
+  Collaboration between universities in China, The Netherlands and The
+  USA.
+\item
+  Not included in this survey as it did not introduce a new technique or
+  practice.
+\item
+  Using search term ``Github Continuous Integration''.
+\item
+  Using search term ``Predicting build time''
+\item
+  Using search term ``Predicting build failures''
+\item
+  Using search term ``Current practices in Continuous Integration''
+\end{enumerate}
+
+Most of the papers we found were linked to our research questions being
+reference in the sections bellow. From the identified papers, we choose
+to not include in our research two papers: \citet{vassallo2017tale} and
+\citet{zampetti2017open}. \citet{vassallo2017tale} is a case study of
+difference in failures on continuous integration between open source
+software (OSS) and industrial software projects from ING Netherlands and
+we consider that it does not fit in any of the research question our
+chapter proposed. \citet{zampetti2017open} is again a case study of the
+usage of static analysis tools in 20 Java open source software projects
+hosted on GitHub that use Travic CI. Taking into account the small
+generalization degree of the findings highlighted by the article, we
+decide to remove this article from our research as well.
 
 \section{Answers}\label{answers}
 
@@ -1356,18 +1228,33 @@ The tools that are being proposed are:
   projects with less data available \citet{ni2018acona}
 \end{itemize}
 
+\emph{Importance of the build process}
+
 The build process is an important part of a project that uses VCS in the
 way that based on the findings from \citet{hassan2018hirebuild} 22\% of
 code commits include changes in build script files for either build
-working or build fixing purposes. Moreover, recent studies have focused
-on how satisfied the users of CI tools are, one particular paper
-\citet{widder2018m} analyzing what factors have an impact on abandonment
-of Travis~CI. The paper finds that increased build complexity reduces
-the chance of abandonment, but larger projects abandon at a higher rate
-and that a project's language has significant but varying effect. A
-surprising result is that metrics of configuration attempts and
-knowledge dispersion in the project do not affect the rate of
-abandonment.
+working or build fixing purposes.
+
+\emph{CI users satisfaction}
+
+Moreover, recent studies have focused on how satisfied the users of CI
+tools are, one particular paper \citet{widder2018m} analyzing what
+factors have an impact on abandonment of Travis~CI. The paper finds that
+increased build complexity reduces the chance of abandonment, but larger
+projects abandon at a higher rate and that a project's language has
+significant but varying effect. A surprising result is that metrics of
+configuration attempts and knowledge dispersion in the project do not
+affect the rate of abandonment.
+
+\emph{Patent for predicting build errors}
+
+\citet{bird2017predicting} introduce a method for predicting sofware
+build errors. This US patent is owned by Microsoft. Having logistic
+regression as machine learning technique, the paper is able to compute
+the probability of a build to fail. Using this method build errors can
+be better anticipated, which decreases the time between working builds.
+
+\emph{Predicting build time}
 
 Another important aspect is the impact of CI on the development process
 efficiency. One of the papers that adresses this matters is
@@ -1381,6 +1268,8 @@ multiple projects. Their research could be useful on one hand for
 software developers and project managers for a better time management
 scheme and on the other hand for other researchers that may improve
 their proposed models.
+
+\emph{Predicting build failures}
 
 Moreover, the usage of automation build tools introduces a delay in the
 development cycle generated by the waiting time until the build finish
@@ -1398,6 +1287,8 @@ the actual error cause. These results seem promising, but there is a
 need in focusing more on producing the error justification fact that
 could make the use of machine learning tools in real build analytics
 tools achievable and tolerated.
+
+\emph{Prediction with less data available}
 
 Even if there were considerable efforts in developing powerful and
 accurate machine learning models for predicting the outcome of builds,
@@ -1421,36 +1312,56 @@ recall and precision) of around 40\% that could be better improved.
 \textbf{RQ2}: What is the current state of practice in the field of
 build analytics?
 
-Continuous Integration is a development practise that requires
+Continuous Integration (CI) is a development practise that requires
 developers to integrate code into a share repository several times a
 day. Each check-in is then verified by an automated build which allows
 engineers to detect any bugs early.
 
-An overview over the state of practice in Build Analytics domain can be
-seen in the figure bellow:
+An overview of Continuous Integration evolution from the introduction of
+the term to the current practices can be seen in the figure bellow:
 
 \begin{figure}
 \centering
-\includegraphics{figures/build-analytics-state-of-practice.png}
-\caption{Build Analytics state of practice overview.}
+\includegraphics{figures/Chapter3/state_pr.png}
+\caption{CI overview.}
 \end{figure}
 
-A survey conduced in open-source projects by \citet{hilton2016usage}
-indicated that 40\% of all projects used CI. It observed that a median
-project introduces CI a year into development. Furthermore, the paper
-claims that CI is widely used in practise nowadays. The paper by
-\citet{rausch2017empirical} explores how CI is widely available for
-projects of every size with the introduction of Version Control Systems
-(VCS) such as GitHub, and hosted build automation platforms such as
-Travis. In this way, CI adoption rates will increase further in the
-future.
+The papers identified using the research protocol defined in the
+previous section that give us an overview of the current state of the
+art in build analytics domain are:
 
-This is an overview of CI and how it works in daily life. Maintaining
-this system requires engineers to follow fundamental practises presented
-by \citet{fowler2006continuous}. The practises presented by
-\citet{fowler2006continuous} are still commonly used today, particularly
-in the agile software industry as suggested by
-\citet{stolberg2009enabling}.
+\begin{itemize}
+\tightlist
+\item
+  Hitlon et al. 2016
+\item
+  Rausch et al. 2017
+\item
+  Fowler et al. 2006
+\item
+  Stolberg et al. 2009
+\item
+  Beller et al. 2017
+\end{itemize}
+
+The topics that are being explored are:
+
+\begin{itemize}
+\tightlist
+\item
+  usage of CI in the industry by \citet{hilton2016usage}
+\item
+  growing popularity of CI due to the introduction of VCS as suggested
+  by \citet{rausch2017empirical}
+\item
+  common practices used in the industry exemplified by
+  \citet{fowler2006continuous}
+\item
+  use of common CI practice in the agile approach presented by
+  \citet{stolberg2009enabling}
+\end{itemize}
+
+The practice that are being proposed are:
 
 \begin{itemize}
 \tightlist
@@ -1478,6 +1389,100 @@ in the agile software industry as suggested by
   Automate Deployment
 \end{itemize}
 
+A survey conduced in open-source projects by \citet{hilton2016usage}
+indicated that 40\% of all projects used CI. It observed that a median
+project introduces CI a year into development. Furthermore, the paper
+claims that CI is widely used in practise nowadays. The paper by
+\citet{rausch2017empirical} explores how CI is widely available for
+projects of every size with the introduction of Version Control Systems
+(VCS) such as GitHub, and hosted build automation platforms such as
+Travis. In this way, CI adoption rates will increase further in the
+future.
+
+This is an overview of CI and how it works in daily life. Maintaining
+this system requires engineers to follow fundamental practises presented
+by \citet{fowler2006continuous}. The practises presented by
+\citet{fowler2006continuous} are still commonly used today, particularly
+in the agile software industry as suggested by
+\citet{stolberg2009enabling}. Below is an explanation of each of the
+practices suggested by \citet{fowler2006continuous}.
+
+\emph{Maintain a Single Source Repository}
+
+The practice advocates the use of a revision control system for the
+project's source code. All artefacts required to build the project
+should be placed in a single repository. This ensures that the system
+does not require additional dependencies. It is preferred for changes to
+be integrated at least once a day. This makes it easier to find and
+remove bugs.
+
+\emph{Automate the Build}
+
+A single command should have the capability of building the system. A
+build script should be able to compile code, execute unit tests and
+automate integration. Many build tools are frequently used in continuous
+integration environments. Other functions that the build may include are
+code quality checks, semantic checks and measuring technical debt etc.
+
+\emph{Make Your Build Self-Testing} Once the code is built, all tests
+should run to confirm that it behaves as the developer would expect it
+to behave.
+
+\emph{Everyone Commits To the Mainline Every Day}
+
+This is one of the most important rules presented by
+\citet{fowler2006continuous}. By committing regularly, every developer
+can reduce the number of conflicting changes. Checking in large data
+runs thee risk of conflicting with other features and can be very
+challenging to resolve. Committing all changes at least once a day is an
+integral practice of the CI framework. In addition, performing nightly
+builds in recommended.
+
+\emph{Every Commit Should Build the Mainline on an Integration Machine}
+
+The system should build commits to the current working version to ensure
+that they integrate correctly. A ``nightly build'' should also execute
+at a scheduled time every night. This build should include more
+verifications than the ones on other branches. It takes longer to run
+and is executed less frequently.
+
+\emph{Fix Broken Builds Immediately}
+
+A broken build is anything that prevents the build from reporting
+success. This could be a compilation error, failed test or inspection,
+problem with the database or failed deployment. In the CI environment,
+it is important that these problems are fixed immediately.
+
+\emph{Keep the Build Fast}
+
+The build should complete rapidly, so if there is an issue with
+integration, it can be identified quickly. A good practice is to have
+more fast-executing tests than slow tests. This means that you need to
+have more unit tests than other types of tests.
+
+\emph{Test in a Clone of the Production Environment}
+
+Having a test environment can lead to failures in tested systems when
+they deploy in the production environment. This is because the
+production environment may differ from the test environment. However,
+building a replica of a production environment is cost effective.
+Thereby, testing in a clone of the production environment ensures that
+your project is improving and not decaying.
+
+\emph{Make it Easy for Anyone to Get the Latest Executable}
+
+Builds should be readily available to stakeholders and testers as this
+can reduce the amount of rework required when rebuilding a feature that
+does not meet requirements. In general, all programmers should start the
+day by updating the project from the repository to ensure everyone is up
+to date.
+
+\emph{Everyone can see what's happening} It should be easy to find out
+whether the build breaks and what/who made relevant changes.
+
+\emph{Automate Deployment} It is important to write a script to deploy
+the application to a live test server that everyone can look at.
+
 It is important to note that CI does not get rid of bugs, but it does
 make them dramatically easier to find and remove. The above practises
 are important for the smooth functioning of CI framework.
@@ -1488,6 +1493,28 @@ analytics?
 Currently research on build analytics is limited by some challenges,
 some are specific to build analytics and some are applicable to the
 entire field of software engineering.
+
+The papers identified using the research protocol defined in section
+\ref{build-analytics-research-protocol} that give us an overview of
+challenges and future research in the field of build analytics are:
+
+\begin{itemize}
+\tightlist
+\item
+  \citet{bisong2017built}
+\item
+  \citet{pinto2018work}
+\item
+  \citet{santolucito2018statically}
+\item
+  \citet{baltes2018no}
+\item
+  \citet{zhao2017impact}
+\item
+  \citet{vassallo2018break}
+\item
+  \citet{beller2017oops}
+\end{itemize}
 
 In \citet{bisong2017built} the main limitation was the performance of
 the machine learning algorithm used. In the implementation R was used
@@ -1500,7 +1527,7 @@ researching on proprietary software projects.
 
 Tools presented in papers might require a more large scale and long term
 study to verify that the tool presented keeps up when it is actually
-used (\citet{santolucito2018statically}).
+used \citep{santolucito2018statically}.
 
 Future research in build analytics branches in a couple of different
 topics. \citet{pinto2018work} proposes to focus on getting a better
@@ -1518,13 +1545,13 @@ Some open research questions from recent papers are the following:
 \tightlist
 \item
   How do teams change their pull request review practices in response to
-  the introduction of continuous integration? (\citet{zhao2017impact})
+  the introduction of continuous integration? \citep{zhao2017impact}
 \item
   How can we detect if fixing a build configuration requires changes in
-  the remote environment? (\citet{vassallo2018break})
+  the remote environment? \citep{vassallo2018break}
 \item
   Does breaking the build often translate to worse project quality and
-  decreased productivity? (\citet{beller2017oops})
+  decreased productivity? \citep{beller2017oops}
 \end{itemize}
 
 From the synthesis of the works discussed in this section the following
@@ -1597,7 +1624,7 @@ following research questions:
   future research?
 \end{itemize}
 
-\section{Research protocol}\label{research-protocol-2}
+\section{Research protocol}\label{research-protocol-1}
 
 We started by studying the initial 6 seed papers which were selected
 based on domain knowledge:
@@ -1712,7 +1739,7 @@ questions:
 Each of these research questions will be answered, using recent papers
 written in this field of research.
 
-\section{Research Protocol}\label{research-protocol-3}
+\section{Research Protocol}\label{research-protocol-2}
 
 In order to select literature to answer the research questions given in
 the previous section, the survey method suggested by
@@ -2318,7 +2345,7 @@ questions.
   to guide but also to motivate future research.
 \end{itemize}
 
-\section{Research Protocol}\label{research-protocol-4}
+\section{Research Protocol}\label{research-protocol-3}
 
 In this section, we will describe\ldots{}
 
@@ -3478,7 +3505,7 @@ this survey:
   \textbf{RQ3} Open challenges and future research required.
 \end{itemize}
 
-\section{Research protocol}\label{research-protocol-5}
+\section{Research protocol}\label{research-protocol-4}
 
 TODO: here are just ideas of what I'm doing but they should be properly
 written
