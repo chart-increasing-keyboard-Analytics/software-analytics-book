@@ -85,7 +85,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2018-10-03}
+    \date{2018-10-07}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -1024,8 +1024,15 @@ process should be fast and without any errors. Unfortunately, this is
 not always the case and automated builds results notify developers of
 compile errors, missing dependencies, broken functionality and many
 other problems. This chapter is aimed to give an overview of the effort
-made in build analytics field and Continuous Integration (CI) as an
+made in Build Analytics field and Continuous Integration (CI) as an
 increasingly common development practice in many projects.
+
+Continuous Integration in a term used in software engineering to
+describe a practice of merging all developer working copies to a shared
+mainline several times a day. CI is in general used together with
+Version control System (VCS). Version Control System is an application
+for revision control that ensures the managment of changes to documents,
+source code and other collections of information.
 
 Build analytics covers research done on data extracted from a build
 process inside a project. This contains amongst others, build logs from
@@ -1036,7 +1043,7 @@ continuous integration such as Travis~CI\footnote{See
 and TeamCity\footnote{See \url{https://www.jetbrains.com/teamcity/}} or
 surveys among developers about their usage of Continuous Integration or
 build systems. This information is often paired with data from Version
-Control Systems (VCS) such as git.
+Control Systems (VCS) such as Git.
 
 In order to get a complete view of the current state of the build
 analytics field, we ask the following research questions.
@@ -1105,7 +1112,7 @@ Initial seed\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
 \citet{bird2017predicting}\strut
 \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-\strut
+RQ1\strut
 \end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
 US patent\strut
 \end{minipage}\tabularnewline
@@ -1116,7 +1123,7 @@ Initial seed\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
 \citet{beller2017oops}\strut
 \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-\strut
+RQ3\strut
 \end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1149,7 +1156,7 @@ Initial seed\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
 \citet{pinto2018work}\strut
 \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-\strut
+RQ3\strut
 \end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1160,7 +1167,7 @@ Initial seed\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
 \citet{zhao2017impact}\strut
 \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-\strut
+RQ3\strut
 \end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
 Collab China, Netherlands, USA Univ\strut
 \end{minipage}\tabularnewline
@@ -1171,7 +1178,7 @@ Initial seed\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
 \citet{widder2018m}\strut
 \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-\strut
+RQ1\strut
 \end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1215,7 +1222,7 @@ Ref 2,3\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
 \citet{vassallo2018break}\strut
 \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-RQ1\strut
+RQ1, RQ3\strut
 \end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1237,7 +1244,7 @@ GScholar Search\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
 \citet{baltes2018no}\strut
 \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-RQ1\strut
+RQ1, RQ3\strut
 \end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
 Search term ``Github Continuous Integration''\strut
 \end{minipage}\tabularnewline
@@ -1248,7 +1255,7 @@ GScholar Search\strut
 \end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
 \citet{bisong2017built}\strut
 \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-RQ1\strut
+RQ1, RQ3\strut
 \end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
 \strut
 \end{minipage}\tabularnewline
@@ -1282,17 +1289,32 @@ RQ1\strut
 \textbf{RQ1}: What is the current state of the art in the field of build
 analytics?
 
-The current state-of-the-art in build analytics domain refers to the use
-of machine learning techniques to increase the productivity when using
-Continuos Integration (CI), to generate constraints on the configuration
-of the CI that could improve build success rate and to predict build
-failures even for newer projects with less training data available.
+The current state-of-the-art in the build analytics domain refers to the
+use of machine learning techniques to increase the productivity when
+using Continuos Integration (CI), to generate constraints on the
+configuration of the CI that could improve build success rate and to
+predict build failures even for newer projects with less training data
+available.
 
 The papers identified using the research protocol defined in the
-previous section that give as an overview of the current state of the
-art in build analytics domain are: * Hassan et al. 2018 * Vassallo et
-al. 2018 * Baltes et al. 2018 * Bisong et al. 2017 * Santolucito et al.
-2018 * Ni et al. 2018
+previous section that give us an overview of the current state of the
+art in build analytics domain are:
+
+\begin{itemize}
+\tightlist
+\item
+  Hassan et al. 2018
+\item
+  Vassallo et al. 2018
+\item
+  Baltes et al. 2018
+\item
+  Bisong et al. 2017
+\item
+  Santolucito et al. 2018
+\item
+  Ni et al. 2018
+\end{itemize}
 
 The topics that are being explored are:
 
@@ -1302,7 +1324,7 @@ The topics that are being explored are:
   the importance of the build process in a VCS project
   \citet{hassan2018hirebuild}
 \item
-  the impact factors of user satisfaction from using a CI tools
+  the impact factors of user satisfaction for using a CI tools
   \citet{widder2018m}
 \item
   methods from helping the developer to fix bugs
@@ -1327,18 +1349,18 @@ The tools that are being proposed are:
   changes \citet{hassan2018hirebuild}
 \item
   VeriCI capable of checking the errors in CI configurations files
-  before the developer push a commit and without needing to wait for the
-  build result \citet{santolucito2018statically}
+  before the developer pushes a commit and without needing to wait for
+  the build result \citet{santolucito2018statically}
 \item
-  ACONA capable of predicting build failure prediction in CI environment
-  for newer projects with less data available \citet{ni2018acona}
+  ACONA capable of predicting build failure in CI environment for newer
+  projects with less data available \citet{ni2018acona}
 \end{itemize}
 
-The build process is important part of a project that uses VCS in the
+The build process is an important part of a project that uses VCS in the
 way that based on the findings from \citet{hassan2018hirebuild} 22\% of
 code commits include changes in build script files for either build
 working or build fixing purposes. Moreover, recent studies have focused
-on how satisfied are the users of CI tools, one particular paper
+on how satisfied the users of CI tools are, one particular paper
 \citet{widder2018m} analyzing what factors have an impact on abandonment
 of Travis~CI. The paper finds that increased build complexity reduces
 the chance of abandonment, but larger projects abandon at a higher rate
@@ -1347,35 +1369,54 @@ surprising result is that metrics of configuration attempts and
 knowledge dispersion in the project do not affect the rate of
 abandonment.
 
-Another important aspect is the impact of CI in the development process
-efficiency. On of the papers that adresses this matters is
+Another important aspect is the impact of CI on the development process
+efficiency. One of the papers that adresses this matters is
 \citet{bisong2017built}. This paper aims to find a balance between the
-frequency of integration and developer's productivity by proposing a
+frequency of integration and developer's productivity by proposing
 machine learning models that were able to predict the build taking
 advantage of the 56 features presented in TravisTorrent build records.
-There models performed quite well with an R-Squared of around 80\%,
+Their models performed quite well with an R-Squared of around 80\%,
 meaning that they were able to capture the variation of build time over
 multiple projects. Their research could be useful on one hand for
 software developers and project managers for a better time management
-scheme and one the other hand for other researchers that may improve
+scheme and on the other hand for other researchers that may improve
 their proposed models.
 
 Moreover, the usage of automation build tools introduces a delay in the
 development cycle generated by the waiting time until the build finish
 successfully. One of the most recent papers analyzed
 \citet{santolucito2018statically} presents a tool VeriCI capable of
-checking the errors in CI configurations files before the developer push
-a commit and without needing to wait for the build result. This paper
-focuses on prediction of build failure without using metadata like
+checking the errors in CI configurations files before the developer
+pushes a commit and without needing to wait for the build result. This
+paper focuses on prediction of build failure without using metadata like
 number of commits, code churn also in the learning process, but relying
 on the actual user programs and configuration scripts. This fact makes
-the identification of the error cause possible. VeriCI achieve 83\%
+the identification of the error cause possible. VeriCI achieves 83\%
 accuracy of predicting build failure on real data from GitHub projects
 and 30-48\% of time the error justification provided by the tool matched
 the actual error cause. These results seem promising, but there is a
 need in focusing more on producing the error justification fact that
 could make the use of machine learning tools in real build analytics
 tools achievable and tolerated.
+
+Even if there were considerable efforts in developing powerful and
+accurate machine learning models for predicting the outcome of builds,
+most of this techniques cannot be trained properly without large project
+past data. The problem that resulted from this is newer project being
+unable to take advantage of the research conducted before and having to
+wait until enough data from their project is generated in order to
+sufficiently train machine learning models from predicting the build
+outcome. The most recent paper of this survey which is only published as
+a poster in June 2018, \citet{ni2018acona}, addresses the problem of
+build failure prediction in CI environment for newer projects with less
+data available. It is using already trained models from other project
+with more data available and combined them by the means of active
+learning in order to find which of that models generalized better from
+the problem in hand and to update the models weights accordingly. It is
+also aimed to cut the expense that CI introduce by reducing the label
+data necessarily for training. Even if the method seems promising, the
+results presented in the poster shows an F-Measure (harmonic average of
+recall and precision) of around 40\% that could be better improved.
 
 \textbf{RQ2}: What is the current state of practice in the field of
 build analytics?
@@ -1384,6 +1425,15 @@ Continuous Integration is a development practise that requires
 developers to integrate code into a share repository several times a
 day. Each check-in is then verified by an automated build which allows
 engineers to detect any bugs early.
+
+An overview over the state of practice in Build Analytics domain can be
+seen in the figure bellow:
+
+\begin{figure}
+\centering
+\includegraphics{figures/Chapter3/state_pr.png}
+\caption{Build Analytics state of practice overview.}
+\end{figure}
 
 A survey conduced in open-source projects by \citet{hilton2016usage}
 indicated that 40\% of all projects used CI. It observed that a median
@@ -1444,15 +1494,25 @@ the machine learning algorithm used. In the implementation R was used
 and it proved not capable of processing the amounts of data needed. This
 shows that it is important to choose the right tool when analyzing data.
 
+\citet{pinto2018work} notes that it's research and many others are done
+on open source software. There are still a lot of possibilities for
+researching on proprietary software projects.
+
+Tools presented in papers might require a more large scale and long term
+study to verify that the tool presented keeps up when it is actually
+used (\citet{santolucito2018statically}).
+
 Future research in build analytics branches in a couple of different
 topics. \citet{pinto2018work} proposes to focus on getting a better
 understanding of the users and why they might choose to abandon an
 automatic build platform.
 
-According to \citet{baltes2018no} future work could look into more
-perspectives when analyzing commit data, for instance partitioning
-commits by developer. It also notes the importance of more qualitative
-research.
+\citet{baltes2018no} suggests that in future research more perspectives
+when analyzing commit data should be taken into account, for instance
+partitioning commits by developer. It also notes the importance of more
+qualitative research.
+
+Some open research questions from recent papers are the following:
 
 \begin{itemize}
 \tightlist
@@ -1476,7 +1536,8 @@ research questions emerged:
   What is the impact of the choice of Continuos Integration platform?
   Most of the research is done on users using Travis~CI, there are many
   other platforms out there. Every platform has their own
-  characteristics.
+  characteristics and this could impact the effectiveness for a specific
+  kind of project.
 \end{itemize}
 
 \chapter{Bug Prediction}\label{bug-prediction}
