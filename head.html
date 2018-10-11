@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="head.html">
-<link rel="next" href="ecosystem-analytics.html">
+<link rel="prev" href="prediction-with-less-data-available.html">
+<link rel="next" href="bug-prediction.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -233,101 +233,177 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="bug-prediction" class="section level1">
-<h1><span class="header-section-number">Chapter 7</span> Bug Prediction</h1>
-<div id="motivation-2" class="section level2">
-<h2><span class="header-section-number">7.1</span> Motivation</h2>
-<p>Minimizing the number of bugs in software is an effort central to software engineering - faulty code fails to fullfill the purpose it was written for, its impact ranges from sligthly embarrassing to disastrous and dangerous, and last but not least - fixing it costs time and money. Resources in a software development lifecycle are almost always limited and therefore should be allocated to where they are needed most - in order to avoid bugs, they should be focused on the most fault-prone areas of the project. Being able to predict where such areas might be would allow more development and testing efforts to be allocated on the right places.</p>
-<p>However, as noted in <span class="citation">D’Ambros, Lanza, and Robbes (<a href="#ref-DAmbros2012">2012</a>)</span>, reliably predicting which parts of source code are the most fault-prone is one of the holy-grails of software engineering. Thus it is not surprising that bug-prediction continues to garner a widespread research interest in software analytics, now equipped with the ever-expanding toolbox of data-mining and machine learning techniques. In this survey we investigate the current efforts in bug-prediction in the light of the advances in software analytics methods and focus our attention on answering the following research questions:</p>
-<ul>
-<li><strong>RQ1</strong> What is the current state of the art in bug prediction? More specifically, we aim to answer the following:
-<ul>
-<li>What software or other metrics does bug prediction rely on and how good are they?</li>
-<li>What kind prediction models are predominantly used?</li>
-<li>How are bug prediction models and results validated and evaluated?</li>
-</ul></li>
-<li><strong>RQ2</strong> What is the current state of practice in bug prediction?
-<ul>
-<li>Are bug prediction techniques applied in practice and if so, how?</li>
-<li>Are the current developments in the field able to provide actionable tools for developers?</li>
-</ul></li>
-<li><strong>RQ3</strong> What are some of the open challenges and directions for future research?</li>
-</ul>
+<div id="head" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</h1>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>week-3 <strong>RQ2</strong>: What is the current state of practice in the field of build analytics?</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Continuous Integration (CI) is a development practice that requires developers to integrate code into a share repository several times a day. Each check-in is then verified by an automated build which allows engineers to detect any bugs early.</p>
+<p>An overview of Continuous Integration evolution from the introduction of the term to the current practices can be seen in the figure bellow:</p>
+<div class="figure">
+<img src="figures/build-analytics/state_pr.png" alt="CI overview." />
+<p class="caption">CI overview.</p>
 </div>
-<div id="research-protocol-1" class="section level2">
-<h2><span class="header-section-number">7.2</span> Research protocol</h2>
-<p>We started by studying the initial 6 seed papers which were selected based on domain knowledge:</p>
+<p>The papers identified using the research protocol defined in the previous section that give us an overview of the current state of the art in build analytics domain are:</p>
 <ul>
-<li><span class="citation">Gyimothy, Ferenc, and Siket (<a href="#ref-Gyimothy2005">2005</a>)</span></li>
-<li><span class="citation">Cagatay Catal and Diri (<a href="#ref-Catal2009review">2009</a>)</span></li>
-<li><span class="citation">Arisholm, Briand, and Johannessen (<a href="#ref-Arisholm2010">2010</a>)</span></li>
-<li><span class="citation">D’Ambros, Lanza, and Robbes (<a href="#ref-DAmbros2010">2010</a>)</span></li>
-<li><span class="citation">Hall et al. (<a href="#ref-Hall2012">2012</a>)</span></li>
-<li><span class="citation">Lewis et al. (<a href="#ref-Lewis2013">2013</a>)</span></li>
+<li>Usage, Costs, and Benefits of Continuous Integration in Open-Source Projects <span class="citation">(Hilton et al. <a href="#ref-hilton2016usage">2016</a>)</span></li>
+<li>An Empirical Analysis of Build Failures in the Continuous Integration Workflows of Java-Based Open-Source Software <span class="citation">(Rausch et al. <a href="#ref-rausch2017empirical">2017</a>)</span></li>
+<li>Continuous Integration <span class="citation">(Fowler and Foemmel <a href="#ref-fowler2006continuous">2006</a>)</span></li>
+<li>Enabling Agile Testing Through Continuous Integration <span class="citation">(Stolberg <a href="#ref-stolberg2009enabling">2009</a>)</span></li>
+<li>Travistorrent: Synthesizing Travis Ci and Github for Full-Stack Research on Continuous Integration <span class="citation">(Moritz Beller, Gousios, and Zaidman <a href="#ref-beller2017travistorrent">2017</a><a href="#ref-beller2017travistorrent">b</a>)</span></li>
 </ul>
-<p>Our searches were based on the following elements:</p>
-<ol style="list-style-type: decimal">
-<li><p>Keyword search using search engines (Scopus, ACM Digital Library, IEEE Explorer). The search query was constructed so that the paper title had to contain the phrase bug prediction, but also the other more general variants used in literature: <em>bug/defect/fault prediction</em>. The title also had to contain at least one of following keywords: <em>metrics</em>, <em>models</em>, <em>validation</em>, <em>evaluation</em>, <em>developers</em>. To remain within the bug prediction field we required <em>software</em> to appear in the abstract.</p></li>
-<li><p>Filtering search results by publication date. We excluded papers older than 10 years; that is, published before 2008.</p></li>
-<li><p>Filtering by the number of citations. We selected papers with 10 or more citations in order to focus on the ones that already have some visibility within the field.</p></li>
-<li><p>Exploring other impactful publications by the same authors.</p></li>
-</ol>
-<p><em>Table 1. Papers found by investigating the authors of other papers.</em></p>
-<table>
-<thead>
-<tr class="header">
-<th>Starting point</th>
-<th>Type</th>
-<th>Result</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="citation">D’Ambros, Lanza, and Robbes (<a href="#ref-DAmbros2010">2010</a>)</span></td>
-<td>is author of</td>
-<td><span class="citation">D’Ambros, Lanza, and Robbes (<a href="#ref-DAmbros2012">2012</a>)</span></td>
-</tr>
-<tr class="even">
-<td><span class="citation">Cagatay Catal and Diri (<a href="#ref-Catal2009review">2009</a>)</span></td>
-<td>is author of</td>
-<td><span class="citation">Catal (<a href="#ref-Catal2011">2011</a>)</span> <br> <span class="citation">C. Catal and Diri (<a href="#ref-Catal2009investigating">2009</a>)</span></td>
-</tr>
-</tbody>
-</table>
+<p>The topics that are being explored are:</p>
+<ul>
+<li>Usage of CI in the industry by <span class="citation">Hilton et al. (<a href="#ref-hilton2016usage">2016</a>)</span></li>
+<li>Growing popularity of CI due to the introduction of VCS as suggested by <span class="citation">Rausch et al. (<a href="#ref-rausch2017empirical">2017</a>)</span></li>
+<li>Common practices used in the industry exemplified by <span class="citation">Fowler and Foemmel (<a href="#ref-fowler2006continuous">2006</a>)</span></li>
+<li>Use of common CI practice in the agile approach presented by <span class="citation">Stolberg (<a href="#ref-stolberg2009enabling">2009</a>)</span></li>
+</ul>
+<p>The practice that are being proposed are:</p>
+<ul>
+<li>Maintain a Single Source Repository</li>
+<li>Automate the Build</li>
+<li>Make Your Build Self-Testing</li>
+<li>Everyone Commits To the Mainline Every Day</li>
+<li>Every Commit Should Build the Mainline on an Integration Machine</li>
+<li>Fix Broken Builds Immediately</li>
+<li>Keep the Build Fast</li>
+<li>Test in a Clone of the Production Environment</li>
+<li>Make it Easy for Anyone to Get the Latest Executable</li>
+<li>Everyone can see what’s happening</li>
+<li>Automate Deployment</li>
+</ul>
+<p>A survey conduced in open-source projects by Hilton et al. <span class="citation">(Hilton et al. <a href="#ref-hilton2016usage">2016</a>)</span> indicated that 40% of all projects used CI. It observed that a median project introduces CI a year into development. Furthermore, the paper claims that CI is widely used in practice nowadays. The paper by Rausch et al. <span class="citation">(Rausch et al. <a href="#ref-rausch2017empirical">2017</a>)</span> explores how CI is widely available for projects of every size with the introduction of Version Control Systems (VCS) such as GitHub, and hosted build automation platforms such as Travis. In this way, CI adoption rates will increase further in the future.</p>
+<p>This is an overview of CI and how it works in daily life. Maintaining this system requires engineers to follow fundamental practices presented by Fowler and Foemmel <span class="citation">(Fowler and Foemmel <a href="#ref-fowler2006continuous">2006</a>)</span>. The practices presented by Fowler and Foemmel <span class="citation">(Fowler and Foemmel <a href="#ref-fowler2006continuous">2006</a>)</span> are still commonly used today, particularly in the agile software industry as suggested by Stolberg <span class="citation">(Stolberg <a href="#ref-stolberg2009enabling">2009</a>)</span>. Below is an explanation of each of the practices suggested by Fowler and Foemmel <span class="citation">(Fowler and Foemmel <a href="#ref-fowler2006continuous">2006</a>.)</span></p>
+<div id="maintain-a-single-source-repository" class="section level4">
+<h4><span class="header-section-number">6.0.0.1</span> Maintain a Single Source Repository</h4>
+<p>The practice advocates the use of a revision control system for the project’s source code. All artifacts required to build the project should be placed in a single repository. This ensures that the system does not require additional dependencies. It is preferred for changes to be integrated at least once a day. This makes it easier to find and remove bugs.</p>
 </div>
-<div id="answers-1" class="section level2">
-<h2><span class="header-section-number">7.3</span> Answers</h2>
+<div id="automate-the-build" class="section level4">
+<h4><span class="header-section-number">6.0.0.2</span> Automate the Build</h4>
+<p>A single command should have the capability of building the system. A build script should be able to compile code, execute unit tests and automate integration. Many build tools are frequently used in continuous integration environments. Other functions that the build may include are code quality checks, semantic checks and measuring technical debt etc.</p>
+</div>
+<div id="make-your-build-self-testing" class="section level4">
+<h4><span class="header-section-number">6.0.0.3</span> Make Your Build Self-Testing</h4>
+<p>Once the code is built, all tests should run to confirm that it behaves as the developer would expect it to behave.</p>
+</div>
+<div id="everyone-commits-to-the-mainline-every-day" class="section level4">
+<h4><span class="header-section-number">6.0.0.4</span> Everyone Commits To the Mainline Every Day</h4>
+<p>This is one of the most important rules presented by Fowler and Foemmel <span class="citation">(Fowler and Foemmel <a href="#ref-fowler2006continuous">2006</a>)</span>. By committing regularly, every developer can reduce the number of conflicting changes. Checking in large data runs thee risk of conflicting with other features and can be very challenging to resolve. Committing all changes at least once a day is an integral practice of the CI framework. In addition, performing nightly builds in recommended.</p>
+</div>
+<div id="every-commit-should-build-the-mainline-on-an-integration-machine" class="section level4">
+<h4><span class="header-section-number">6.0.0.5</span> Every Commit Should Build the Mainline on an Integration Machine</h4>
+<p>The system should build commits to the current working version to ensure that they integrate correctly. A “nightly build” should also execute at a scheduled time every night. This build should include more verification than the ones on other branches. It takes longer to run and is executed less frequently.</p>
+</div>
+<div id="fix-broken-builds-immediately" class="section level4">
+<h4><span class="header-section-number">6.0.0.6</span> Fix Broken Builds Immediately</h4>
+<p>A broken build is anything that prevents the build from reporting success. This could be a compilation error, failed test or inspection, problem with the database or failed deployment. In the CI environment, it is important that these problems are fixed immediately.</p>
+</div>
+<div id="keep-the-build-fast" class="section level4">
+<h4><span class="header-section-number">6.0.0.7</span> Keep the Build Fast</h4>
+<p>The build should complete rapidly, so if there is an issue with integration, it can be identified quickly. A good practice is to have more fast-executing tests than slow tests. This means that you need to have more unit tests than other types of tests.</p>
+</div>
+<div id="test-in-a-clone-of-the-production-environment" class="section level4">
+<h4><span class="header-section-number">6.0.0.8</span> Test in a Clone of the Production Environment</h4>
+<p>Having a test environment can lead to failures in tested systems when they deploy in the production environment. This is because the production environment may differ from the test environment. However, building a replica of a production environment is cost effective. Thereby, testing in a clone of the production environment ensures that your project is improving and not decaying.</p>
+</div>
+<div id="make-it-easy-for-anyone-to-get-the-latest-executable" class="section level4">
+<h4><span class="header-section-number">6.0.0.9</span> Make it Easy for Anyone to Get the Latest Executable</h4>
+<p>Builds should be readily available to stakeholders and testers as this can reduce the amount of rework required when rebuilding a feature that does not meet requirements. In general, all programmers should start the day by updating the project from the repository to ensure everyone is up to date.</p>
+</div>
+<div id="everyone-can-see-whats-happening" class="section level4">
+<h4><span class="header-section-number">6.0.0.10</span> Everyone can see what’s happening</h4>
+<p>It should be easy to find out whether the build breaks and what/who made relevant changes. This ensures that communication trickels down to all programmers and that everyone can see what’s happening.</p>
+</div>
+<div id="automate-deployment" class="section level4">
+<h4><span class="header-section-number">6.0.0.11</span> Automate Deployment</h4>
+<p>It is important to write a script to deploy the application to a live test server that everyone can look at.</p>
+<p>It is important to note that CI does not get rid of bugs, but it does make them dramatically easier to find and remove. The above practices are important for the smooth functioning of CI framework. These practices are still relevant today and used by professionals in the industry.</p>
+<!--
+    - Tools and companies creating / employing them
+    - Case studies and their findings -->
+</div>
+<div id="build-analytics-future-research" class="section level3">
+<h3><span class="header-section-number">6.0.1</span> Build Analytics Future Research</h3>
+<p><strong>RQ3</strong>: What future research can we expect in the field of build analytics?</p>
+<p>Currently research on build analytics is limited by some challenges, some are specific to build analytics and some are applicable to the entire field of software engineering.</p>
+<p>The papers identified using the research protocol defined in section <a href="build-analytics.html#build-analytics-research-protocol">4.2</a> that give us an overview of challenges and future research in the field of build analytics are:</p>
+<ul>
+<li><span class="citation">Bisong, Tran, and Baysal (<a href="#ref-bisong2017built">2017</a>)</span></li>
+<li><span class="citation">Pinto and Rebouças (<a href="#ref-pinto2018work">2018</a>)</span></li>
+<li><span class="citation">Santolucito et al. (<a href="#ref-santolucito2018statically">2018</a>)</span></li>
+<li><span class="citation">Baltes et al. (<a href="#ref-baltes2018no">2018</a>)</span></li>
+<li><span class="citation">Zhao et al. (<a href="#ref-zhao2017impact">2017</a>)</span></li>
+<li><span class="citation">Vassallo et al. (<a href="#ref-vassallo2018break">2018</a>)</span></li>
+<li><span class="citation">Moritz Beller, Gousios, and Zaidman (<a href="#ref-beller2017oops">2017</a><a href="#ref-beller2017oops">a</a>)</span></li>
+</ul>
+<p>In <span class="citation">Bisong, Tran, and Baysal (<a href="#ref-bisong2017built">2017</a>)</span> the main limitation was the performance of the machine learning algorithm used. In the implementation R was used and it proved not capable of processing the amounts of data needed. This shows that it is important to choose the right tool when analyzing data.</p>
+<p><span class="citation">Pinto and Rebouças (<a href="#ref-pinto2018work">2018</a>)</span> notes that it’s research and many others are done on open source software. There are still a lot of possibilities for researching on proprietary software projects.</p>
+<p>Tools presented in papers might require a more large scale and long term study to verify that the tool presented keeps up when it is actually used <span class="citation">(Santolucito et al. <a href="#ref-santolucito2018statically">2018</a>)</span>.</p>
+<p>Future research in build analytics branches in a couple of different topics. <span class="citation">Pinto and Rebouças (<a href="#ref-pinto2018work">2018</a>)</span> proposes to focus on getting a better understanding of the users and why they might choose to abandon an automatic build platform.</p>
+<p><span class="citation">Baltes et al. (<a href="#ref-baltes2018no">2018</a>)</span> suggests that in future research more perspectives when analyzing commit data should be taken into account, for instance partitioning commits by developer. It also notes the importance of more qualitative research.</p>
+<p>Some open research questions from recent papers are the following:</p>
+<ul>
+<li>How do teams change their pull request review practices in response to the introduction of continuous integration? <span class="citation">(Zhao et al. <a href="#ref-zhao2017impact">2017</a>)</span></li>
+<li>How can we detect if fixing a build configuration requires changes in the remote environment? <span class="citation">(Vassallo et al. <a href="#ref-vassallo2018break">2018</a>)</span></li>
+<li>Does breaking the build often translate to worse project quality and decreased productivity? <span class="citation">(Moritz Beller, Gousios, and Zaidman <a href="#ref-beller2017oops">2017</a><a href="#ref-beller2017oops">a</a>)</span></li>
+</ul>
+<p>From the synthesis of the works discussed in this section the following research questions emerged:</p>
+<ul>
+<li>What is the impact of the choice of Continuous Integration platform? Most of the research is done on users using Travis CI, there are many other platforms out there. Every platform has their own characteristics and this could impact the effectiveness for a specific kind of project.</li>
+</ul>
 
 </div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
-<div id="ref-DAmbros2012">
-<p>D’Ambros, M., M. Lanza, and R. Robbes. 2012. “Evaluating Defect Prediction Approaches: A Benchmark and an Extensive Comparison.” <em>Empirical Software Engineering</em> 17 (4-5): 531–77. <a href="www.scopus.com" class="uri">www.scopus.com</a>.</p>
+<div id="ref-hilton2016usage">
+<p>Hilton, Michael, Timothy Tunnell, Kai Huang, Darko Marinov, and Danny Dig. 2016. “Usage, Costs, and Benefits of Continuous Integration in Open-Source Projects.” In <em>Proceedings of the 31st Ieee/Acm International Conference on Automated Software Engineering</em>, 426–37. ACM.</p>
 </div>
-<div id="ref-Gyimothy2005">
-<p>Gyimothy, T., R. Ferenc, and I. Siket. 2005. “Empirical validation of object-oriented metrics on open source software for fault prediction.” <em>IEEE Transactions on Software Engineering</em> 31 (10): 897–910. doi:<a href="https://doi.org/10.1109/TSE.2005.112">10.1109/TSE.2005.112</a>.</p>
+<div id="ref-rausch2017empirical">
+<p>Rausch, Thomas, Waldemar Hummer, Philipp Leitner, and Stefan Schulte. 2017. “An Empirical Analysis of Build Failures in the Continuous Integration Workflows of Java-Based Open-Source Software.” In <em>Proceedings of the 14th International Conference on Mining Software Repositories</em>, 345–55. IEEE Press.</p>
 </div>
-<div id="ref-Catal2009review">
-<p>Catal, Cagatay, and Banu Diri. 2009. “A systematic review of software fault prediction studies.” doi:<a href="https://doi.org/10.1016/j.eswa.2008.10.027">10.1016/j.eswa.2008.10.027</a>.</p>
+<div id="ref-fowler2006continuous">
+<p>Fowler, Martin, and Matthew Foemmel. 2006. “Continuous Integration.” <em>Thought-Works) Http://Www. Thoughtworks. Com/Continuous Integration. Pdf</em> 122: 14.</p>
 </div>
-<div id="ref-Arisholm2010">
-<p>Arisholm, Erik, Lionel C Briand, and Eivind B Johannessen. 2010. “A systematic and comprehensive investigation of methods to build and evaluate fault prediction models.” <em>Journal of Systems and Software</em> 83 (1): 2–17. doi:<a href="https://doi.org/10.1016/j.jss.2009.06.055">10.1016/j.jss.2009.06.055</a>.</p>
+<div id="ref-stolberg2009enabling">
+<p>Stolberg, Sean. 2009. “Enabling Agile Testing Through Continuous Integration.” In <em>Agile Conference, 2009. Agile’09.</em>, 369–74. IEEE.</p>
 </div>
-<div id="ref-DAmbros2010">
-<p>D’Ambros, Marco, Michele Lanza, and Romain Robbes. 2010. “An extensive comparison of bug prediction approaches.” <em>Proceedings - International Conference on Software Engineering</em>, 31–41. doi:<a href="https://doi.org/10.1109/MSR.2010.5463279">10.1109/MSR.2010.5463279</a>.</p>
+<div id="ref-beller2017travistorrent">
+<p>Beller, Moritz, Georgios Gousios, and Andy Zaidman. 2017b. “Travistorrent: Synthesizing Travis Ci and Github for Full-Stack Research on Continuous Integration.” In <em>Proceedings of the 14th International Conference on Mining Software Repositories</em>, 447–50. IEEE press.</p>
 </div>
-<div id="ref-Hall2012">
-<p>Hall, T., S. Beecham, D. Bowes, D. Gray, and S. Counsell. 2012. “A Systematic Literature Review on Fault Prediction Performance in Software Engineering.” <em>IEEE Transactions on Software Engineering</em> 38 (6): 1276–1304. doi:<a href="https://doi.org/10.1109/TSE.2011.103">10.1109/TSE.2011.103</a>.</p>
+<div id="ref-bisong2017built">
+<p>Bisong, Ekaba, Eric Tran, and Olga Baysal. 2017. “Built to Last or Built Too Fast?: Evaluating Prediction Models for Build Times.” In <em>Proceedings of the 14th International Conference on Mining Software Repositories</em>, 487–90. IEEE Press.</p>
 </div>
-<div id="ref-Lewis2013">
-<p>Lewis, Chris, Zhongpeng Lin, Caitlin Sadowski, Xiaoyan Zhu, Rong Ou, and E. James Whitehead. 2013. “Does bug prediction support human developers? Findings from a Google case study.” In <em>2013 35th International Conference on Software Engineering (Icse)</em>, 372–81. IEEE. doi:<a href="https://doi.org/10.1109/ICSE.2013.6606583">10.1109/ICSE.2013.6606583</a>.</p>
+<div id="ref-pinto2018work">
+<p>Pinto, Gustavo, and Fernando Castor Rodrigo Bonifacio Marcel Rebouças. 2018. “Work Practices and Challenges in Continuous Integration: A Survey with Travis Ci Users.”</p>
 </div>
-<div id="ref-Catal2011">
-<p>Catal, C. 2011. “Software Fault Prediction: A Literature Review and Current Trends.” <em>Expert Systems with Applications</em> 38 (4): 4626–36. <a href="www.scopus.com" class="uri">www.scopus.com</a>.</p>
+<div id="ref-santolucito2018statically">
+<p>Santolucito, Mark, Jialu Zhang, Ennan Zhai, and Ruzica Piskac. 2018. “Statically Verifying Continuous Integration Configurations.” <em>arXiv Preprint arXiv:1805.04473</em>.</p>
 </div>
-<div id="ref-Catal2009investigating">
-<p>Catal, C., and B. Diri. 2009. “Investigating the Effect of Dataset Size, Metrics Sets, and Feature Selection Techniques on Software Fault Prediction Problem.” <em>Information Sciences</em> 179 (8): 1040–58. <a href="www.scopus.com" class="uri">www.scopus.com</a>.</p>
+<div id="ref-baltes2018no">
+<p>Baltes, Sebastian, Jascha Knack, Daniel Anastasiou, Ralf Tymann, and Stephan Diehl. 2018. “(No) Influence of Continuous Integration on the Commit Activity in Github Projects.” <em>arXiv Preprint arXiv:1802.08441</em>.</p>
+</div>
+<div id="ref-zhao2017impact">
+<p>Zhao, Yangyang, Alexander Serebrenik, Yuming Zhou, Vladimir Filkov, and Bogdan Vasilescu. 2017. “The Impact of Continuous Integration on Other Software Development Practices: A Large-Scale Empirical Study.” In <em>Proceedings of the 32nd Ieee/Acm International Conference on Automated Software Engineering</em>, 60–71. IEEE Press.</p>
+</div>
+<div id="ref-vassallo2018break">
+<p>Vassallo, Carmine, Sebastian Proksch, Timothy Zemp, and Harald C Gall. 2018. “Un-Break My Build: Assisting Developers with Build Repair Hints.”</p>
+</div>
+<div id="ref-beller2017oops">
+<p>Beller, Moritz, Georgios Gousios, and Andy Zaidman. 2017a. “Oops, My Tests Broke the Build: An Explorative Analysis of Travis Ci with Github.” In <em>Mining Software Repositories (Msr), 2017 Ieee/Acm 14th International Conference on</em>, 356–67. IEEE.</p>
 </div>
 </div>
             </section>
@@ -335,8 +411,8 @@
           </div>
         </div>
       </div>
-<a href="head.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="ecosystem-analytics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="prediction-with-less-data-available.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="bug-prediction.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -366,7 +442,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/saltudelft/software-analytics-book/edit/master/04-bug-prediction.Rmd",
+"link": "https://github.com/saltudelft/software-analytics-book/edit/master/03-build-analytics.Rmd",
 "text": "Edit"
 },
 "download": ["software-analytics-survey.pdf", "software-analytics-survey.epub"],
