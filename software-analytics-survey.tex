@@ -85,7 +85,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2018-10-11}
+    \date{2018-10-12}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -1533,6 +1533,9 @@ art in build analytics domain are:
 \item
   Travistorrent: Synthesizing Travis Ci and Github for Full-Stack
   Research on Continuous Integration \citep{beller2017travistorrent}
+\item
+  I'im Leaving You, Travis: A Continuous Integration Breakup Story
+  \citep{widder2018m}
 \end{itemize}
 
 The topics that are being explored are:
@@ -1603,11 +1606,14 @@ explanation of each of the practices suggested by Fowler and Foemmel
 Repository}\label{maintain-a-single-source-repository}
 
 The practice advocates the use of a revision control system for the
-project's source code. All artifacts required to build the project
+project's source code. All artefacts required to build the project
 should be placed in a single repository. This ensures that the system
 does not require additional dependencies. It is preferred for changes to
 be integrated at least once a day. This makes it easier to find and
-remove bugs.
+remove bugs. The framework is not difficult to implement with the
+growing popularity of Version Control Systems (VCS) such as GitHub, and
+hosted build automation platforms such as Travis
+(\citet{beller2017travistorrent}).
 
 \subsubsection{Automate the Build}\label{automate-the-build}
 
@@ -1621,7 +1627,9 @@ code quality checks, semantic checks and measuring technical debt etc.
 Self-Testing}\label{make-your-build-self-testing}
 
 Once the code is built, all tests should run to confirm that it behaves
-as the developer would expect it to behave.
+as the developer would expect it to behave. In this way, we are finding
+and eradicating software bugs earlier. This saves copious amounts of
+time in the integrating phase.
 
 \subsubsection{Everyone Commits To the Mainline Every
 Day}\label{everyone-commits-to-the-mainline-every-day}
@@ -1654,9 +1662,11 @@ it is important that these problems are fixed immediately.
 \subsubsection{Keep the Build Fast}\label{keep-the-build-fast}
 
 The build should complete rapidly, so if there is an issue with
-integration, it can be identified quickly. A good practice is to have
-more fast-executing tests than slow tests. This means that you need to
-have more unit tests than other types of tests.
+integration, it can be identified quickly. As explored by Widder et
+al.\citep{widder2018m}, one of the factors that lead to companies
+abandoning the CI framework is the complexity of the build. A good
+practice is to have more fast-executing tests than slow tests. This
+means that you need to have more unit tests than other types of tests.
 
 \subsubsection{Test in a Clone of the Production
 Environment}\label{test-in-a-clone-of-the-production-environment}
@@ -1681,13 +1691,19 @@ to date.
 happening}\label{everyone-can-see-whats-happening}
 
 It should be easy to find out whether the build breaks and what/who made
-relevant changes. This ensures that communication trickels down to all
-programmers and that everyone can see what's happening.
+relevant changes. Continuous Integration is all about communication, so
+it is important to ensure that everyone can easily see the current state
+of the system. This is also another reason why CI works really well in
+the agile industry \citep{stolberg2009enabling}. Both techniques stress
+the importance of good communication.
 
 \subsubsection{Automate Deployment}\label{automate-deployment}
 
 It is important to write a script to deploy the application to a live
-test server that everyone can look at.
+test server that everyone can look at. This is an integral aspect of CI
+as you are moving executables between different environments several
+times a day. Automating this process will save time and allow you to
+deploy the application into any environment easily.
 
 It is important to note that CI does not get rid of bugs, but it does
 make them dramatically easier to find and remove. The above practices
@@ -1727,28 +1743,29 @@ challenges and future research in the field of build analytics are:
   \citet{beller2017oops}
 \end{itemize}
 
-In \citet{bisong2017built} the main limitation was the performance of
-the machine learning algorithm used. In the implementation R was used
-and it proved not capable of processing the amounts of data needed. This
-shows that it is important to choose the right tool when analyzing data.
+In Bisong et al.\citep{bisong2017built} the main limitation was the
+performance of the machine learning algorithm used. In the
+implementation R was used and it proved not capable of processing the
+amounts of data needed. This shows that it is important to choose the
+right tool when analyzing data.
 
-\citet{pinto2018work} notes that it's research and many others are done
-on open source software. There are still a lot of possibilities for
-researching on proprietary software projects.
+In Pinto and Rebouças\citep{pinto2018work} it is noted that research is
+often done on open source software. There are still a lot of
+possibilities for researching on proprietary software projects.
 
 Tools presented in papers might require a more large scale and long term
 study to verify that the tool presented keeps up when it is actually
-used \citep{santolucito2018statically}.
+used\citep{santolucito2018statically}.
 
 Future research in build analytics branches in a couple of different
-topics. \citet{pinto2018work} proposes to focus on getting a better
-understanding of the users and why they might choose to abandon an
-automatic build platform.
+topics. Pinto and Rebouças\citep{pinto2018work} proposes to focus on
+getting a better understanding of the users and why they might choose to
+abandon an automatic build platform.
 
-\citet{baltes2018no} suggests that in future research more perspectives
-when analyzing commit data should be taken into account, for instance
-partitioning commits by developer. It also notes the importance of more
-qualitative research.
+Baltes et al.\citep{baltes2018no} suggests that in future research more
+perspectives when analyzing commit data should be taken into account,
+for instance partitioning commits by developer. It also notes the
+importance of more qualitative research.
 
 Some open research questions from recent papers are the following:
 
