@@ -25,7 +25,7 @@
 <meta name="author" content="IN4334 2018 TU Delft">
 
 
-<meta name="date" content="2018-10-12">
+<meta name="date" content="2018-10-13">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -275,14 +275,9 @@ there _must_ be a space, else it is interpreted as superscript. -->
 <h3><span class="header-section-number">4.1.4</span> Research Questions</h3>
 <p>We aimed to make a complete overview of build analytics field from analyzing current both state of the art and state of practice to inspecting the future research that could be done and finally conclude our survey with the research questions that emerged after this exhaustive field research. In order to achieve a structural way of summarizing a field, we asked the following research questions:</p>
 <p><strong>RQ1</strong>: What is the current state of the art in the field of build analytics?</p>
-<p>In order to answer to the first research question, we need to present the current topics that are being explored in the build analytics domain alongside with the research methods, tools and datasets acquired for the problems in hand and aggregate and reflect about the main research findings that the state-of-the-art papers display. <!--
-  - Topics that are being explored
-  - Research methods, tools and datasets being used
-  - Main research findings, aggregated --></p>
+<p>In order to answer to the first research question, we need to present the current topics that are being explored in the build analytics domain alongside with the research methods, tools and datasets acquired for the problems in hand and aggregate and reflect about the main research findings that the state-of-the-art papers display.</p>
 <p><strong>RQ2</strong>: What is the current state of practice in the field of build analytics?</p>
-<p>This section examines scientific papers to analyse the current trend of build analytics in the software development industry. We look at the popularity of CI in the industry and also explore the increase in the use of Continuous Integration (CI) by discussing its ample benefits. Furthermore, it will discuss the practices used by engineers in the industry to ensure that their code is improving and not decaying. <!--
-  - Tools and companies creating / employing them
-  - Case studies and their findings --></p>
+<p>This section examines scientific papers to analyse the current trend of build analytics in the software development industry. We look at the popularity of CI in the industry and also explore the increase in the use of Continuous Integration (CI) by discussing its ample benefits. Furthermore, it will discuss the practices used by engineers in the industry to ensure that their code is improving and not decaying.</p>
 <p><strong>RQ3</strong>: What future research can we expect in the field of build analytics?</p>
 <p>In this section we will explore where new challenges lie in the field of build analytics. We will also show what open research items are described in the papers. This section ends with research questions based on the open research and challenges in current research.</p>
 </div>
@@ -305,7 +300,7 @@ there _must_ be a space, else it is interpreted as superscript. -->
 <h3><span class="header-section-number">4.3.1</span> Build Analytics State of the Art</h3>
 <p><strong>RQ1</strong>: What is the current state of the art in the field of build analytics?</p>
 <p>The current state-of-the-art in the build analytics domain refers to the use of machine learning techniques to increase the productivity when using Continuous Integration (CI), to generate constraints on the configuration of the CI that could improve build success rate and to predict build failures even for newer projects with less training data available.</p>
-<p>The papers identified using the research protocol defined in the previous section that give us an overview of the current state of the art in build analytics field are:</p>
+<p>The papers identified using the research protocol defined section <a href="build-analytics.html#build-analytics-research-protocol">4.2</a> that give us an overview of the current state of the art in build analytics field are:</p>
 <ul>
 <li>HireBuild: an automatic approach to history-driven repair of build scripts <span class="citation">[<a href="#ref-hassan2018hirebuild">57</a>]</span></li>
 <li>A tale of CI build failures: An open source and a financial organization perspective <span class="citation">[<a href="#ref-vassallo2017tale">116</a>]</span></li>
@@ -352,10 +347,6 @@ there _must_ be a space, else it is interpreted as superscript. -->
 <div id="prediction-with-less-data-available" class="section level4">
 <h4><span class="header-section-number">4.3.1.6</span> Prediction with Less Data Available</h4>
 <p>Even if there were considerable efforts in developing powerful and accurate machine learning models for predicting the outcome of builds, most of this techniques cannot be trained properly without large project past data. The problem that resulted from this is newer project being unable to take advantage of the research conducted before and having to wait until enough data from their project is generated in order to sufficiently train machine learning models from predicting the build outcome. In reference <span class="citation">[<a href="#ref-ni2018acona">91</a>]</span>, the most recent paper of this survey which is only published as a poster in June 2018, Ni et al. address the problem of build failure prediction in CI environment for newer projects with less data available. It is using already trained models from other project with more data available and combined them by the means of active learning in order to find which of that models generalized better from the problem in hand and to update the models weights accordingly. It is also aimed to cut the expense that CI introduce by reducing the label data necessarily for training. Even if the method seems promising, the results presented in the poster shows an F-Measure (harmonic average of recall and precision) of around 40% that could be better improved.</p>
-<!--
-    - Topics that are being explored
-    - Research methods, tools and datasets being used
-    - Main research findings, aggregated -->
 </div>
 </div>
 <div id="build-analytics-state-of-practice" class="section level3">
@@ -367,7 +358,7 @@ there _must_ be a space, else it is interpreted as superscript. -->
 <img src="figures/build-analytics/state_pr.png" alt="CI overview." />
 <p class="caption">CI overview.</p>
 </div>
-<p>The papers identified using the research protocol defined in the previous section that give us an overview of the current state of the art in build analytics domain are:</p>
+<p>The papers identified using the research protocol defined in section <a href="build-analytics.html#build-analytics-research-protocol">4.2</a> that give us an overview of the current state of the art in build analytics domain are:</p>
 <ul>
 <li>Usage, Costs, and Benefits of Continuous Integration in Open-Source Projects <span class="citation">[<a href="#ref-hilton2016usage">60</a>]</span></li>
 <li>An Empirical Analysis of Build Failures in the Continuous Integration Workflows of Java-Based Open-Source Software <span class="citation">[<a href="#ref-rausch2017empirical">100</a>]</span></li>
@@ -443,9 +434,6 @@ there _must_ be a space, else it is interpreted as superscript. -->
 <h4><span class="header-section-number">4.3.2.11</span> Automate Deployment</h4>
 <p>It is important to write a script to deploy the application to a live test server that everyone can look at. This is an integral aspect of CI as you are moving executables between different environments several times a day. Automating this process will save time and allow you to deploy the application into any environment easily.</p>
 <p>It is important to note that CI does not get rid of bugs, but it does make them dramatically easier to find and remove. The above practices are important for the smooth functioning of CI framework. These practices are still relevant today and used by professionals in the industry.</p>
-<!--
-    - Tools and companies creating / employing them
-    - Case studies and their findings -->
 </div>
 </div>
 <div id="build-analytics-future-research" class="section level3">
