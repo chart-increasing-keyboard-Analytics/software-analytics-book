@@ -1065,8 +1065,8 @@ We aimed to make a complete overview of build analytics field from
 analyzing current both state of the art and state of practice to
 inspecting the future research that could be done and finally conclude
 our survey with the research questions that emerged after this
-exhaustive field research. In order to achieve a structural way of
-summarizing a field, we asked the following research questions:
+exhaustive field research. To achieve a structural way of summarizing a
+field, we asked the following research questions:
 
 \textbf{RQ1}: What is the current state of the art in the field of build
 analytics?
@@ -1081,10 +1081,10 @@ the state-of-the-art papers display.
 build analytics?
 
 Section \ref{build-analytics-state-of-practice} examines scientific
-papers to analyse the current trend of build analytics in the software
+papers to analyze the current trend of build analytics in the software
 development industry. We look at the popularity of CI in the industry
-and also explore the increase in the use of Continuous Integration (CI)
-by discussing its ample benefits. Furthermore, it will discuss the
+and explore the increase in the use of Continuous Integration (CI) by
+discussing its ample benefits. Furthermore, it will discuss the
 practices used by engineers in the industry to ensure that their code is
 improving and not decaying.
 
@@ -1124,13 +1124,13 @@ we selected only the relevant papers that were published after 2008, in
 other words we have not included papers older than 10 years. We had
 chosen 10 years as our threshold being inspired by ``ICSE-Most
 Influential Paper 10 Years Later'' Award. The only paper that does not
-obey to this rule is cornerstone description of CI practices written by
-Martin Fowler, as we considered it important for us to see the practices
-evolution in build analytics field. Most of the papers we founded were
-linked to our research questions being reference in the sections bellow.
-From the selected papers, we choose to not include in our research two
-papers, as they are case studies on a couple of project and do not
-introduce new techniques or applications.
+obey to this rule is the cornerstone description of CI practices written
+by Martin Fowler, as we considered it important for us to see the
+practices evolution in build analytics field. Most of the papers we
+founded were linked to our research questions being reference in the
+sections bellow. From the selected papers, we omitted two papers, as
+they are case studies on a couple of project and do not introduce new
+techniques or applications.
 
 See table \ref{tab:build-analytics-selected-papers} for an overview of
 the papers which were selected for this survey.
@@ -1223,20 +1223,16 @@ The tools that are being proposed are:
   {[}\protect\hyperlink{ref-ni2018acona}{91}{]}
 \end{itemize}
 
-\subsubsection{Importance of the Build
-Process}\label{importance-of-the-build-process}
+\subsubsection{Importance of the Build Process and CI Users
+Satisfaction}\label{importance-of-the-build-process-and-ci-users-satisfaction}
 
 The build process is an important part of a project that uses VCS in the
 way that based on the findings of Hassan et al.
 {[}\protect\hyperlink{ref-hassan2018hirebuild}{57}{]}, 22\% of code
 commits include changes in build script files for either build working
-or build fixing purposes.
-
-\subsubsection{CI Users Satisfaction}\label{ci-users-satisfaction}
-
-Moreover, recent studies have focused on how satisfied the users of CI
-tools are, one particular paper by Widder et al.
-{[}\protect\hyperlink{ref-widder2018m}{119}{]} analyzing what factors
+or build fixing purposes. Moreover, recent studies have focused on how
+satisfied the users of CI tools are, one paper by Widder et al.
+{[}\protect\hyperlink{ref-widder2018m}{119}{]} analyzed what factors
 have an impact on abandonment of Travis~CI. This paper finds that
 increased build complexity reduces the chance of abandonment, but larger
 projects abandon at a higher rate and that a project's language has
@@ -1257,7 +1253,7 @@ which decreases the time between working builds.
 \subsubsection{Predicting Build Time}\label{predicting-build-time}
 
 Another important aspect is the impact of CI on the development process
-efficiency. One of the papers that addresses this matters is the one
+efficiency. One of the papers that addresses this matter is the one
 written by Bisong et al.
 {[}\protect\hyperlink{ref-bisong2017built}{22}{]}. This paper aims to
 find a balance between the frequency of integration and developer's
@@ -1267,7 +1263,7 @@ TravisTorrent build records. Their models performed quite well with an
 R-Squared of around 80\%, meaning that they were able to capture the
 variation of build time over multiple projects. Their research could be
 useful on one hand for software developers and project managers for a
-better time management scheme and on the other hand for other
+better time management scheme and on the other hand, for other
 researchers that may improve their proposed models.
 
 \subsubsection{Predicting Build
@@ -1296,23 +1292,23 @@ Available}\label{prediction-with-less-data-available}
 
 Even if there were considerable efforts in developing powerful and
 accurate machine learning models for predicting the outcome of builds,
-most of this techniques cannot be trained properly without large project
-past data. The problem that resulted from this is newer project being
-unable to take advantage of the research conducted before and having to
-wait until enough data from their project is generated in order to
+most of these techniques cannot be trained properly without large
+project past data. The problem that resulted from this is newer project
+being unable to take advantage of the research conducted before and
+having to wait until enough data from their project is generated to
 sufficiently train machine learning models from predicting the build
 outcome. In reference {[}\protect\hyperlink{ref-ni2018acona}{91}{]}, the
 most recent paper of this survey which is only published as a poster in
 June 2018, Ni et al. address the problem of build failure prediction in
 CI environment for newer projects with less data available. It is using
 already trained models from other project with more data available and
-combined them by the means of active learning in order to find which of
-that models generalized better from the problem in hand and to update
-the models weights accordingly. It is also aimed to cut the expense that
-CI introduce by reducing the label data necessarily for training. Even
-if the method seems promising, the results presented in the poster shows
-an F-Measure (harmonic average of recall and precision) of around 40\%
-that could be better improved.
+combined them by the means of active learning to find which of that
+models generalized better from the problem in hand and to update the
+model's weights accordingly. It is also aimed to cut the expense that CI
+introduce by reducing the label data necessarily for training. Even if
+the method seems promising, the results presented in the poster shows an
+F-Measure (harmonic average of recall and precision) of around 40\% that
+could be better improved.
 
 \subsection{Build Analytics State of
 Practice}\label{build-analytics-state-of-practice}
@@ -1354,11 +1350,11 @@ current state of the art in build analytics domain are:
   Enabling Agile Testing Through Continuous Integration
   {[}\protect\hyperlink{ref-stolberg2009enabling}{109}{]}
 \item
-  Travistorrent: Synthesizing Travis Ci and Github for Full-Stack
+  Travistorrent: Synthesizing Travis~CI and Github for Full-Stack
   Research on Continuous Integration
   {[}\protect\hyperlink{ref-beller2017travistorrent}{17}{]}
 \item
-  I'im Leaving You, Travis: A Continuous Integration Breakup Story
+  I'm Leaving You, Travis: A Continuous Integration Breakup Story
   {[}\protect\hyperlink{ref-widder2018m}{119}{]}
 \item
   Continuous integration in a social-coding world: Empirical evidence
@@ -1389,7 +1385,7 @@ The topics that are being explored are:
 
 \subsubsection{Build Analytics Usage}\label{build-analytics-usage}
 
-A survey conduced in open-source projects by Hilton et al.
+A survey conducted in open-source projects by Hilton et al.
 {[}\protect\hyperlink{ref-hilton2016usage}{60}{]} indicated that 40\% of
 all projects used CI. It observed that a median project introduces CI a
 year into development. Furthermore, the paper claims that CI is widely
@@ -1419,7 +1415,7 @@ dependencies. In addition, he advises creating a build script that can
 compile the code, execute unit tests and automate integration. Once the
 code is built, all tests should run to confirm that it behaves as the
 developer would expect it to behave. In this way, we are finding and
-eradicating software bugs earlier, and keeping builds fast. As explored
+eradicating software bugs earlier and keeping builds fast. As explored
 by Widder et al.{[}\protect\hyperlink{ref-widder2018m}{119}{]}, one of
 the factors that lead to companies abandoning the CI framework is the
 complexity of the build. A good practice is to have more fast-executing
@@ -1432,7 +1428,7 @@ should schedule a ``nightly build'' to update the project from the
 repository to ensure everyone is up to date. Continuous Integration is
 all about communication, so it is important to ensure that everyone can
 easily see the current state of the system. This is also another reason
-why CI works really well in the agile industry
+why CI works well in the agile industry
 {[}\protect\hyperlink{ref-stolberg2009enabling}{109}{]}. Both techniques
 stress the importance of good communication.
 
@@ -1441,11 +1437,11 @@ The paper by Vasilescu et al.
 sample of large and active GitHub projects developed in Java, Python and
 Ruby. The paper finds that direct code modifications (commits) and more
 popular than indirect code modifications (pull request). Additionally,
-the notion of automated testing is not as widely practised. Most samples
+the notion of automated testing is not as widely practiced. Most samples
 in Vasilescu {[}\protect\hyperlink{ref-vasilescu2014continuous}{115}{]}
-study were configured to use TRAVIS-CI, however, less than half actually
-do. In terms of languages, Ruby projects are among the early adopters of
-TRAVIS-CI, while Java projects are late to adopt CI. The paper uncovers
+study were configured to use Travis~CI, however, less than half do. In
+terms of languages, Ruby projects are among the early adopters of
+Travis~CI, while Java projects are late to adopt CI. The paper uncovers
 that the pull requests are much more likely to result in successful
 builds than direct commits.
 
@@ -1470,7 +1466,7 @@ challenges and future research in the field of build analytics are:
   build times {[}\protect\hyperlink{ref-bisong2017built}{22}{]}
 \item
   Work Practices and Challenges in Continuous Integration: A Survey with
-  Travis CI Users {[}\protect\hyperlink{ref-pinto2018work}{93}{]}
+  Travis~CI Users {[}\protect\hyperlink{ref-pinto2018work}{93}{]}
 \item
   Statically Verifying Continuous Integration Configurations
   {[}\protect\hyperlink{ref-santolucito2018statically}{104}{]}
@@ -1485,7 +1481,7 @@ challenges and future research in the field of build analytics are:
   Un-Break My Build: Assisting Developers with Build Repair Hints
   {[}\protect\hyperlink{ref-vassallo2018break}{116}{]}
 \item
-  Oops, my tests broke the build: An explorative analysis of Travis CI
+  Oops, my tests broke the build: An explorative analysis of Travis~CI
   with GitHub {[}\protect\hyperlink{ref-beller2017oops}{16}{]}
 \end{itemize}
 
@@ -1500,8 +1496,8 @@ is noted that research is often done on open source software. There are
 still a lot of possibilities for researching on proprietary software
 projects.
 
-Tools presented in papers might require a more large scale and long term
-study to verify that the tool presented keeps up when it is actually
+Tools presented in papers might require a more large-scale and long-term
+study to verify that the tool presented keeps up when it is
 used{[}\protect\hyperlink{ref-santolucito2018statically}{104}{]}.
 
 Future research in build analytics branches in a couple of different
@@ -1512,8 +1508,8 @@ choose to abandon an automatic build platform.
 
 Baltes et al.{[}\protect\hyperlink{ref-baltes2018no}{8}{]} suggest that
 in future research more perspectives when analyzing commit data should
-be taken into account, for instance partitioning commits by developer.
-It also notes the importance of more qualitative research.
+be considered, for instance partitioning commits by developer. It also
+notes the importance of more qualitative research.
 
 Some open research questions from recent papers are the following:
 
